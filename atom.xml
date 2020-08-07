@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.averagejoe.top/"/>
-  <updated>2020-08-04T11:36:44.957Z</updated>
+  <updated>2020-08-07T08:41:03.006Z</updated>
   <id>http://www.averagejoe.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>这是标题</title>
+    <link href="http://www.averagejoe.top/2020/08/07/test/"/>
+    <id>http://www.averagejoe.top/2020/08/07/test/</id>
+    <published>2020-08-07T01:25:00.000Z</published>
+    <updated>2020-08-07T08:41:03.006Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;test!&lt;/p&gt;
+&lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) {
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
