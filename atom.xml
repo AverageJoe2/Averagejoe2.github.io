@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.averagejoe.top/"/>
-  <updated>2020-08-07T09:45:22.812Z</updated>
+  <updated>2020-08-07T10:05:06.260Z</updated>
   <id>http://www.averagejoe.top/</id>
   
   <author>
@@ -18,37 +18,10 @@
   
   <entry>
     <title>分手加离职</title>
-    <link href="http://www.averagejoe.top/2020/08/07/fen-shou-jia-chi-zhi-1/"/>
-    <id>http://www.averagejoe.top/2020/08/07/fen-shou-jia-chi-zhi-1/</id>
-    <published>2020-08-07T09:45:22.000Z</published>
-    <updated>2020-08-07T09:45:22.812Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>分手加离职</title>
     <link href="http://www.averagejoe.top/2020/08/07/fen-shou-jia-chi-zhi/"/>
     <id>http://www.averagejoe.top/2020/08/07/fen-shou-jia-chi-zhi/</id>
-    <published>2020-08-07T09:42:55.000Z</published>
-    <updated>2020-08-07T09:42:55.027Z</updated>
+    <published>2020-08-07T09:55:16.000Z</published>
+    <updated>2020-08-07T10:05:06.260Z</updated>
     
     <summary type="html">
     
@@ -56,10 +29,8 @@
       
         
         
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
+          &lt;p&gt;​        每当这个时候总是应该停下来好好整理一下心情, 一个人是的拥有无限的自由,那个值得我放下一切去爱的人好像来了又走了,是的我喜欢了她一阵子.留不住的我都会放手,做回朋友希望她过得好 !&lt;/p&gt;
+&lt;script&gt;
        
         
       
@@ -68,55 +39,7 @@
     
     
     
-  </entry>
-  
-  <entry>
-    <title>这是标题</title>
-    <link href="http://www.averagejoe.top/2020/08/07/test/"/>
-    <id>http://www.averagejoe.top/2020/08/07/test/</id>
-    <published>2020-08-07T01:25:00.000Z</published>
-    <updated>2020-08-07T09:08:12.379Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;test!&lt;/p&gt;
-&lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) {
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://www.averagejoe.top/2020/08/04/hello-world/"/>
-    <id>http://www.averagejoe.top/2020/08/04/hello-world/</id>
-    <published>2020-08-04T11:36:44.957Z</published>
-    <updated>2020-08-04T11:36:44.957Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;
-        
-      
-    
-    </summary>
-    
-    
+      <category term="dairy" scheme="http://www.averagejoe.top/tags/dairy/"/>
     
   </entry>
   
