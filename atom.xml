@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.averagejoe.top/"/>
-  <updated>2020-08-07T09:42:55.027Z</updated>
+  <updated>2020-08-07T09:45:22.812Z</updated>
   <id>http://www.averagejoe.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>分手加离职</title>
+    <link href="http://www.averagejoe.top/2020/08/07/fen-shou-jia-chi-zhi-1/"/>
+    <id>http://www.averagejoe.top/2020/08/07/fen-shou-jia-chi-zhi-1/</id>
+    <published>2020-08-07T09:45:22.000Z</published>
+    <updated>2020-08-07T09:45:22.812Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>分手加离职</title>
