@@ -18,8 +18,8 @@
     
     <entry>
       <title>重来</title>
-      <link href="/2020/08/07/fen-shou-jia-chi-zhi/"/>
-      <url>/2020/08/07/fen-shou-jia-chi-zhi/</url>
+      <link href="/2020/08/07/feelings/"/>
+      <url>/2020/08/07/feelings/</url>
       
         <content type="html"><![CDATA[<p>​        每当这个时候总是应该停下来好好整理一下心情.</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
