@@ -242,6 +242,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -437,25 +450,7 @@
 <p> 5．同时编辑2个文件，拷贝一个文件中的文本并粘贴到另一个文件中。<br> vi file1 file2<br> yy 在文件1的光标处拷贝所在行<br> :n 切换到文件2 (n=next)<br> p 在文件2的光标所在处粘贴所拷贝的行<br> :n 切换回文件1</p>
 <p> 6．替换文件中的路径。<br> 使用命令“:%s#/usr/bin#/bin#g”可以把文件中所有路径/usr/bin换成/bin。也可以使用命令“:%s//usr/bin//bin/g”实现，其中“”是转义字符，表明其后的“/”字符是具有实际意义的字符，不是分隔符。</p>
 <p>ctrl+p :变量提示自动补全</p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
             </div>
             <hr/>
 
@@ -964,7 +959,6 @@
                         
                             chmod +x rc.local/etc/rc.local 中添加开机自启chmod 777 /root/sharesudo mount -t vboxsf Share /root/share
 
-        document.quer
                         
                     </div>
                     <div class="publish-info">
@@ -1220,7 +1214,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">198.9k</span>&nbsp;字
+                class="white-color">212.8k</span>&nbsp;字
             
             
             

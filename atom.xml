@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.averagejoe.top/"/>
-  <updated>2020-09-10T01:52:22.835Z</updated>
+  <updated>2020-09-10T03:47:46.709Z</updated>
   <id>http://www.averagejoe.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.averagejoe.top/2020/09/10/diary/0910/"/>
     <id>http://www.averagejoe.top/2020/09/10/diary/0910/</id>
     <published>2020-09-10T01:25:00.000Z</published>
-    <updated>2020-09-10T01:52:22.835Z</updated>
+    <updated>2020-09-10T03:47:46.709Z</updated>
     
     <summary type="html">
     
@@ -29,11 +29,7 @@
       
         
         
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
+          &lt;p&gt;有人说你怎么又换工作了,你都不稳定怎么谈感情.在我看来人生本来就没有所谓的铁饭碗,也没有什么保险可以保住所有意外.来人世走一朝又何必过得那么拘束,&lt;br&gt;虽然每一个公司都可以映射出纷杂社会的一个角度.但我还是想experience more.
         
       
     
@@ -179,9 +175,7 @@
       
         
         
-          &lt;p&gt;chmod +x rc.local&lt;br&gt;/etc/rc.local 中添加开机自启&lt;br&gt;chmod 777 /root/share&lt;br&gt;sudo mount -t vboxsf Share /root/share&lt;/p&gt;
-&lt;script&gt;
-       
+          &lt;p&gt;chmod +x rc.local&lt;br&gt;/etc/rc.local 中添加开机自启&lt;br&gt;chmod 777 /root/share&lt;br&gt;sudo mount -t vboxsf Share
         
       
     
@@ -297,9 +291,7 @@
       
         
         
-          &lt;p&gt;teamviewer 刷新mac地址:&lt;br&gt;/Users/AverageJoe/Devs/idea/gitSource/mac-teamviewer-crack&lt;br&gt;sudo python TeamViewer-id-changer.py\&lt;/p&gt;
-&lt;script&gt;
-
+          &lt;p&gt;teamviewer 刷新mac地址:&lt;br&gt;/Users/AverageJoe/Devs/idea/gitSource/mac-teamviewer-crack&lt;br&gt;sudo python
         
       
     
@@ -469,11 +461,7 @@
       
         
         
-          &lt;p&gt;nginx -h&lt;br&gt;nginx -s  stop&lt;/p&gt;
-&lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if
+          &lt;p&gt;nginx -h&lt;br&gt;nginx -s 
         
       
     

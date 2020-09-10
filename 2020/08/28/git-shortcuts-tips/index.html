@@ -242,6 +242,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -393,7 +406,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    310
+                    258
                 </div>
                 
 
@@ -422,25 +435,7 @@
 <h1 id="Your-branch-and-‘origin-master’-have-diverged"><a href="#Your-branch-and-‘origin-master’-have-diverged" class="headerlink" title="Your branch and ‘origin/master’ have diverged,"></a>Your branch and ‘origin/master’ have diverged,</h1><h1 id="and-have-3-and-8-different-commits-each-respectively"><a href="#and-have-3-and-8-different-commits-each-respectively" class="headerlink" title="and have 3 and 8 different commits each, respectively."></a>and have 3 and 8 different commits each, respectively.</h1><h1 id="use-“git-pull”-to-merge-the-remote-branch-into-yours"><a href="#use-“git-pull”-to-merge-the-remote-branch-into-yours" class="headerlink" title="(use “git pull” to merge the remote branch into yours)"></a>(use “git pull” to merge the remote branch into yours)</h1><p>Resolve:</p>
 <p>git fetch origin<br>git reset –hard origin/master</p>
 <p>2.先删后加<br>git remote rm origin<br>git remote add origin [url]</p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
             </div>
             <hr/>
 
@@ -1203,7 +1198,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">198.9k</span>&nbsp;字
+                class="white-color">212.8k</span>&nbsp;字
             
             
             

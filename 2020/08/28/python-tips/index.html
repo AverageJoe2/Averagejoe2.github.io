@@ -242,6 +242,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -393,7 +406,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    571
+                    521
                 </div>
                 
 
@@ -455,7 +468,7 @@
 <p>if() or () or ():&gt;&gt;&gt;&gt;or条件换行</p>
 <p>if(()<br>    or()<br>    or()):<br>编辑器自动换行: \ 不用添加括号</p>
 <p>import 工具包在文件开头方便下面的代码调用</p>
-<p>\转译字符<br>" &gt;&gt;”<br>'&gt;&gt;’<br>\&gt;&gt; <br>\r &gt;&gt; 回车</p>
+<p>\转译字符<br>&quot; &gt;&gt;”<br>&#39;&gt;&gt;’<br>\&gt;&gt; <br>\r &gt;&gt; 回车</p>
 <p>import while_test 导入自己写的工具包</p>
 <p>def:定义函数<br>def functionName():<br>        “””函数文档注释 “””<br>函数是先定义再调用 python是从上到下执行</p>
 <p>函数定义上方空两行</p>
@@ -464,25 +477,7 @@
 <p>python setup.py build 打包 exe </p>
 <p>pip install -r C:\projects\flaskmongouserlogintemplate\requirements.txt</p>
 <p>list(map(lambda x:str(x),auths))</p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
             </div>
             <hr/>
 
@@ -991,7 +986,6 @@
                         
                             teamviewer 刷新mac地址:/Users/AverageJoe/Devs/idea/gitSource/mac-teamviewer-cracksudo python TeamViewer-id-changer.py\
 
-    
                         
                     </div>
                     <div class="publish-info">
@@ -1247,7 +1241,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">198.9k</span>&nbsp;字
+                class="white-color">212.8k</span>&nbsp;字
             
             
             

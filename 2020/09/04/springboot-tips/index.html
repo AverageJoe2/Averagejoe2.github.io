@@ -242,6 +242,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -481,12 +494,12 @@ strip-prefix :false #保留全局路由前缀一般没用.</code></pre>
 <p>data:{<br>birthday:123123213<br>person:{age: 21,<br>name:jack}<br>}<br>computed:{//计算属性<br>    birth(){<br>    const day=new Date(this.birtyday)<br>    day.getFullYear()+”年”+day.getFullMonth+”月”<br>    }<br>},//在方法里面地一个属性进行计算<br>watch:{</p>
 <p>}<br>计算属性只在开始运行一次.</p>
 <p>监控num值的变化:<br>watch:{<br>    num(newValue,oldvalue){  #浅监控<br>        console.log()<br>    }</p>
-<pre><code>person:{ #深度监控
+<pre><code>person:&#123; #深度监控
     deep:true,
-    handler(val){
+    handler(val)&#123;
         console.log(val.age)
-    }
-}</code></pre>
+    &#125;
+&#125;</code></pre>
 <p>}</p>
 <div id="app">
 <counter></counter>
@@ -495,7 +508,7 @@ strip-prefix :false #保留全局路由前缀一般没用.</code></pre>
 </div>
 Vue组件化开发. vue组件也是一个vue实例
 
-<p>Vue.component(“counter”,{  #全局组件定义<br>    template:”&lt;button @click=’count++’&gt;“ #templte中只能有一个根标签<br>    data(){<br>        return count,<br>        return xxx<br>    }<br>})</p>
+<p>Vue.component(“counter”,{  #全局组件定义<br>    template:”&lt;button @click=’count++’&gt;</button>“ #templte中只能有一个根标签<br>    data(){<br>        return count,<br>        return xxx<br>    }<br>})</p>
 <p>const app=new Vue({<br>    el:”#app”,<br>    data{},<br>    componets:{<br>    #局部组件定义 只在#根元素下生效放到vue实例内部<br>        #counter<br>        counter: counter   # es6 key=value 可以简写成 counter<br>    }<br>})</p>
 <p>vuex :组件中通讯和父子间通讯</p>
 <p>父子间通讯:</p>
@@ -522,25 +535,7 @@ const counter ={
 
 <p>#########################################<br>webpack :<br>1,小文件打包成整体减少请求次数<br>2,将es6语法进行转换编译,兼容老版本浏览器<br>3,代码混淆,提高安全性</p>
 <p>webpack脚手架:vue-cli<br>npm install -g vue-cli<br>ESlint 前端语法校验器.</p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
             </div>
             <hr/>
 
@@ -1313,7 +1308,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">198.9k</span>&nbsp;字
+                class="white-color">212.8k</span>&nbsp;字
             
             
             
