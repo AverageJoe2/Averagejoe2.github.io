@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.averagejoe.top/"/>
-  <updated>2020-09-10T03:47:46.709Z</updated>
+  <updated>2020-09-10T03:56:53.678Z</updated>
   <id>http://www.averagejoe.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.averagejoe.top/2020/09/10/diary/0910/"/>
     <id>http://www.averagejoe.top/2020/09/10/diary/0910/</id>
     <published>2020-09-10T01:25:00.000Z</published>
-    <updated>2020-09-10T03:47:46.709Z</updated>
+    <updated>2020-09-10T03:56:53.678Z</updated>
     
     <summary type="html">
     
@@ -81,6 +81,29 @@
         
         
           &lt;p&gt;设置jenkins开机自启&lt;br&gt;sudo launchctl load -w /Library/LaunchDaemons/org.jenkins-ci.plist&lt;br&gt;sudo launchctl unload -w
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2020/08/28/password-tips/"/>
+    <id>http://www.averagejoe.top/2020/08/28/password-tips/</id>
+    <published>2020-08-28T08:41:38.906Z</published>
+    <updated>2020-09-10T03:58:09.908Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;1）新津腾华智控科技有限公司，做研发、出口，部分贸易:&lt;a href=&quot;http://www.thcon.cn/&quot;&gt;www.thcon.cn&lt;/a&gt;&lt;br&gt;2）四川精控光华科技有限公司，做研发，目前不做实际业务，但是研发部门通常喜欢叫精控公司，&lt;a
         
       
     
@@ -462,29 +485,6 @@
         
         
           &lt;p&gt;nginx -h&lt;br&gt;nginx -s 
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/08/14/php/"/>
-    <id>http://www.averagejoe.top/2020/08/14/php/</id>
-    <published>2020-08-14T03:54:45.124Z</published>
-    <updated>2020-08-22T06:02:43.625Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;apache默认服务器安装目录:&lt;br&gt;/etc/apache2&lt;br&gt;命令&lt;br&gt;sudo apachectl start     //开始&lt;br&gt;sudo apachectl restart   //重启&lt;br&gt;sudo apachectl stop     
         
       
     
