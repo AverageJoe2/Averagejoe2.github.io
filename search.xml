@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>分手后</title>
+      <link href="/2020/09/10/diary/0910/"/>
+      <url>/2020/09/10/diary/0910/</url>
+      
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> diary </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> feelings </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title></title>
       <link href="/2020/09/04/springboot-tips/"/>
       <url>/2020/09/04/springboot-tips/</url>
@@ -274,7 +299,7 @@
       <link href="/2018/09/07/ge-shi-zui-quan-zhan-shi/"/>
       <url>/2018/09/07/ge-shi-zui-quan-zhan-shi/</url>
       
-        <content type="html"><![CDATA[<p>最全展示!</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<p>最全展示!</p><p><a href="https://cdn.jsdelivr.net/gh/Yafine/cdn@3.3.4/source/favicon.png">https://cdn.jsdelivr.net/gh/Yafine/cdn@3.3.4/source/favicon.png</a><br><a href="https://cdn.jsdelivr.net/gh/Yafine/cdn@3.3.4/source/logo.png">https://cdn.jsdelivr.net/gh/Yafine/cdn@3.3.4/source/logo.png</a></p><p>作者: Yafine<br>链接: <a href="https://yafine-blog.cn/posts/4ab2.html">https://yafine-blog.cn/posts/4ab2.html</a><br>来源: 过客~励む<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       <categories>
