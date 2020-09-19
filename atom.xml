@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.averagejoe.top/"/>
-  <updated>2020-09-11T02:16:27.135Z</updated>
+  <updated>2020-09-18T01:11:51.292Z</updated>
   <id>http://www.averagejoe.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2020/09/18/wechat-tips/"/>
+    <id>http://www.averagejoe.top/2020/09/18/wechat-tips/</id>
+    <published>2020-09-18T01:11:42.759Z</published>
+    <updated>2020-09-18T01:11:51.292Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;======================微信公众号平台服务=======================&lt;br&gt;邮箱:&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>分手后...</title>
@@ -95,7 +118,7 @@
     <link href="http://www.averagejoe.top/2020/08/28/password-tips/"/>
     <id>http://www.averagejoe.top/2020/08/28/password-tips/</id>
     <published>2020-08-28T08:41:38.906Z</published>
-    <updated>2020-09-10T09:22:10.801Z</updated>
+    <updated>2020-09-17T09:02:52.952Z</updated>
     
     <summary type="html">
     
@@ -165,7 +188,7 @@
     <link href="http://www.averagejoe.top/2020/08/28/sublime-tips/"/>
     <id>http://www.averagejoe.top/2020/08/28/sublime-tips/</id>
     <published>2020-08-28T08:41:17.386Z</published>
-    <updated>2020-08-28T09:28:53.454Z</updated>
+    <updated>2020-09-11T08:32:14.946Z</updated>
     
     <summary type="html">
     
@@ -190,7 +213,7 @@
     <link href="http://www.averagejoe.top/2020/08/28/vbox-tips/"/>
     <id>http://www.averagejoe.top/2020/08/28/vbox-tips/</id>
     <published>2020-08-28T08:41:11.667Z</published>
-    <updated>2020-08-28T08:41:11.669Z</updated>
+    <updated>2020-09-12T02:32:44.036Z</updated>
     
     <summary type="html">
     
@@ -236,7 +259,7 @@
     <link href="http://www.averagejoe.top/2020/08/28/docker-tips/"/>
     <id>http://www.averagejoe.top/2020/08/28/docker-tips/</id>
     <published>2020-08-28T08:40:24.910Z</published>
-    <updated>2020-08-28T08:40:24.913Z</updated>
+    <updated>2020-09-17T03:07:41.625Z</updated>
     
     <summary type="html">
     
@@ -353,7 +376,7 @@
     <link href="http://www.averagejoe.top/2020/08/28/windows-tips/"/>
     <id>http://www.averagejoe.top/2020/08/28/windows-tips/</id>
     <published>2020-08-28T08:38:59.972Z</published>
-    <updated>2020-08-28T09:34:23.988Z</updated>
+    <updated>2020-09-15T09:27:53.356Z</updated>
     
     <summary type="html">
     
@@ -462,29 +485,6 @@
         
           &lt;p&gt;#!/bin/sh&lt;/p&gt;
 &lt;p&gt;yum install docker -y&amp;amp;&amp;amp;service docker start&amp;amp;&amp;amp;chkconfig docker on&amp;amp;&amp;amp;docker pull
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/08/18/mac-tips/"/>
-    <id>http://www.averagejoe.top/2020/08/18/mac-tips/</id>
-    <published>2020-08-18T07:51:13.579Z</published>
-    <updated>2020-08-18T07:53:12.801Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;nginx -h&lt;br&gt;nginx -s 
         
       
     
