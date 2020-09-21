@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.averagejoe.top/"/>
-  <updated>2020-09-18T01:11:51.292Z</updated>
+  <updated>2020-09-21T07:03:57.417Z</updated>
   <id>http://www.averagejoe.top/</id>
   
   <author>
@@ -18,10 +18,25 @@
   
   <entry>
     <title></title>
+    <link href="http://www.averagejoe.top/2020/09/21/diary/0921/"/>
+    <id>http://www.averagejoe.top/2020/09/21/diary/0921/</id>
+    <published>2020-09-21T07:03:57.417Z</published>
+    <updated>2020-09-21T07:03:57.417Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
     <link href="http://www.averagejoe.top/2020/09/18/wechat-tips/"/>
     <id>http://www.averagejoe.top/2020/09/18/wechat-tips/</id>
     <published>2020-09-18T01:11:42.759Z</published>
-    <updated>2020-09-18T01:11:51.292Z</updated>
+    <updated>2020-09-19T09:05:40.135Z</updated>
     
     <summary type="html">
     
@@ -71,7 +86,7 @@
     <link href="http://www.averagejoe.top/2020/09/04/springboot-tips/"/>
     <id>http://www.averagejoe.top/2020/09/04/springboot-tips/</id>
     <published>2020-09-04T06:28:13.911Z</published>
-    <updated>2020-09-04T06:28:13.911Z</updated>
+    <updated>2020-09-19T02:53:52.648Z</updated>
     
     <summary type="html">
     
@@ -118,7 +133,7 @@
     <link href="http://www.averagejoe.top/2020/08/28/password-tips/"/>
     <id>http://www.averagejoe.top/2020/08/28/password-tips/</id>
     <published>2020-08-28T08:41:38.906Z</published>
-    <updated>2020-09-17T09:02:52.952Z</updated>
+    <updated>2020-09-21T04:02:23.561Z</updated>
     
     <summary type="html">
     
@@ -461,30 +476,6 @@
 &lt;p&gt;chsh -s /bin/zsh&lt;/p&gt;
 &lt;p&gt;cmd&amp;gt;&amp;gt;bash切换至：&lt;br&gt;bash on Ubuntu on Windows&lt;/p&gt;
 &lt;p&gt;gi first search box
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/08/28/vpm-tips/"/>
-    <id>http://www.averagejoe.top/2020/08/28/vpm-tips/</id>
-    <published>2020-08-28T07:54:51.741Z</published>
-    <updated>2020-08-28T08:29:22.654Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;#!/bin/sh&lt;/p&gt;
-&lt;p&gt;yum install docker -y&amp;amp;&amp;amp;service docker start&amp;amp;&amp;amp;chkconfig docker on&amp;amp;&amp;amp;docker pull
         
       
     
