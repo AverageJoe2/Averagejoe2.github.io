@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.averagejoe.top/"/>
-  <updated>2020-09-22T06:27:30.921Z</updated>
+  <updated>2020-10-10T03:45:52.851Z</updated>
   <id>http://www.averagejoe.top/</id>
   
   <author>
@@ -17,74 +17,13 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>写给韩霞的信</title>
-    <link href="http://www.averagejoe.top/2020/09/21/diary/0921/"/>
-    <id>http://www.averagejoe.top/2020/09/21/diary/0921/</id>
-    <published>2020-09-21T01:25:00.000Z</published>
-    <updated>2020-09-22T06:27:30.921Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;pre&gt;&lt;code&gt;看到你在抖音的回复以后我一晚上没睡.
-韩霞国庆我想来见你,我想应该是我需要你这样优秀的姑娘.你不是说做什么是要有决心吗,放弃你我做不到
-...减肥我做到了现在62kg左右不是两个月完成的,给我点时间好不好.那天我应该追着你出来才对,而不是让你先走.
-说说我的
-        
-      
-    
-    </summary>
-    
-    
-      <category term="diary" scheme="http://www.averagejoe.top/categories/diary/"/>
-    
-    
-      <category term="diary" scheme="http://www.averagejoe.top/tags/diary/"/>
-    
-  </entry>
-  
-  <entry>
     <title></title>
-    <link href="http://www.averagejoe.top/2020/09/18/wechat-tips/"/>
-    <id>http://www.averagejoe.top/2020/09/18/wechat-tips/</id>
-    <published>2020-09-18T01:11:42.759Z</published>
-    <updated>2020-09-19T09:05:40.135Z</updated>
+    <link href="http://www.averagejoe.top/2020/10/10/diary/1010/"/>
+    <id>http://www.averagejoe.top/2020/10/10/diary/1010/</id>
+    <published>2020-10-10T01:25:00.000Z</published>
+    <updated>2020-10-10T03:45:52.851Z</updated>
     
     <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;======================微信公众号平台服务=======================&lt;br&gt;邮箱:&lt;a
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>分手后...</title>
-    <link href="http://www.averagejoe.top/2020/09/10/diary/0910/"/>
-    <id>http://www.averagejoe.top/2020/09/10/diary/0910/</id>
-    <published>2020-09-10T01:25:00.000Z</published>
-    <updated>2020-09-11T02:16:27.135Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;有人说你怎么又换工作了,你都不稳定怎么谈感情.在我看来人生本来就没有所谓的铁饭碗和稳定一说,也没有什么保险可以保住所有意外.来人世走一朝又何必过得那么拘束,&lt;br&gt;虽然每一个公司都可以映射出纷杂社会的一个角度.但我还是想experience more.
-        
-      
     
     </summary>
     
@@ -148,7 +87,7 @@
     <link href="http://www.averagejoe.top/2020/08/28/password-tips/"/>
     <id>http://www.averagejoe.top/2020/08/28/password-tips/</id>
     <published>2020-08-28T08:41:38.906Z</published>
-    <updated>2020-09-21T04:02:23.561Z</updated>
+    <updated>2020-10-10T01:18:31.669Z</updated>
     
     <summary type="html">
     
@@ -194,7 +133,7 @@
     <link href="http://www.averagejoe.top/2020/08/28/sql-tip/"/>
     <id>http://www.averagejoe.top/2020/08/28/sql-tip/</id>
     <published>2020-08-28T08:41:26.201Z</published>
-    <updated>2020-08-28T09:23:41.863Z</updated>
+    <updated>2020-09-29T06:35:34.809Z</updated>
     
     <summary type="html">
     
@@ -289,7 +228,7 @@
     <link href="http://www.averagejoe.top/2020/08/28/docker-tips/"/>
     <id>http://www.averagejoe.top/2020/08/28/docker-tips/</id>
     <published>2020-08-28T08:40:24.910Z</published>
-    <updated>2020-09-17T03:07:41.625Z</updated>
+    <updated>2020-09-22T09:09:56.417Z</updated>
     
     <summary type="html">
     
@@ -313,7 +252,7 @@
     <link href="http://www.averagejoe.top/2020/08/28/git-shortcuts-tips/"/>
     <id>http://www.averagejoe.top/2020/08/28/git-shortcuts-tips/</id>
     <published>2020-08-28T08:40:19.651Z</published>
-    <updated>2020-08-28T08:40:19.654Z</updated>
+    <updated>2020-09-25T09:39:41.506Z</updated>
     
     <summary type="html">
     
@@ -479,7 +418,7 @@
     <link href="http://www.averagejoe.top/2020/08/28/linux-command-tips/"/>
     <id>http://www.averagejoe.top/2020/08/28/linux-command-tips/</id>
     <published>2020-08-28T08:38:01.368Z</published>
-    <updated>2020-08-28T08:38:01.371Z</updated>
+    <updated>2020-09-30T07:36:27.005Z</updated>
     
     <summary type="html">
     
@@ -491,6 +430,53 @@
 &lt;p&gt;chsh -s /bin/zsh&lt;/p&gt;
 &lt;p&gt;cmd&amp;gt;&amp;gt;bash切换至：&lt;br&gt;bash on Ubuntu on Windows&lt;/p&gt;
 &lt;p&gt;gi first search box
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2020/08/28/vpm-tips/"/>
+    <id>http://www.averagejoe.top/2020/08/28/vpm-tips/</id>
+    <published>2020-08-28T07:54:51.741Z</published>
+    <updated>2020-08-28T08:29:22.654Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;#!/bin/sh&lt;/p&gt;
+&lt;p&gt;yum install docker -y&amp;amp;&amp;amp;service docker start&amp;amp;&amp;amp;chkconfig docker on&amp;amp;&amp;amp;docker pull
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2020/08/18/mac-tips/"/>
+    <id>http://www.averagejoe.top/2020/08/18/mac-tips/</id>
+    <published>2020-08-18T07:51:13.579Z</published>
+    <updated>2020-09-17T02:45:42.084Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;nginx -h&lt;br&gt;nginx -s  stop&lt;br&gt;开启读写权限:&lt;br&gt;sudo mount -uw
         
       
     
