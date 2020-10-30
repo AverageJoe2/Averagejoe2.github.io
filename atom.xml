@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.averagejoe.top/"/>
-  <updated>2020-10-30T09:32:41.776Z</updated>
+  <updated>2020-10-30T09:52:34.824Z</updated>
   <id>http://www.averagejoe.top/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>diary-1030</title>
+    <link href="http://www.averagejoe.top/2020/10/30/diary-1030/"/>
+    <id>http://www.averagejoe.top/2020/10/30/diary-1030/</id>
+    <published>2020-10-30T09:47:35.000Z</published>
+    <updated>2020-10-30T09:52:34.824Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;bPw0COdWK3U.jpg&quot;&gt;图片1&lt;/a&gt;&lt;/p&gt;
+&lt;img src=&quot;/2020/10/30/diary-1030/bPw0COdWK3U.jpg&quot; class title=&quot;This is an example
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>1030</title>
     <link href="http://www.averagejoe.top/2020/10/30/diary/2020/1030/"/>
     <id>http://www.averagejoe.top/2020/10/30/diary/2020/1030/</id>
     <published>2020-10-30T09:18:14.000Z</published>
-    <updated>2020-10-30T09:32:41.776Z</updated>
+    <updated>2020-10-30T09:45:24.291Z</updated>
     
     <summary type="html">
     
@@ -462,30 +486,6 @@
 &lt;p&gt;chsh -s /bin/zsh&lt;/p&gt;
 &lt;p&gt;cmd&amp;gt;&amp;gt;bash切换至：&lt;br&gt;bash on Ubuntu on Windows&lt;/p&gt;
 &lt;p&gt;gi first search box
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/08/28/vpm-tips/"/>
-    <id>http://www.averagejoe.top/2020/08/28/vpm-tips/</id>
-    <published>2020-08-28T07:54:51.741Z</published>
-    <updated>2020-08-28T08:29:22.654Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;#!/bin/sh&lt;/p&gt;
-&lt;p&gt;yum install docker -y&amp;amp;&amp;amp;service docker start&amp;amp;&amp;amp;chkconfig docker on&amp;amp;&amp;amp;docker pull
         
       
     
