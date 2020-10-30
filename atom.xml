@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.averagejoe.top/"/>
-  <updated>2020-10-30T08:40:09.953Z</updated>
+  <updated>2020-10-30T08:45:16.865Z</updated>
   <id>http://www.averagejoe.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.averagejoe.top/2020/10/30/diary/2020/1030-md/"/>
     <id>http://www.averagejoe.top/2020/10/30/diary/2020/1030-md/</id>
     <published>2020-10-30T08:13:32.000Z</published>
-    <updated>2020-10-30T08:40:09.953Z</updated>
+    <updated>2020-10-30T08:45:16.865Z</updated>
     
     <summary type="html">
     
@@ -47,7 +47,7 @@
     <link href="http://www.averagejoe.top/2020/09/10/diary/diary-tips/"/>
     <id>http://www.averagejoe.top/2020/09/10/diary/diary-tips/</id>
     <published>2020-09-10T01:23:06.114Z</published>
-    <updated>2020-10-30T08:38:19.077Z</updated>
+    <updated>2020-10-30T08:45:02.049Z</updated>
     
     <summary type="html">
     
@@ -56,6 +56,7 @@
         
         
           &lt;p&gt;创建带有文件目录的.md文档&lt;br&gt;hexo n 1030.md&lt;/p&gt;
+&lt;p&gt;Attach img&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/2020/09/10/diary/diary-tips/%E5%9B%BE%E7%89%871.png&quot;
         
       
