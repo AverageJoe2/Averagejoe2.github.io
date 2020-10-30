@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.averagejoe.top/"/>
-  <updated>2020-10-30T07:51:39.270Z</updated>
+  <updated>2020-10-30T08:40:09.953Z</updated>
   <id>http://www.averagejoe.top/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>img_test.md</title>
-    <link href="http://www.averagejoe.top/2020/10/30/diary/img-test-md/"/>
-    <id>http://www.averagejoe.top/2020/10/30/diary/img-test-md/</id>
-    <published>2020-10-30T06:19:22.000Z</published>
-    <updated>2020-10-30T07:51:39.270Z</updated>
+    <title>1030.md</title>
+    <link href="http://www.averagejoe.top/2020/10/30/diary/2020/1030-md/"/>
+    <id>http://www.averagejoe.top/2020/10/30/diary/2020/1030-md/</id>
+    <published>2020-10-30T08:13:32.000Z</published>
+    <updated>2020-10-30T08:40:09.953Z</updated>
     
     <summary type="html">
     
@@ -29,10 +29,8 @@
       
         
         
-          &lt;p&gt;1:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2020/10/30/diary/img-test-md/bPw0COdWK3U.jpg&quot; alt=&quot;test&quot;&gt;&lt;/p&gt;
-&lt;p&gt;3:&lt;/p&gt;
-&lt;img
+          &lt;p&gt;&lt;img src=&quot;/2020/10/30/diary/2020/1030-md/bPw0COdWK3U.jpg&quot; alt=&quot;图片1&quot;&gt;&lt;/p&gt;
+&lt;img src=&quot;/2020/10/30/diary/2020/1030-md/bPw0COdWK3U.jpg&quot; class
         
       
     
@@ -40,14 +38,16 @@
     
     
     
+      <category term="情感" scheme="http://www.averagejoe.top/tags/%E6%83%85%E6%84%9F/"/>
+    
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/10/30/diary/1010/"/>
-    <id>http://www.averagejoe.top/2020/10/30/diary/1010/</id>
-    <published>2020-10-30T03:33:00.000Z</published>
-    <updated>2020-10-30T07:42:29.297Z</updated>
+    <title>diary shortcuts</title>
+    <link href="http://www.averagejoe.top/2020/09/10/diary/diary-tips/"/>
+    <id>http://www.averagejoe.top/2020/09/10/diary/diary-tips/</id>
+    <published>2020-09-10T01:23:06.114Z</published>
+    <updated>2020-10-30T08:38:19.077Z</updated>
     
     <summary type="html">
     
@@ -55,7 +55,8 @@
       
         
         
-          &lt;p&gt;&lt;img src=&quot;/2020/10/30/diary/1010/bPw0COdWK3U.jpg&quot;
+          &lt;p&gt;创建带有文件目录的.md文档&lt;br&gt;hexo n 1030.md&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2020/09/10/diary/diary-tips/%E5%9B%BE%E7%89%871.png&quot;
         
       
     
@@ -65,7 +66,7 @@
       <category term="diary" scheme="http://www.averagejoe.top/categories/diary/"/>
     
     
-      <category term="feelings" scheme="http://www.averagejoe.top/tags/feelings/"/>
+      <category term="diary-tips" scheme="http://www.averagejoe.top/tags/diary-tips/"/>
     
   </entry>
   
@@ -144,7 +145,7 @@
     <link href="http://www.averagejoe.top/2020/08/28/shortcut-tips/"/>
     <id>http://www.averagejoe.top/2020/08/28/shortcut-tips/</id>
     <published>2020-08-28T08:41:34.062Z</published>
-    <updated>2020-08-28T08:41:34.064Z</updated>
+    <updated>2020-10-30T08:14:10.946Z</updated>
     
     <summary type="html">
     
