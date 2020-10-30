@@ -8,22 +8,15 @@
       <link href="2020/10/30/diary-1030/"/>
       <url>2020/10/30/diary-1030/</url>
       
-        <content type="html"><![CDATA[<p><a href="bPw0COdWK3U.jpg">图片1</a></p><img src="/2020/10/30/diary-1030/bPw0COdWK3U.jpg" class title="This is an example image">]]></content>
+        <content type="html"><![CDATA[<p>有时候心情就像现在一样…什么都不想说又什么都说不出来.</p><img src="/2020/10/30/diary-1030/bPw0COdWK3U.jpg" class title="在路上看不一样的风景">]]></content>
       
       
       
-    </entry>
-    
-    
-    
-    <entry>
-      <title>1030</title>
-      <link href="2020/10/30/diary/2020/1030/"/>
-      <url>2020/10/30/diary/2020/1030/</url>
-      
-        <content type="html"><![CDATA[<p><a href="bPw0COdWK3U.jpg">图片1</a></p>]]></content>
-      
-      
+        <tags>
+            
+            <tag> 情感 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -34,7 +27,7 @@
       <link href="2020/09/10/diary/diary-tips/"/>
       <url>2020/09/10/diary/diary-tips/</url>
       
-        <content type="html"><![CDATA[<p>创建带有文件目录的.md文档<br>hexo n 1030.md<br>Attach img!</p><p><a href="%E5%9B%BE%E7%89%871.png">图片1</a></p>]]></content>
+        <content type="html"><![CDATA[<p>创建带有文件目录的.md文档<br>hexo n 1030.md<br>Attach img!</p><p><a href="%E5%9B%BE%E7%89%871.png">图片链接1</a></p>]]></content>
       
       
       <categories>
