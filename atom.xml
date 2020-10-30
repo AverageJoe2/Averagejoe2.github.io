@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.averagejoe.top/"/>
-  <updated>2020-10-30T05:40:01.298Z</updated>
+  <updated>2020-10-30T07:40:47.333Z</updated>
   <id>http://www.averagejoe.top/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/10/30/diary/1010/"/>
-    <id>http://www.averagejoe.top/2020/10/30/diary/1010/</id>
-    <published>2020-10-30T03:33:00.000Z</published>
-    <updated>2020-10-30T05:40:01.298Z</updated>
+    <title>img_test.md</title>
+    <link href="http://www.averagejoe.top/2020/10/30/img-test-md/"/>
+    <id>http://www.averagejoe.top/2020/10/30/img-test-md/</id>
+    <published>2020-10-30T06:19:22.000Z</published>
+    <updated>2020-10-30T07:40:47.333Z</updated>
     
     <summary type="html">
     
@@ -29,9 +29,25 @@
       
         
         
-          &lt;p&gt;&lt;img src=&quot;imgs/kjOBqwMUnWw.jpg&quot;
+          &lt;p&gt;&lt;img src=&quot;/2020/10/30/img-test-md/bPw0COdWK3U.jpg&quot; alt=&quot;test&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Users/AverageJoe/Pictures/pap.er/bPw0COdWK3U.jpg&quot;
         
       
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2020/10/30/diary/1010/"/>
+    <id>http://www.averagejoe.top/2020/10/30/diary/1010/</id>
+    <published>2020-10-30T03:33:00.000Z</published>
+    <updated>2020-10-30T07:26:12.086Z</updated>
+    
+    <summary type="html">
     
     </summary>
     
@@ -462,31 +478,6 @@
         
           &lt;p&gt;#!/bin/sh&lt;/p&gt;
 &lt;p&gt;yum install docker -y&amp;amp;&amp;amp;service docker start&amp;amp;&amp;amp;chkconfig docker on&amp;amp;&amp;amp;docker pull
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/08/18/mac-tips/"/>
-    <id>http://www.averagejoe.top/2020/08/18/mac-tips/</id>
-    <published>2020-08-18T07:51:13.579Z</published>
-    <updated>2020-10-30T03:48:55.049Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;nginx -h&lt;br&gt;nginx -s  stop&lt;br&gt;开启读写权限:&lt;br&gt;sudo mount -uw /&lt;/p&gt;
-&lt;p&gt;ln -s source destination&lt;/p&gt;
-&lt;p&gt;ln -s
         
       
     

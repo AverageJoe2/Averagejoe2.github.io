@@ -508,7 +508,7 @@ strip-prefix :false #保留全局路由前缀一般没用.</code></pre>
 </div>
 Vue组件化开发. vue组件也是一个vue实例
 
-<p>Vue.component(“counter”,{  #全局组件定义<br>    template:”&lt;button @click=’count++’&gt;</button>“ #templte中只能有一个根标签<br>    data(){<br>        return count,<br>        return xxx<br>    }<br>})</p>
+<p>Vue.component(“counter”,{  #全局组件定义<br>    template:”&lt;button @click=’count++’&gt;“ #templte中只能有一个根标签<br>    data(){<br>        return count,<br>        return xxx<br>    }<br>})</p>
 <p>const app=new Vue({<br>    el:”#app”,<br>    data{},<br>    componets:{<br>    #局部组件定义 只在#根元素下生效放到vue实例内部<br>        #counter<br>        counter: counter   # es6 key=value 可以简写成 counter<br>    }<br>})</p>
 <p>vuex :组件中通讯和父子间通讯</p>
 <p>父子间通讯:</p>

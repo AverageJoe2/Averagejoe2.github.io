@@ -436,8 +436,8 @@
 </ul>
 <h1 id="1-索引库数据导入"><a href="#1-索引库数据导入" class="headerlink" title="1.索引库数据导入"></a>1.索引库数据导入</h1><p>昨天我们学习了Elasticsearch的基本应用。今天就学以致用，搭建搜索微服务，实现搜索功能。</p>
 <h2 id="1-1-创建搜索服务"><a href="#1-1-创建搜索服务" class="headerlink" title="1.1.创建搜索服务"></a>1.1.创建搜索服务</h2><p>创建module：</p>
-<p><img src="assets/1532178218793.png" alt="1532178218793"></p>
-<p><img src="assets/1532178276070.png" alt="1532178276070"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532178218793.png" alt="1532178218793"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532178276070.png" alt="1532178276070"></p>
 <p>Pom文件：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>leyou<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.leyou.parent<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.leyou.search<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>leyou-search<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- web --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- elasticsearch --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-data-elasticsearch<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- eureka --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- feign --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-openfeign<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -452,16 +452,16 @@
 <h2 id="1-2-索引库数据格式分析"><a href="#1-2-索引库数据格式分析" class="headerlink" title="1.2.索引库数据格式分析"></a>1.2.索引库数据格式分析</h2><p>接下来，我们需要商品数据导入索引库，便于用户搜索。</p>
 <p>那么问题来了，我们有SPU和SKU，到底如何保存到索引库？</p>
 <h3 id="1-2-1-以结果为导向"><a href="#1-2-1-以结果为导向" class="headerlink" title="1.2.1.以结果为导向"></a>1.2.1.以结果为导向</h3><p>大家来看下搜索结果页：</p>
-<p><img src="assets/1532180648745.png" alt="1532180648745"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532180648745.png" alt="1532180648745"></p>
 <p>可以看到，每一个搜索结果都有至少1个商品，当我们选择大图下方的小图，商品会跟着变化。</p>
 <p>因此，<strong>搜索的结果是SPU，即多个SKU的集合</strong>。</p>
 <p>既然搜索的结果是SPU，那么我们索引库中存储的应该也是SPU，但是却需要包含SKU的信息。</p>
 <h3 id="1-2-2-需要什么数据"><a href="#1-2-2-需要什么数据" class="headerlink" title="1.2.2.需要什么数据"></a>1.2.2.需要什么数据</h3><p>再来看看页面中有什么数据：</p>
-<p> <img src="assets/1526607712207.png" alt="1526607712207"> </p>
+<p> <img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1526607712207.png" alt="1526607712207"> </p>
 <p>直观能看到的：图片、价格、标题、副标题</p>
 <p>暗藏的数据：spu的id，sku的id</p>
 <p>另外，页面还有过滤条件：</p>
-<p> <img src="assets/1526608095471.png" alt="1526608095471"></p>
+<p> <img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1526608095471.png" alt="1526608095471"></p>
 <p>这些过滤条件也都需要存储到索引库中，包括：</p>
 <p>商品分类、品牌、可用来搜索的规格参数等</p>
 <p>综上所述，我们需要的数据格式有：</p>
@@ -517,7 +517,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 根据商品分类id查询名称</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> ids 要查询的分类id集合</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> 多个名称的集合</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@GetMapping(&quot;names&quot;)</span></span><br><span class="line"><span class="keyword">public</span> ResponseEntity&lt;List&lt;String&gt;&gt; queryNameByIds(<span class="meta">@RequestParam(&quot;ids&quot;)</span> List&lt;Long&gt; ids)&#123;</span><br><span class="line">    List&lt;String &gt; list = <span class="keyword">this</span>.categoryService.queryNameByIds(ids);</span><br><span class="line">    <span class="keyword">if</span> (list == <span class="keyword">null</span> || list.size() &lt; <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ResponseEntity.ok(list);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>测试：</p>
-<p><img src="assets/1532213731039.png" alt="1532213731039"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532213731039.png" alt="1532213731039"></p>
 <h3 id="1-3-2-编写FeignClient"><a href="#1-3-2-编写FeignClient" class="headerlink" title="1.3.2.编写FeignClient"></a>1.3.2.编写FeignClient</h3><h4 id="1-3-2-1-问题展现"><a href="#1-3-2-1-问题展现" class="headerlink" title="1.3.2.1.问题展现"></a>1.3.2.1.问题展现</h4><p>操作leyou-search工程</p>
 <p>现在，我们要在搜索微服务调用商品微服务的接口。</p>
 <p>第一步要引入商品微服务依赖：<code>leyou-item-interface</code>。</p>
@@ -538,7 +538,7 @@
 <li>调用方不用字自己编写接口方法声明，直接继承提供方给的Api接口即可，</li>
 </ul>
 <p>第一步：服务的提供方在<code>leyou-item-interface</code>中提供API接口，并编写接口声明：</p>
-<p> <img src="assets/1526613268722.png" alt="1526613268722"></p>
+<p> <img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1526613268722.png" alt="1526613268722"></p>
 <p>商品分类服务接口：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequestMapping(&quot;category&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CategoryApi</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@GetMapping(&quot;names&quot;)</span></span><br><span class="line">    ResponseEntity&lt;List&lt;String&gt;&gt; queryNameByIds(<span class="meta">@RequestParam(&quot;ids&quot;)</span> List&lt;Long&gt; ids);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -561,20 +561,20 @@
 
 <p>是不是简单多了？</p>
 <p>项目结构：</p>
-<p> <img src="assets/1532215914558.png" alt="1532215914558"></p>
-<p> <img src="assets/1532218231760.png" alt="1532218231760"></p>
+<p> <img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532215914558.png" alt="1532215914558"></p>
+<p> <img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532218231760.png" alt="1532218231760"></p>
 <h4 id="1-3-2-3-测试"><a href="#1-3-2-3-测试" class="headerlink" title="1.3.2.3.测试"></a>1.3.2.3.测试</h4><p>在leyou-search中引入springtest依赖：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>创建测试类：</p>
 <p>在接口上按快捷键：<code>Ctrl + Shift + T</code></p>
-<p> <img src="assets/1532216103709.png" alt="1532216103709"></p>
-<p> <img src="assets/1532216169168.png" alt="1532216169168"></p>
+<p> <img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532216103709.png" alt="1532216103709"></p>
+<p> <img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532216169168.png" alt="1532216169168"></p>
 <p>测试代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith(SpringRunner.class)</span></span><br><span class="line"><span class="meta">@SpringBootTest(classes = LeyouSearchApplication.class)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CategoryClientTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> CategoryClient categoryClient;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQueryCategories</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        List&lt;String&gt; names = <span class="keyword">this</span>.categoryClient.queryNameByIds(Arrays.asList(<span class="number">1L</span>, <span class="number">2L</span>, <span class="number">3L</span>));</span><br><span class="line">        names.forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>结果：</p>
-<p><img src="assets/1532216884221.png" alt="1532216884221"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532216884221.png" alt="1532216884221"></p>
 <h2 id="1-4-导入数据"><a href="#1-4-导入数据" class="headerlink" title="1.4.导入数据"></a>1.4.导入数据</h2><p>导入数据只做一次,以后的更新删除等操作通过消息队列来操作索引库</p>
 <h3 id="1-4-1-创建GoodsRepository"><a href="#1-4-1-创建GoodsRepository" class="headerlink" title="1.4.1.创建GoodsRepository"></a>1.4.1.创建GoodsRepository</h3><p>java代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">GoodsRepository</span> <span class="keyword">extends</span> <span class="title">ElasticsearchRepository</span>&lt;<span class="title">Goods</span>, <span class="title">Long</span>&gt; </span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -585,12 +585,12 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith(SpringRunner.class)</span></span><br><span class="line"><span class="meta">@SpringBootTest(classes = LeyouSearchApplication.class)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ElasticsearchTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> GoodsRepository goodsRepository;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> ElasticsearchTemplate elasticsearchTemplate;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">createIndex</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">// 创建索引</span></span><br><span class="line">        <span class="keyword">this</span>.elasticsearchTemplate.createIndex(Goods.class);</span><br><span class="line">        <span class="comment">// 配置映射</span></span><br><span class="line">        <span class="keyword">this</span>.elasticsearchTemplate.putMapping(Goods.class);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>通过kibana查看：</p>
-<p><img src="assets/1532217819818.png" alt="1532217819818"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532217819818.png" alt="1532217819818"></p>
 <h3 id="1-4-3-导入数据"><a href="#1-4-3-导入数据" class="headerlink" title="1.4.3.导入数据"></a>1.4.3.导入数据</h3><p>导入数据其实就是查询数据，然后把查询到的Spu转变为Goods来保存，因此我们先编写一个SearchService，然后在里面定义一个方法， 把Spu转为Goods</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SearchService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> CategoryClient categoryClient;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> GoodsClient goodsClient;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> SpecificationClient specificationClient;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> ObjectMapper mapper = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Goods <span class="title">buildGoods</span><span class="params">(Spu spu)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Goods goods = <span class="keyword">new</span> Goods();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 查询商品分类名称</span></span><br><span class="line">        List&lt;String&gt; names = <span class="keyword">this</span>.categoryClient.queryNameByIds(Arrays.asList(spu.getCid1(), spu.getCid2(), spu.getCid3()));</span><br><span class="line">        <span class="comment">// 查询sku</span></span><br><span class="line">        List&lt;Sku&gt; skus = <span class="keyword">this</span>.goodsClient.querySkuBySpuId(spu.getId());</span><br><span class="line">        <span class="comment">// 查询详情</span></span><br><span class="line">        SpuDetail spuDetail = <span class="keyword">this</span>.goodsClient.querySpuDetailById(spu.getId());</span><br><span class="line">        <span class="comment">// 查询规格参数</span></span><br><span class="line">        List&lt;SpecParam&gt; params = <span class="keyword">this</span>.specificationClient.querySpecParam(<span class="keyword">null</span>, spu.getCid3(), <span class="keyword">true</span>, <span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 处理sku，仅封装id、价格、标题、图片，并获得价格集合</span></span><br><span class="line">        List&lt;Long&gt; prices = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        List&lt;Map&lt;String, Object&gt;&gt; skuList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        skus.forEach(sku -&gt; &#123;</span><br><span class="line">            prices.add(sku.getPrice());</span><br><span class="line">            Map&lt;String, Object&gt; skuMap = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">            skuMap.put(<span class="string">&quot;id&quot;</span>, sku.getId());</span><br><span class="line">            skuMap.put(<span class="string">&quot;title&quot;</span>, sku.getTitle());</span><br><span class="line">            skuMap.put(<span class="string">&quot;price&quot;</span>, sku.getPrice());</span><br><span class="line">            skuMap.put(<span class="string">&quot;image&quot;</span>, StringUtils.isBlank(sku.getImages()) ? <span class="string">&quot;&quot;</span> : StringUtils.split(sku.getImages(), <span class="string">&quot;,&quot;</span>)[<span class="number">0</span>]);</span><br><span class="line">            skuList.add(skuMap);</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 处理规格参数</span></span><br><span class="line">        Map&lt;String, Object&gt; genericSpecs = mapper.readValue(spuDetail.getGenericSpec(), <span class="keyword">new</span> TypeReference&lt;Map&lt;String, Object&gt;&gt;() &#123;</span><br><span class="line">        &#125;);</span><br><span class="line">        Map&lt;String, Object&gt; specialSpecs = mapper.readValue(spuDetail.getSpecialSpec(), <span class="keyword">new</span> TypeReference&lt;Map&lt;String, Object&gt;&gt;() &#123;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="comment">// 获取可搜索的规格参数</span></span><br><span class="line">        Map&lt;String, Object&gt; searchSpec = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 过滤规格模板，把所有可搜索的信息保存到Map中</span></span><br><span class="line">        Map&lt;String, Object&gt; specMap = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        params.forEach(p -&gt; &#123;</span><br><span class="line">            <span class="keyword">if</span> (p.getSearching()) &#123;</span><br><span class="line">                <span class="keyword">if</span> (p.getGeneric()) &#123;</span><br><span class="line">                    String value = genericSpecs.get(p.getId().toString()).toString();</span><br><span class="line">                    <span class="keyword">if</span>(p.getNumeric())&#123;</span><br><span class="line">                        value = chooseSegment(value, p);</span><br><span class="line">                    &#125;</span><br><span class="line">                    specMap.put(p.getName(), StringUtils.isBlank(value) ? <span class="string">&quot;其它&quot;</span> : value);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    specMap.put(p.getName(), specialSpecs.get(p.getId().toString()));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        goods.setId(spu.getId());</span><br><span class="line">        goods.setSubTitle(spu.getSubTitle());</span><br><span class="line">        goods.setBrandId(spu.getBrandId());</span><br><span class="line">        goods.setCid1(spu.getCid1());</span><br><span class="line">        goods.setCid2(spu.getCid2());</span><br><span class="line">        goods.setCid3(spu.getCid3());</span><br><span class="line">        goods.setCreateTime(spu.getCreateTime());</span><br><span class="line">        goods.setAll(spu.getTitle() + <span class="string">&quot; &quot;</span> + StringUtils.join(names, <span class="string">&quot; &quot;</span>));</span><br><span class="line">        goods.setPrice(prices);</span><br><span class="line">        goods.setSkus(mapper.writeValueAsString(skuList));</span><br><span class="line">        goods.setSpecs(specMap);</span><br><span class="line">        <span class="keyword">return</span> goods;</span><br><span class="line">    &#125;                                                   </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>因为过滤参数中有一类比较特殊，就是数值区间：</p>
-<p><img src="assets/1526608095471.png" alt="1526608095471"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1526608095471.png" alt="1526608095471"></p>
 <p>所以我们在存入时要进行处理：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> String <span class="title">chooseSegment</span><span class="params">(String value, SpecParam p)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">double</span> val = NumberUtils.toDouble(value);</span><br><span class="line">    String result = <span class="string">&quot;其它&quot;</span>;</span><br><span class="line">    <span class="comment">// 保存数值段</span></span><br><span class="line">    <span class="keyword">for</span> (String segment : p.getSegments().split(<span class="string">&quot;,&quot;</span>)) &#123;</span><br><span class="line">        String[] segs = segment.split(<span class="string">&quot;-&quot;</span>);</span><br><span class="line">        <span class="comment">// 获取数值范围</span></span><br><span class="line">        <span class="keyword">double</span> begin = NumberUtils.toDouble(segs[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">double</span> end = Double.MAX_VALUE;</span><br><span class="line">        <span class="keyword">if</span>(segs.length == <span class="number">2</span>)&#123;</span><br><span class="line">            end = NumberUtils.toDouble(segs[<span class="number">1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 判断是否在范围内</span></span><br><span class="line">        <span class="keyword">if</span>(val &gt;= begin &amp;&amp; val &lt; end)&#123;</span><br><span class="line">            <span class="keyword">if</span>(segs.length == <span class="number">1</span>)&#123;</span><br><span class="line">                result = segs[<span class="number">0</span>] + p.getUnit() + <span class="string">&quot;以上&quot;</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(begin == <span class="number">0</span>)&#123;</span><br><span class="line">                result = segs[<span class="number">1</span>] + p.getUnit() + <span class="string">&quot;以下&quot;</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                result = segment + p.getUnit();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -600,12 +600,12 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">loadData</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">// 创建索引</span></span><br><span class="line">    <span class="keyword">this</span>.elasticsearchTemplate.createIndex(Goods.class);</span><br><span class="line">    <span class="comment">// 配置映射</span></span><br><span class="line">    <span class="keyword">this</span>.elasticsearchTemplate.putMapping(Goods.class);</span><br><span class="line">    <span class="keyword">int</span> page = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> rows = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">int</span> size = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="comment">// 查询分页数据</span></span><br><span class="line">        PageResult&lt;SpuBo&gt; result = <span class="keyword">this</span>.goodsClient.querySpuByPage(page, rows, <span class="keyword">true</span>, <span class="keyword">null</span>);</span><br><span class="line">        List&lt;SpuBo&gt; spus = result.getItems();</span><br><span class="line">        size = spus.size();</span><br><span class="line">        <span class="comment">// 创建Goods集合</span></span><br><span class="line">        List&lt;Goods&gt; goodsList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="comment">// 遍历spu</span></span><br><span class="line">        <span class="keyword">for</span> (SpuBo spu : spus) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Goods goods = <span class="keyword">this</span>.searchService.buildGoods(spu);</span><br><span class="line">                goodsList.add(goods);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.goodsRepository.saveAll(goodsList);</span><br><span class="line">        page++;</span><br><span class="line">    &#125; <span class="keyword">while</span> (size == <span class="number">100</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>通过kibana查询， 可以看到数据成功导入：</p>
-<p><img src="assets/1532228358310.png" alt="1532228358310"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532228358310.png" alt="1532228358310"></p>
 <h1 id="2-实现基本搜索"><a href="#2-实现基本搜索" class="headerlink" title="2.实现基本搜索"></a>2.实现基本搜索</h1><h2 id="2-1-页面分析"><a href="#2-1-页面分析" class="headerlink" title="2.1.页面分析"></a>2.1.页面分析</h2><h3 id="2-1-1-页面跳转"><a href="#2-1-1-页面跳转" class="headerlink" title="2.1.1.页面跳转"></a>2.1.1.页面跳转</h3><p>在首页的顶部，有一个输入框：</p>
-<p><img src="assets/1526629923970.png" alt="1526629923970"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1526629923970.png" alt="1526629923970"></p>
 <p>当我们输入任何文本，点击搜索，就会跳转到搜索页<code>search.html</code>了：</p>
 <p>并且将搜索关键字以请求参数携带过来：</p>
-<p><img src="assets/1532229236516.png" alt="1532229236516"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532229236516.png" alt="1532229236516"></p>
 <p>我们打开<code>search.html</code>，在最下面会有提前定义好的Vue实例：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el: <span class="string">&quot;#searchApp&quot;</span>,</span></span><br><span class="line">        data: &#123;</span><br><span class="line">        &#125;,</span><br><span class="line">        components:&#123;</span><br><span class="line"><span class="javascript">            <span class="comment">// 加载页面顶部组件</span></span></span><br><span class="line"><span class="javascript">            lyTop: <span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&quot;./js/pages/top.js&quot;</span>)</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -627,11 +627,11 @@
 <li>这里使用的是post请求，这样可以携带更多参数，并且以json格式发送</li>
 </ul>
 <p>在leyou-gateway中，添加允许信任域名：</p>
-<p><img src="assets/1532233280898.png" alt="1532233280898"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532233280898.png" alt="1532233280898"></p>
 <p>并添加网关映射：</p>
-<p><img src="assets/1532233247824.png" alt="1532233247824"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532233247824.png" alt="1532233247824"></p>
 <p>刷新页面试试：</p>
-<p><img src="assets/1532233086523.png" alt="1532233086523"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532233086523.png" alt="1532233086523"></p>
 <p>因为后台没有提供接口，所以无法访问。没关系，接下来我们实现后台接口</p>
 <h2 id="2-2-后台提供搜索接口"><a href="#2-2-后台提供搜索接口" class="headerlink" title="2.2.后台提供搜索接口"></a>2.2.后台提供搜索接口</h2><h3 id="2-2-1-controller"><a href="#2-2-1-controller" class="headerlink" title="2.2.1.controller"></a>2.2.1.controller</h3><p>首先分析几个问题：</p>
 <ul>
@@ -654,8 +654,8 @@
 
 <p>注意点：我们要设置SourceFilter，来选择要返回的结果，否则返回一堆没用的数据，影响查询效率。</p>
 <h3 id="2-2-3-测试"><a href="#2-2-3-测试" class="headerlink" title="2.2.3.测试"></a>2.2.3.测试</h3><p>刷新页面测试：</p>
-<p><img src="assets/1532237344249.png" alt="1532237344249"></p>
-<p><img src="assets/1532237401249.png" alt="1532237401249"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532237344249.png" alt="1532237344249"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532237401249.png" alt="1532237401249"></p>
 <p>数据是查到了，但是因为我们只查询部分字段，所以结果json 数据中有很多null，这很不优雅。</p>
 <p>解决办法很简单，在leyou-search的application.yml中添加一行配置，json处理时忽略空值：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">jackson:</span></span><br><span class="line">    <span class="attr">default-property-inclusion:</span> <span class="string">non_null</span> <span class="comment"># 配置json处理时忽略空值</span></span><br></pre></td></tr></table></figure>
@@ -663,22 +663,22 @@
 
 
 <p>结果：</p>
-<p><img src="assets/1532237986819.png" alt="1532237986819"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532237986819.png" alt="1532237986819"></p>
 <h2 id="2-3-页面渲染"><a href="#2-3-页面渲染" class="headerlink" title="2.3.页面渲染"></a>2.3.页面渲染</h2><p>页面已经拿到了结果，接下来就要渲染样式了。</p>
 <h3 id="2-3-1-保存搜索结果"><a href="#2-3-1-保存搜索结果" class="headerlink" title="2.3.1.保存搜索结果"></a>2.3.1.保存搜索结果</h3><p>首先，在data中定义属性，保存搜索的结果：</p>
-<p><img src="assets/1532239032197.png" alt="1532239032197"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532239032197.png" alt="1532239032197"></p>
 <p>在<code>loadData</code>的异步查询中，将结果赋值给<code>goodsList</code>：</p>
-<p><img src="assets/1532239117076.png" alt="1532239117076"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532239117076.png" alt="1532239117076"></p>
 <h3 id="2-3-2-循环展示商品"><a href="#2-3-2-循环展示商品" class="headerlink" title="2.3.2.循环展示商品"></a>2.3.2.循环展示商品</h3><p>在search.html的中部，有一个<code>div</code>，用来展示所有搜索到的商品：</p>
-<p><img src="assets/1532238893722.png" alt="1532238893722"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532238893722.png" alt="1532238893722"></p>
 <p>可以看到，<code>div</code>中有一个无序列表<code>ul</code>，内部的每一个<code>li</code>就是一个商品spu了。</p>
 <p>我们删除多余的，只保留一个<code>li</code>，然后利用vue的循环来展示搜索到的结果：</p>
-<p><img src="assets/1532239244410.png" alt="1532239244410"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532239244410.png" alt="1532239244410"></p>
 <h3 id="2-3-3-多sku展示"><a href="#2-3-3-多sku展示" class="headerlink" title="2.3.3.多sku展示"></a>2.3.3.多sku展示</h3><h4 id="2-3-3-1-分析"><a href="#2-3-3-1-分析" class="headerlink" title="2.3.3.1.分析"></a>2.3.3.1.分析</h4><p>接下来展示具体的商品信息，来看图：</p>
-<p> <img src="assets/1526607712207.png" alt="1526607712207"></p>
+<p> <img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1526607712207.png" alt="1526607712207"></p>
 <p>这里我们可以发现，一个商品位置，是多个sku的信息集合。<strong>当用户鼠标选择某个sku，对应的图片、价格、标题会随之改变！</strong></p>
 <p>我们先来实现sku的选择，才能去展示不同sku的数据。</p>
-<p> <img src="assets/1526654252710.png" alt="1526654252710"></p>
+<p> <img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1526654252710.png" alt="1526654252710"></p>
 <p>可以看到，在列表中默认第一个是被选中的，那我们就需要做两件事情：</p>
 <ul>
 <li><p>在搜索到数据时，先默认把第一个sku作为被选中的，记录下来</p>
@@ -687,12 +687,12 @@
 </li>
 </ul>
 <h4 id="2-3-3-2-初始化sku"><a href="#2-3-3-2-初始化sku" class="headerlink" title="2.3.3.2.初始化sku"></a>2.3.3.2.初始化sku</h4><p>查询出的结果集skus是一个json类型的字符串，不是js对象</p>
-<p><img src="assets/1532240220800.png" alt="1532240220800"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532240220800.png" alt="1532240220800"></p>
 <p>我们在查询成功的回调函数中，对goods进行遍历，把skus转化成对象，并添加一个selected属性保存被选中的sku：</p>
-<p><img src="assets/1532240609206.png" alt="1532240609206"></p>
-<p><img src="assets/1532240586769.png" alt="1532240586769"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532240609206.png" alt="1532240609206"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532240586769.png" alt="1532240586769"></p>
 <h4 id="2-3-3-3-多sku图片列表"><a href="#2-3-3-3-多sku图片列表" class="headerlink" title="2.3.3.3.多sku图片列表"></a>2.3.3.3.多sku图片列表</h4><p>接下来，我们看看多个sku的图片列表位置：</p>
-<p><img src="assets/1532240706261.png" alt="1532240706261"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532240706261.png" alt="1532240706261"></p>
 <p>看到又是一个无序列表，这里我们也一样删掉多余的，保留一个<code>li</code>，需要注意选中的项有一个样式类：selected</p>
 <p>我们的代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--多sku图片列表--&gt;</span><br><span class="line">&lt;ul class&#x3D;&quot;skus&quot;&gt;</span><br><span class="line">    &lt;li :class&#x3D;&quot;&#123;selected: sku.id &#x3D;&#x3D; goods.selected.id&#125;&quot; v-for&#x3D;&quot;sku in goods.skus&quot; :key&#x3D;&quot;sku.id&quot;</span><br><span class="line">        @mouseEnter&#x3D;&quot;goods.selected&#x3D;sku&quot;&gt;</span><br><span class="line">        &lt;img :src&#x3D;&quot;sku.image&quot;&gt;</span><br><span class="line">    &lt;&#x2F;li&gt;</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure>
@@ -703,22 +703,22 @@
 <li>绑定了鼠标事件，鼠标进入后把当前sku赋值到goods.selected</li>
 </ul>
 <h3 id="2-3-4-展示sku其它属性"><a href="#2-3-4-展示sku其它属性" class="headerlink" title="2.3.4.展示sku其它属性"></a>2.3.4.展示sku其它属性</h3><p>现在，我们已经可以通过<code>goods.selected获取</code>用户选中的sku，那么我们就可以在页面展示了：</p>
-<p><img src="assets/1526656197524.png" alt="1526656197524"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1526656197524.png" alt="1526656197524"></p>
 <p>刷新页面：</p>
-<p> <img src="assets/1526656243166.png" alt="1526656243166"></p>
+<p> <img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1526656243166.png" alt="1526656243166"></p>
 <p>看起来很完美是吧！</p>
 <p>但其实有一些瑕疵</p>
 <h3 id="2-3-5-几个问题"><a href="#2-3-5-几个问题" class="headerlink" title="2.3.5.几个问题"></a>2.3.5.几个问题</h3><h4 id="2-3-5-1-价格显示的是分"><a href="#2-3-5-1-价格显示的是分" class="headerlink" title="2.3.5.1.价格显示的是分"></a>2.3.5.1.价格显示的是分</h4><p>首先价格显示就不正确，我们数据库中存放的是以分为单位，所以这里要格式化。</p>
 <p>好在我们之前common.js中定义了工具类，可以帮我们转换。</p>
 <p>改造：</p>
-<p><img src="assets/1532242831006.png" alt="1532242831006"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532242831006.png" alt="1532242831006"></p>
 <p>结果报错：</p>
-<p><img src="assets/1532242950035.png" alt="1532242950035"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532242950035.png" alt="1532242950035"></p>
 <p>为啥？</p>
 <p>因为在Vue范围内使用任何变量，都会默认去Vue实例中寻找，我们使用ly，但是Vue实例中没有这个变量。所以解决办法就是把ly记录到Vue实例：</p>
-<p><img src="assets/1532242983324.png" alt="1532242983324"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532242983324.png" alt="1532242983324"></p>
 <p>然后刷新页面：</p>
-<p><img src="assets/1532243052100.png" alt="1532243052100"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532243052100.png" alt="1532243052100"></p>
 <h4 id="2-3-5-2-标题过长"><a href="#2-3-5-2-标题过长" class="headerlink" title="2.3.5.2.标题过长"></a>2.3.5.2.标题过长</h4><p>标题内容太长了，已经无法完全显示，怎么办？</p>
 <p>截取一下：</p>
 <p><img src="/assets/1526656959487.png" alt="1526656959487"></p>
@@ -729,11 +729,11 @@
 <p>这是因为Vue的自动渲染是基于对象的属性变化的。比如页面使用GoodsList进行渲染，如果GoodsList变化，或者其内部的任何子对象变化，都会Vue感知，从而从新渲染页面。</p>
 <p>然而，这一切有一个前提，那就是当你第一次渲染时，对象中有哪些属性，Vue就只监视这些属性，后来添加的属性发生改变，是不会被监视到的。</p>
 <p>而我们的goods对象中，本身是没有selected属性的，是我们后来才添加进去的：</p>
-<p><img src="assets/1532243182104.png" alt="1532243182104"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532243182104.png" alt="1532243182104"></p>
 <p>这段代码稍微改造一下，即可：</p>
-<p><img src="assets/1532243275078.png" alt="1532243275078"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532243275078.png" alt="1532243275078"></p>
 <p>也就是说，我们先把selected属性初始化完毕，然后才把整个对象赋值给goodsList，这样，goodsList已初始化时就有selected属性，以后就会被正常监控了。</p>
-<p> <img src="assets/skus.gif"></p>
+<p> <img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/skus.gif"></p>
 <h1 id="3-页面分页效果"><a href="#3-页面分页效果" class="headerlink" title="3.页面分页效果"></a>3.页面分页效果</h1><p>刚才的查询中，我们默认了查询的页码和每页大小，因此所有的分页功能都无法使用，接下来我们一起看看<code>分页功能条</code>该如何制作。</p>
 <p>这里要分两步，</p>
 <ul>
@@ -741,7 +741,7 @@
 <li>第二步：点击分页按钮，我们做什么</li>
 </ul>
 <h2 id="3-1-如何生成分页条"><a href="#3-1-如何生成分页条" class="headerlink" title="3.1.如何生成分页条"></a>3.1.如何生成分页条</h2><p>先看下页面关于分页部分的代码：</p>
-<p> <img src="H:assets/1526692249371.png" alt="1526692249371"></p>
+<p> <img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1526692249371.png" alt="1526692249371"></p>
 <p>可以看到所有的分页栏内容都是写死的。</p>
 <h3 id="3-1-1-需要的数据"><a href="#3-1-1-需要的数据" class="headerlink" title="3.1.1.需要的数据"></a>3.1.1.需要的数据</h3><p>分页数据应该是根据<strong>总页数</strong>、<strong>当前页</strong>、<strong>总条数</strong>等信息来计算得出。</p>
 <ul>
@@ -754,20 +754,20 @@
 
 <p>因为page是搜索条件之一，所以记录在search对象中。</p>
 <p>要注意：我们在created钩子函数中，会读取url路径的参数，然后赋值给search。如果是第一次请求页面，page是不存在的。因此为了避免page被覆盖，我们应该这么做：</p>
-<p><img src="assets/1532243978471.png" alt="1532243978471"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532243978471.png" alt="1532243978471"></p>
 <p>不过，这个时候我们自己的search对象中的值就可有可无了</p>
 <h3 id="3-1-2-后台提供数据"><a href="#3-1-2-后台提供数据" class="headerlink" title="3.1.2.后台提供数据"></a>3.1.2.后台提供数据</h3><p>后台返回的结果中，要包含total和totalPage，我们改造下刚才的接口：</p>
 <p>在我们返回的PageResult对象中，其实是有totalPage字段的：</p>
-<p>  <img src="assets/1526695144476.png" alt="1526695144476"></p>
+<p>  <img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1526695144476.png" alt="1526695144476"></p>
 <p>我们在返回时，把这个值填上：</p>
 <p> <img src="/assets/1526695592422.png" alt="1526695592422"></p>
 <p>页面测试一下：</p>
-<p><img src="assets/1532244453375.png" alt="1532244453375"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532244453375.png" alt="1532244453375"></p>
 <p>OK</p>
 <h3 id="3-1-3-页面计算分页条"><a href="#3-1-3-页面计算分页条" class="headerlink" title="3.1.3.页面计算分页条"></a>3.1.3.页面计算分页条</h3><p>首先，把后台提供的数据保存在data中：</p>
-<p> <img src="H:/%E4%B9%90%E4%BC%98/7%E6%9C%881%E5%8F%B7%E6%9B%B4%E6%96%B0/day12-%E5%9F%BA%E6%9C%AC%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/assets/1526695967230.png" alt="1526695967230"></p>
+<p> <img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/%E4%B9%90%E4%BC%98/7%E6%9C%881%E5%8F%B7%E6%9B%B4%E6%96%B0/day12-%E5%9F%BA%E6%9C%AC%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/assets/1526695967230.png" alt="1526695967230"></p>
 <p>然后看下我们要实现的效果：</p>
-<p><img src="H:/%E4%B9%90%E4%BC%98/7%E6%9C%881%E5%8F%B7%E6%9B%B4%E6%96%B0/day12-%E5%9F%BA%E6%9C%AC%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/assets/1526695821870.png" alt="1526695821870"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/%E4%B9%90%E4%BC%98/7%E6%9C%881%E5%8F%B7%E6%9B%B4%E6%96%B0/day12-%E5%9F%BA%E6%9C%AC%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/assets/1526695821870.png" alt="1526695821870"></p>
 <p>这里最复杂的是中间的1~5的分页按钮，它需要动态变化。</p>
 <p>思路分析：</p>
 <ul>
@@ -781,14 +781,14 @@
 </li>
 </ul>
 <p>所以，我们的页面这样来做：</p>
-<p><img src="assets/1532246481241.png" alt="1532246481241"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532246481241.png" alt="1532246481241"></p>
 <p>a标签中的分页数字通过<code>index</code>函数来计算，需要把<code>i</code>传递过去：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">index(i)&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">this</span>.search.page &lt;= <span class="number">3</span> || <span class="built_in">this</span>.totalPage &lt;= <span class="number">5</span>)&#123;</span><br><span class="line">        <span class="comment">// 如果当前页小于等于3或者总页数小于等于5</span></span><br><span class="line">        <span class="keyword">return</span> i;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">this</span>.search.page &gt; <span class="number">3</span>) &#123;</span><br><span class="line">        <span class="comment">// 如果当前页大于3</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.search.page - <span class="number">3</span> + i;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.totalPage - <span class="number">5</span> + i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
 <p>需要注意的是，如果总页数不足5页，我们就不应该遍历1<del>5，而是1</del>总页数，稍作改进：</p>
-<p><img src="assets/1526698842013.png" alt="1526698842013"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1526698842013.png" alt="1526698842013"></p>
 <p>分页条的其它部分就比较简单了：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;sui-pagination pagination-large&quot;&gt;</span><br><span class="line">    &lt;ul style&#x3D;&quot;width: 550px&quot;&gt;</span><br><span class="line">        &lt;li :class&#x3D;&quot;&#123;prev:true,disabled:search.page &#x3D;&#x3D;&#x3D; 1&#125;&quot;&gt;</span><br><span class="line">            &lt;a href&#x3D;&quot;#&quot;&gt;«上一页&lt;&#x2F;a&gt;</span><br><span class="line">        &lt;&#x2F;li&gt;</span><br><span class="line">        &lt;li :class&#x3D;&quot;&#123;active: index(i) &#x3D;&#x3D;&#x3D; search.page&#125;&quot; v-for&#x3D;&quot;i in Math.min(5,totalPage)&quot; :key&#x3D;&quot;i&quot;&gt;</span><br><span class="line">            &lt;a href&#x3D;&quot;#&quot;&gt;&#123;&#123;index(i)&#125;&#125;&lt;&#x2F;a&gt;</span><br><span class="line">        &lt;&#x2F;li&gt;</span><br><span class="line">        &lt;li class&#x3D;&quot;dotted&quot; v-show&#x3D;&quot;totalPage &gt; 5&quot;&gt;&lt;span&gt;...&lt;&#x2F;span&gt;&lt;&#x2F;li&gt;</span><br><span class="line">        &lt;li :class&#x3D;&quot;&#123;next:true,disabled:search.page &#x3D;&#x3D;&#x3D; totalPage&#125;&quot;&gt;</span><br><span class="line">            &lt;a href&#x3D;&quot;#&quot;&gt;下一页»&lt;&#x2F;a&gt;</span><br><span class="line">        &lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span&gt;共&#123;&#123;totalPage&#125;&#125;页&amp;nbsp;&lt;&#x2F;span&gt;</span><br><span class="line">        &lt;span&gt;</span><br><span class="line">            到第</span><br><span class="line">            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;page-num&quot; :value&#x3D;&quot;search.page&quot;&gt;</span><br><span class="line">            页 &lt;button class&#x3D;&quot;page-confirm&quot; onclick&#x3D;&quot;alert(1)&quot;&gt;确定&lt;&#x2F;button&gt;</span><br><span class="line">        &lt;&#x2F;span&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
 
@@ -798,7 +798,7 @@
 
 <h2 id="3-2-点击分页做什么"><a href="#3-2-点击分页做什么" class="headerlink" title="3.2.点击分页做什么"></a>3.2.点击分页做什么</h2><p>点击分页按钮后，自然是要修改<code>page</code>的值</p>
 <p>所以，我们在<code>上一页</code>、<code>下一页</code>按钮添加点击事件，对page进行修改，在数字按钮上绑定点击事件，点击直接修改page：</p>
-<p><img src="assets/1532248549662.png" alt="1532248549662"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532248549662.png" alt="1532248549662"></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">prevPage()&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">this</span>.search.page &gt; <span class="number">1</span>)&#123;</span><br><span class="line">        <span class="built_in">this</span>.search.page--</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">nextPage()&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">this</span>.search.page &lt; <span class="built_in">this</span>.totalPage)&#123;</span><br><span class="line">        <span class="built_in">this</span>.search.page++</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -818,11 +818,11 @@
 
 <p>再次刷新，OK了！</p>
 <h2 id="3-3-页面顶部分页条"><a href="#3-3-页面顶部分页条" class="headerlink" title="3.3.页面顶部分页条"></a>3.3.页面顶部分页条</h2><p>在页面商品列表的顶部，也有一个分页条：</p>
-<p> <img src="assets/1526716212704.png" alt="1526716212704"></p>
+<p> <img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1526716212704.png" alt="1526716212704"></p>
 <p>我们把这一部分，也加上点击事件：</p>
-<p><img src="assets/1532248435097.png" alt="1532248435097"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1532248435097.png" alt="1532248435097"></p>
 <h1 id="4-排序-作业"><a href="#4-排序-作业" class="headerlink" title="4.排序(作业)"></a>4.排序(作业)</h1><h2 id="4-1-页面搜索排序条件"><a href="#4-1-页面搜索排序条件" class="headerlink" title="4.1.页面搜索排序条件"></a>4.1.页面搜索排序条件</h2><p>在搜索商品列表的顶部，有这么一部分内容：</p>
-<p> <img src="assets/1526716565293.png" alt="1526716565293"></p>
+<p> <img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1526716565293.png" alt="1526716565293"></p>
 <p>这是用来做排序的，默认按照综合排序。点击新品，应该按照商品创建时间排序，点击价格应该按照价格排序。因为我们没有统计销量和评价，这里咱们以<code>新品</code>和<code>价格</code>为例，进行讲解，做法是想通的。</p>
 <p>排序需要知道两个内容：</p>
 <ul>
@@ -830,23 +830,23 @@
 <li>排序的方式</li>
 </ul>
 <p>因此，我们首先在<code>search</code>中记录这两个信息，因为created钩子函数会对search进行覆盖，因此我们在钩子函数中对这两个信息进行初始化即可：</p>
-<p> <img src="assets/1526717586493.png" alt="1526717586493"></p>
+<p> <img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1526717586493.png" alt="1526717586493"></p>
 <p>然后，在页面上给按钮绑定点击事件，修改<code>sortBy</code>和<code>descending</code>的值：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--排序字段--&gt;</span><br><span class="line">&lt;ul class&#x3D;&quot;sui-nav&quot;&gt;</span><br><span class="line">    &lt;li :class&#x3D;&quot;&#123;active:!search.sortBy&#125;&quot; @click&#x3D;&quot;search.sortBy&#x3D;&#39;&#39;&quot;&gt;</span><br><span class="line">        &lt;a href&#x3D;&quot;#&quot;&gt;综合&lt;&#x2F;a&gt;</span><br><span class="line">    &lt;&#x2F;li&gt;</span><br><span class="line">    &lt;li&gt;</span><br><span class="line">        &lt;a href&#x3D;&quot;#&quot;&gt;销量&lt;&#x2F;a&gt;</span><br><span class="line">    &lt;&#x2F;li&gt;</span><br><span class="line">    &lt;li @click&#x3D;&quot;search.sortBy&#x3D;&#39;createTime&#39;&quot; :class&#x3D;&quot;&#123;active: search.sortBy&#x3D;&#x3D;&#x3D;&#39;createTime&#39;&#125;&quot;&gt;</span><br><span class="line">        &lt;a href&#x3D;&quot;#&quot;&gt;新品&lt;&#x2F;a&gt;</span><br><span class="line">    &lt;&#x2F;li&gt;</span><br><span class="line">    &lt;li&gt;</span><br><span class="line">        &lt;a href&#x3D;&quot;#&quot;&gt;评价&lt;&#x2F;a&gt;</span><br><span class="line">    &lt;&#x2F;li&gt;</span><br><span class="line">    &lt;li @click&#x3D;&quot;search.sortBy&#x3D;&#39;price&#39;; search.descending &#x3D; !search.descending&quot;</span><br><span class="line">        :class&#x3D;&quot;&#123;active: search.sortBy&#x3D;&#x3D;&#x3D;&#39;price&#39;&#125;&quot;&gt;</span><br><span class="line">        &lt;a href&#x3D;&quot;#&quot;&gt;</span><br><span class="line">            价格</span><br><span class="line">            &lt;v-icon v-show&#x3D;&quot;search.descending&quot;&gt;arrow_drop_down&lt;&#x2F;v-icon&gt;</span><br><span class="line">            &lt;v-icon v-show&#x3D;&quot;!search.descending&quot;&gt;arrow_drop_up&lt;&#x2F;v-icon&gt;</span><br><span class="line">        &lt;&#x2F;a&gt;</span><br><span class="line">    &lt;&#x2F;li&gt;</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure>
 
 <p>可以看到，页面请求参数中已经有了排序字段了：</p>
-<p> <img src="assets/1526718252315.png" alt="1526718252315"></p>
+<p> <img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1526718252315.png" alt="1526718252315"></p>
 <h2 id="4-2-后台添加排序逻辑"><a href="#4-2-后台添加排序逻辑" class="headerlink" title="4.2.后台添加排序逻辑"></a>4.2.后台添加排序逻辑</h2><p>接下来，后台需要接收请求参数中的排序信息，然后在搜索中加入排序的逻辑。</p>
 <p>现在，我们的请求参数对象<code>SearchRequest</code>中，只有page、key两个字段。需要进行扩展：</p>
-<p> <img src="assets/1526718448918.png" alt="1526718448918"></p>
+<p> <img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1526718448918.png" alt="1526718448918"></p>
 <p>然后在搜索业务逻辑中，添加排序条件：</p>
-<p><img src="assets/1526718637618.png" alt="1526718637618"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1526718637618.png" alt="1526718637618"></p>
 <p>注意，因为我们存储在索引库中的的价格是一个数组，因此在按照价格排序时，会进行智能处理：</p>
 <ul>
 <li>如果是价格降序，则会把数组中的最大值拿来排序</li>
 <li>如果是价格升序，则会把数组中的最小值拿来排序</li>
 </ul>
-<p><img src="assets/1526719415219.png" alt="1526719415219"></p>
+<p><img src="/2018/10/14/leyou/day12-bi-ji/day12-elasticsearch2/1526719415219.png" alt="1526719415219"></p>
 
             </div>
             <hr/>

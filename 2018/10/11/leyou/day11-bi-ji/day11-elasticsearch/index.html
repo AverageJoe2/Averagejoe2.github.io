@@ -440,11 +440,11 @@
 <p>面对这样复杂的搜索业务和数据量，使用传统数据库搜索就显得力不从心，一般我们都会使用全文检索技术，比如之前大家学习过的Solr。</p>
 <p>不过今天，我们要讲的是另一个全文检索技术：Elasticsearch。</p>
 <h2 id="1-1-简介"><a href="#1-1-简介" class="headerlink" title="1.1.简介"></a>1.1.简介</h2><h3 id="1-1-1-Elastic"><a href="#1-1-1-Elastic" class="headerlink" title="1.1.1.Elastic"></a>1.1.1.Elastic</h3><p>Elastic官网：<a target="_blank" rel="noopener" href="https://www.elastic.co/cn/">https://www.elastic.co/cn/</a></p>
-<p><img src="assets/1528546351055.png" alt="1528546351055"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528546351055.png" alt="1528546351055"></p>
 <p>Elastic有一条完整的产品线及解决方案：Elasticsearch、Kibana、Logstash等，前面说的三个就是大家常说的ELK技术栈。</p>
-<p><img src="assets/1528546493105.png" alt="1528546493105"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528546493105.png" alt="1528546493105"></p>
 <h3 id="1-1-2-Elasticsearch"><a href="#1-1-2-Elasticsearch" class="headerlink" title="1.1.2.Elasticsearch"></a>1.1.2.Elasticsearch</h3><p>Elasticsearch官网：<a target="_blank" rel="noopener" href="https://www.elastic.co/cn/products/elasticsearch">https://www.elastic.co/cn/products/elasticsearch</a></p>
-<p><img src="assets/1528547087016.png" alt="1528547087016"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528547087016.png" alt="1528547087016"></p>
 <p>如上所述，Elasticsearch具备以下特点：</p>
 <ul>
 <li>分布式，无需人工搭建集群（solr就需要人为配置，使用Zookeeper作为注册中心）</li>
@@ -452,7 +452,7 @@
 <li>近实时搜索，数据更新在Elasticsearch中几乎是完全同步的。</li>
 </ul>
 <h3 id="1-1-3-版本"><a href="#1-1-3-版本" class="headerlink" title="1.1.3.版本"></a>1.1.3.版本</h3><p>目前Elasticsearch最新的版本是6.3.1，我们就使用6.3.0</p>
-<p><img src="assets/1528547283102.png" alt="1528547283102"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528547283102.png" alt="1528547283102"></p>
 <p>需要虚拟机JDK1.8及以上</p>
 <h2 id="1-2-安装和配置"><a href="#1-2-安装和配置" class="headerlink" title="1.2.安装和配置"></a>1.2.安装和配置</h2><p>为了模拟真实场景，我们将在linux下安装Elasticsearch。</p>
 <h3 id="1-2-1-新建一个用户leyou"><a href="#1-2-1-新建一个用户leyou" class="headerlink" title="1.2.1.新建一个用户leyou"></a>1.2.1.新建一个用户leyou</h3><p>出于安全考虑，elasticsearch默认不允许以root账号运行。</p>
@@ -468,8 +468,8 @@
 
 
 <h3 id="1-2-2-上传安装包-并解压"><a href="#1-2-2-上传安装包-并解压" class="headerlink" title="1.2.2.上传安装包,并解压"></a>1.2.2.上传安装包,并解压</h3><p>我们将安装包上传到：/home/leyou目录</p>
-<p><img src="assets/1528610258461.png" alt="1528610258461"></p>
-<p><img src="assets/1528551162835.png" alt="1528551162835"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528610258461.png" alt="1528610258461"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528551162835.png" alt="1528551162835"></p>
 <p>解压缩：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf elasticsearch-6.2.4.tar.gz</span><br></pre></td></tr></table></figure>
 
@@ -478,12 +478,12 @@
 <p>我们把目录重命名：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv elasticsearch-6.2.4&#x2F; elasticsearch</span><br></pre></td></tr></table></figure>
 
-<p><img src="assets/1528610397414.png" alt="1528610397414"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528610397414.png" alt="1528610397414"></p>
 <p>进入，查看目录结构：</p>
-<p><img src="assets/1528551465373.png" alt="1528551465373"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528551465373.png" alt="1528551465373"></p>
 <h3 id="1-2-3-修改配置"><a href="#1-2-3-修改配置" class="headerlink" title="1.2.3.修改配置"></a>1.2.3.修改配置</h3><p>我们进入config目录：<code>cd config</code></p>
 <p>需要修改的配置文件有两个：</p>
-<p><img src="assets/1528551598931.png" alt="1528551598931"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528551598931.png" alt="1528551598931"></p>
 <ol>
 <li><strong>jvm.options</strong></li>
 </ol>
@@ -511,7 +511,7 @@
 <p>进入elasticsearch的根目录，然后创建：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir data</span><br><span class="line">mkdir logs</span><br></pre></td></tr></table></figure>
 
-<p><img src="assets/1528552839032.png" alt="1528552839032"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528552839032.png" alt="1528552839032"></p>
 <ul>
 <li>修改绑定的ip：</li>
 </ul>
@@ -583,19 +583,19 @@
 </tr>
 </tbody></table>
 <h2 id="1-3-运行"><a href="#1-3-运行" class="headerlink" title="1.3.运行"></a>1.3.运行</h2><p>进入elasticsearch/bin目录，可以看到下面的执行文件：</p>
-<p><img src="assets/1528553103468.png" alt="1528553103468"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528553103468.png" alt="1528553103468"></p>
 <p>然后输入命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;elasticsearch</span><br></pre></td></tr></table></figure>
 
 <p>发现报错了，启动失败：</p>
-<h3 id="1-3-1-错误1：内核过低"><a href="#1-3-1-错误1：内核过低" class="headerlink" title="1.3.1.错误1：内核过低"></a>1.3.1.错误1：内核过低</h3><p><img src="assets/1528598315714.png" alt="1528598315714"></p>
+<h3 id="1-3-1-错误1：内核过低"><a href="#1-3-1-错误1：内核过低" class="headerlink" title="1.3.1.错误1：内核过低"></a>1.3.1.错误1：内核过低</h3><p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528598315714.png" alt="1528598315714"></p>
 <p>我们使用的是centos6，其linux内核版本为2.6。而Elasticsearch的插件要求至少3.5以上版本。不过没关系，我们禁用这个插件即可。</p>
 <p>修改elasticsearch.yml文件，在最下面添加如下配置：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bootstrap.system_call_filter: false</span><br></pre></td></tr></table></figure>
 
 <p>然后重启</p>
 <h3 id="1-3-2-错误2：文件权限不足"><a href="#1-3-2-错误2：文件权限不足" class="headerlink" title="1.3.2.错误2：文件权限不足"></a>1.3.2.错误2：文件权限不足</h3><p>再次启动，又出错了：</p>
-<p><img src="assets/1528599116836.png" alt="1528599116836"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528599116836.png" alt="1528599116836"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1]: max file descriptors [4096] for elasticsearch process likely too low, increase to at least [65536]</span><br></pre></td></tr></table></figure>
 
 <p>我们用的是leyou用户，而不是root，所以文件权限不足。</p>
@@ -638,20 +638,20 @@
 
 <h3 id="1-3-5-重启终端窗口"><a href="#1-3-5-重启终端窗口" class="headerlink" title="1.3.5.重启终端窗口"></a>1.3.5.重启终端窗口</h3><p>所有错误修改完毕，一定要重启你的 Xshell终端，否则配置无效。</p>
 <h3 id="1-3-6-启动"><a href="#1-3-6-启动" class="headerlink" title="1.3.6.启动"></a>1.3.6.启动</h3><p>再次启动，终于成功了！</p>
-<p><img src="assets/1528603044862.png" alt="1528603044862"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528603044862.png" alt="1528603044862"></p>
 <p>可以看到绑定了两个端口:</p>
 <ul>
 <li>9300：集群节点间通讯接口</li>
 <li>9200：客户端访问接口</li>
 </ul>
 <p>我们在浏览器中访问：<a target="_blank" rel="noopener" href="http://192.168.56.101:9200/">http://192.168.56.101:9200</a></p>
-<p><img src="assets/1528611090621.png" alt="1528611090621"></p>
-<h2 id="1-4-安装kibana"><a href="#1-4-安装kibana" class="headerlink" title="1.4.安装kibana"></a>1.4.安装kibana</h2><h3 id="1-4-1-什么是Kibana？"><a href="#1-4-1-什么是Kibana？" class="headerlink" title="1.4.1.什么是Kibana？"></a>1.4.1.什么是Kibana？</h3><p><img src="assets/1528603530298.png" alt="1528603530298"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528611090621.png" alt="1528611090621"></p>
+<h2 id="1-4-安装kibana"><a href="#1-4-安装kibana" class="headerlink" title="1.4.安装kibana"></a>1.4.安装kibana</h2><h3 id="1-4-1-什么是Kibana？"><a href="#1-4-1-什么是Kibana？" class="headerlink" title="1.4.1.什么是Kibana？"></a>1.4.1.什么是Kibana？</h3><p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528603530298.png" alt="1528603530298"></p>
 <p>Kibana是一个基于Node.js的Elasticsearch索引库数据统计工具，可以利用Elasticsearch的聚合功能，生成各种图表，如柱形图，线状图，饼图等。</p>
 <p>而且还提供了操作Elasticsearch索引数据的控制台，并且提供了一定的API提示，非常有利于我们学习Elasticsearch的语法。</p>
 <h3 id="1-4-2-安装"><a href="#1-4-2-安装" class="headerlink" title="1.4.2.安装"></a>1.4.2.安装</h3><p>因为Kibana依赖于node，我们的虚拟机没有安装node，而window中安装过。所以我们选择在window下使用kibana。</p>
 <p>最新版本与elasticsearch保持一致，也是6.3.0</p>
-<p><img src="assets/1528611218599.png" alt="1528611218599"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528611218599.png" alt="1528611218599"></p>
 <p>解压到特定目录即可</p>
 <h3 id="1-4-3-配置运行"><a href="#1-4-3-配置运行" class="headerlink" title="1.4.3.配置运行"></a>1.4.3.配置运行</h3><blockquote>
 <p>配置</p>
@@ -664,24 +664,24 @@
 <p>运行</p>
 </blockquote>
 <p>进入安装目录下的bin目录：</p>
-<p><img src="assets/1528612108406.png" alt="1528612108406"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528612108406.png" alt="1528612108406"></p>
 <p>双击运行：</p>
-<p><img src="assets/1528612216033.png" alt="1528612216033"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528612216033.png" alt="1528612216033"></p>
 <p>发现kibana的监听端口是5601</p>
 <p>我们访问：<a target="_blank" rel="noopener" href="http://127.0.0.1:5601/">http://127.0.0.1:5601</a></p>
-<p><img src="assets/1528612265677.png" alt="1528612265677"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528612265677.png" alt="1528612265677"></p>
 <h3 id="1-4-4-控制台"><a href="#1-4-4-控制台" class="headerlink" title="1.4.4.控制台"></a>1.4.4.控制台</h3><p>选择左侧的DevTools菜单，即可进入控制台页面：</p>
-<p><img src="assets/1528612350020.png" alt="1528612350020"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528612350020.png" alt="1528612350020"></p>
 <p>在页面右侧，我们就可以输入请求，访问Elasticsearch了。</p>
-<p><img src="assets/1528612514556.png" alt="1528612514556"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528612514556.png" alt="1528612514556"></p>
 <h2 id="1-5-安装ik分词器"><a href="#1-5-安装ik分词器" class="headerlink" title="1.5.安装ik分词器"></a>1.5.安装ik分词器</h2><p>Lucene的IK分词器早在2012年已经没有维护了，现在我们要使用的是在其基础上维护升级的版本，并且开发为ElasticSearch的集成插件了，与Elasticsearch一起维护升级，版本也保持一致，最新版本：6.3.0</p>
 <h3 id="1-5-1-安装"><a href="#1-5-1-安装" class="headerlink" title="1.5.1.安装"></a>1.5.1.安装</h3><p>上传课前资料中的zip包，解压到Elasticsearch目录的plugins目录中：</p>
-<p><img src="assets/1528612654570.png" alt="1526482432181"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528612654570.png" alt="1526482432181"></p>
 <p>使用unzip命令解压：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip elasticsearch-analysis-ik-6.3.0.zip -d ik-analyzer</span><br></pre></td></tr></table></figure>
 
 <p>然后重启elasticsearch：</p>
-<p><img src="assets/1528612928524.png" alt="1528612928524"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528612928524.png" alt="1528612928524"></p>
 <h3 id="1-5-2-测试"><a href="#1-5-2-测试" class="headerlink" title="1.5.2.测试"></a>1.5.2.测试</h3><p>大家先不管语法，我们先测试一波。</p>
 <p>在kibana控制台输入下面的请求：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">POST _analyze</span><br><span class="line">&#123;</span><br><span class="line">  &quot;analyzer&quot;: &quot;ik_max_word&quot;,</span><br><span class="line">  &quot;text&quot;:     &quot;我是中国人&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -693,14 +693,14 @@
 
 <h2 id="1-7-API"><a href="#1-7-API" class="headerlink" title="1.7.API"></a>1.7.API</h2><p>Elasticsearch提供了Rest风格的API，即http请求接口，而且也提供了各种语言的客户端API</p>
 <h3 id="1-7-1-Rest风格API"><a href="#1-7-1-Rest风格API" class="headerlink" title="1.7.1.Rest风格API"></a>1.7.1.Rest风格API</h3><p>文档地址：<a target="_blank" rel="noopener" href="https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html">https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html</a></p>
-<p><img src="H:/%E4%B9%90%E4%BC%98/7%E6%9C%881%E5%8F%B7%E6%9B%B4%E6%96%B0/day11-elasticsearch/assets/1526518410240.png" alt="1526518410240"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/%E4%B9%90%E4%BC%98/7%E6%9C%881%E5%8F%B7%E6%9B%B4%E6%96%B0/day11-elasticsearch/assets/1526518410240.png" alt="1526518410240"></p>
 <h3 id="1-7-2-客户端API"><a href="#1-7-2-客户端API" class="headerlink" title="1.7.2.客户端API"></a>1.7.2.客户端API</h3><p>Elasticsearch支持的客户端非常多：<a target="_blank" rel="noopener" href="https://www.elastic.co/guide/en/elasticsearch/client/index.html">https://www.elastic.co/guide/en/elasticsearch/client/index.html</a></p>
-<p><img src="assets/1528613714338.png" alt="1528613714338"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528613714338.png" alt="1528613714338"></p>
 <p>点击Java Rest Client后，你会发现又有两个：</p>
-<p><img src="assets/1528613788606.png" alt="1528613788606"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528613788606.png" alt="1528613788606"></p>
 <p>Low Level Rest Client是低级别封装，提供一些基础功能，但更灵活</p>
 <p>High Level Rest Client，是在Low  Level Rest Client基础上进行的高级别封装，功能更丰富和完善，而且API会变的简单</p>
-<p> <img src="assets/1526518875072.png" alt="1526518875072"></p>
+<p> <img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1526518875072.png" alt="1526518875072"></p>
 <h3 id="1-7-3-如何学习"><a href="#1-7-3-如何学习" class="headerlink" title="1.7.3.如何学习"></a>1.7.3.如何学习</h3><p>建议先学习Rest风格API，了解发起请求的底层实现，请求体格式等。</p>
 <h1 id="2-操作索引"><a href="#2-操作索引" class="headerlink" title="2.操作索引"></a>2.操作索引</h1><h2 id="2-1-基本概念"><a href="#2-1-基本概念" class="headerlink" title="2.1.基本概念"></a>2.1.基本概念</h2><p>Elasticsearch也是基于Lucene的全文检索库，本质也是存储数据，很多概念与MySQL类似的。</p>
 <p>对比关系：</p>
@@ -765,12 +765,12 @@
 </li>
 </ul>
 <h3 id="2-2-2-测试"><a href="#2-2-2-测试" class="headerlink" title="2.2.2.测试"></a>2.2.2.测试</h3><p>我们先用RestClient来试试</p>
-<p><img src="assets/1528615921930.png" alt="1528615921930"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528615921930.png" alt="1528615921930"></p>
 <p>响应：</p>
-<p><img src="assets/1528615945473.png" alt="1528615945473"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528615945473.png" alt="1528615945473"></p>
 <p>可以看到索引创建成功了。</p>
 <h3 id="2-2-3-使用kibana创建"><a href="#2-2-3-使用kibana创建" class="headerlink" title="2.2.3.使用kibana创建"></a>2.2.3.使用kibana创建</h3><p>kibana的控制台，可以对http请求进行简化，示例：</p>
-<p><img src="assets/1528616088691.png" alt="1528616088691"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528616088691.png" alt="1528616088691"></p>
 <p>相当于是省去了elasticsearch的服务器地址</p>
 <p>而且还有语法提示，非常舒服。</p>
 <h2 id="2-3-查看索引设置"><a href="#2-3-查看索引设置" class="headerlink" title="2.3.查看索引设置"></a>2.3.查看索引设置</h2><blockquote>
@@ -779,9 +779,9 @@
 <p>Get请求可以帮我们查看索引信息，格式：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET &#x2F;索引库名</span><br></pre></td></tr></table></figure>
 
-<p><img src="assets/1528616233409.png" alt="1528616233409"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528616233409.png" alt="1528616233409"></p>
 <p>或者，我们可以使用*来查询所有索引库配置：</p>
-<p><img src="assets/1528616305800.png" alt="1528616305800"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528616305800.png" alt="1528616305800"></p>
 <h2 id="2-4-删除索引"><a href="#2-4-删除索引" class="headerlink" title="2.4.删除索引"></a>2.4.删除索引</h2><p>删除索引使用DELETE请求</p>
 <blockquote>
 <p>语法</p>
@@ -791,11 +791,11 @@
 <blockquote>
 <p>示例</p>
 </blockquote>
-<p><img src="assets/1528616383952.png" alt="1528616383952"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528616383952.png" alt="1528616383952"></p>
 <p>再次查看heima2：</p>
-<p><img src="assets/1528616452713.png" alt="1528616452713"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528616452713.png" alt="1528616452713"></p>
 <p>当然，我们也可以用HEAD请求，查看索引是否存在：</p>
-<p><img src="assets/1528616489638.png" alt="1528616489638"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1528616489638.png" alt="1528616489638"></p>
 <h2 id="2-5-映射配置"><a href="#2-5-映射配置" class="headerlink" title="2.5.映射配置"></a>2.5.映射配置</h2><p>索引有了，接下来肯定是添加数据。但是，在添加数据之前必须定义映射。</p>
 <p>什么是映射？</p>
 <p>​    映射是定义文档的过程，文档包含哪些字段，这些字段是否保存，是否索引，是否分词等</p>
@@ -842,7 +842,7 @@
 
 
 <h3 id="2-5-3-字段属性详解"><a href="#2-5-3-字段属性详解" class="headerlink" title="2.5.3.字段属性详解"></a>2.5.3.字段属性详解</h3><h4 id="2-5-3-1-type"><a href="#2-5-3-1-type" class="headerlink" title="2.5.3.1.type"></a>2.5.3.1.type</h4><p>Elasticsearch中支持的数据类型非常丰富：</p>
-<p><img src="assets/1531712631982.png" alt="1531712631982"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531712631982.png" alt="1531712631982"></p>
 <p>我们说几个关键的：</p>
 <ul>
 <li><p>String类型，又分两种：</p>
@@ -878,7 +878,7 @@
 <p>而如果设置store为true，就会在<code>_source</code>以外额外存储一份数据，多余，因此一般我们都会将store设置为false，事实上，<strong>store的默认值就是false。</strong></p>
 <h4 id="2-5-3-4-boost"><a href="#2-5-3-4-boost" class="headerlink" title="2.5.3.4.boost"></a>2.5.3.4.boost</h4><p>激励因子，这个与lucene中一样</p>
 <p>其它的不再一一讲解，用的不多，大家参考官方文档：</p>
-<p><img src="assets/1531713176079.png" alt="1531713176079"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531713176079.png" alt="1531713176079"></p>
 <h2 id="2-6-新增数据"><a href="#2-6-新增数据" class="headerlink" title="2.6.新增数据"></a>2.6.新增数据</h2><h3 id="2-6-1-随机生成id"><a href="#2-6-1-随机生成id" class="headerlink" title="2.6.1.随机生成id"></a>2.6.1.随机生成id</h3><p>通过POST请求，可以向一个已经存在的索引库中添加数据。</p>
 <blockquote>
 <p>语法：</p>
@@ -953,7 +953,7 @@
 <blockquote>
 <p>示例：</p>
 </blockquote>
-<p><img src="assets/1531727693743.png" alt="1531727693743"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531727693743.png" alt="1531727693743"></p>
 <h1 id="3-查询"><a href="#3-查询" class="headerlink" title="3.查询"></a>3.查询</h1><p>我们从4块来讲查询：</p>
 <ul>
 <li>基本查询</li>
@@ -1011,7 +1011,7 @@
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">PUT /heima/goods/3</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;title&quot;</span>:<span class="string">&quot;小米电视4A&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;images&quot;</span>:<span class="string">&quot;http://image.leyou.com/12479122.jpg&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;price&quot;</span>:<span class="number">3899.00</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>现在，索引库中有2部手机，1台电视：</p>
-<p> <img src="assets/1531728628406.png" alt="1531728628406"></p>
+<p> <img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531728628406.png" alt="1531728628406"></p>
 <ul>
 <li>or关系</li>
 </ul>
@@ -1044,7 +1044,7 @@
 
 <p>本例中，搜索语句可以分为3个词，如果使用and关系，需要同时满足3个词才会被搜索到。这里我们采用最小品牌数：75%，那么也就是说只要匹配到总词条数量的75%即可，这里3*75% 约等于2。所以只要包含2个词条就算满足条件了。</p>
 <p>结果：</p>
-<p><img src="assets/1531730367614.png" alt="1531730367614"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531730367614.png" alt="1531730367614"></p>
 <h3 id="3-1-3-多字段查询（multi-match）"><a href="#3-1-3-多字段查询（multi-match）" class="headerlink" title="3.1.3 多字段查询（multi_match）"></a>3.1.3 多字段查询（multi_match）</h3><p><code>multi_match</code>与<code>match</code>类似，不同的是它可以在多个字段中查询</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">GET /heima/_search</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;query&quot;</span>:&#123;</span><br><span class="line">        <span class="attr">&quot;multi_match&quot;</span>: &#123;</span><br><span class="line">            <span class="attr">&quot;query&quot;</span>:    <span class="string">&quot;小米&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;fields&quot;</span>:   [ <span class="string">&quot;title&quot;</span>, <span class="string">&quot;subTitle&quot;</span> ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -1322,7 +1322,7 @@
 
 <p>完美，！</p>
 <p>如果你用kibana将结果变为柱形图，会更好看：</p>
-<p><img src="assets/1531752558505.png" alt="1531752558505"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531752558505.png" alt="1531752558505"></p>
 <h3 id="4-5-2-范围分桶range"><a href="#4-5-2-范围分桶range" class="headerlink" title="4.5.2.范围分桶range"></a>4.5.2.范围分桶range</h3><p>范围分桶与阶梯分桶类似，也是把数字按照阶段进行分组，只不过range方式需要你自己指定每一组的起始和结束大小。</p>
 <h1 id="5-Spring-Data-Elasticsearch"><a href="#5-Spring-Data-Elasticsearch" class="headerlink" title="5.Spring Data Elasticsearch"></a>5.Spring Data Elasticsearch</h1><p>Elasticsearch提供的Java客户端有一些不太方便的地方：</p>
 <ul>
@@ -1334,16 +1334,16 @@
 <p>而是学习Spring提供的套件：Spring Data Elasticsearch。</p>
 <h2 id="5-1-简介"><a href="#5-1-简介" class="headerlink" title="5.1.简介"></a>5.1.简介</h2><p>Spring Data Elasticsearch是Spring Data项目下的一个子模块。</p>
 <p>查看 Spring Data的官网：<a target="_blank" rel="noopener" href="http://projects.spring.io/spring-data/">http://projects.spring.io/spring-data/</a></p>
-<p><img src="assets/1531753066475.png" alt="1531753066475"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531753066475.png" alt="1531753066475"></p>
 <blockquote>
 <p>Spring Data的使命是为数据访问提供熟悉且一致的基于Spring的编程模型，同时仍保留底层数据存储的特殊特性。</p>
 <p>它使得使用数据访问技术，关系数据库和非关系数据库，map-reduce框架和基于云的数据服务变得容易。这是一个总括项目，其中包含许多特定于给定数据库的子项目。这些令人兴奋的技术项目背后，是由许多公司和开发人员合作开发的。</p>
 </blockquote>
 <p>Spring Data 的使命是给各种数据访问提供统一的编程接口，不管是关系型数据库（如MySQL），还是非关系数据库（如Redis），或者类似Elasticsearch这样的索引数据库。从而简化开发人员的代码，提高开发效率。</p>
 <p>包含很多不同数据操作的模块：</p>
-<p><img src="assets/1531753715580.png" alt="1531753715580"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531753715580.png" alt="1531753715580"></p>
 <p>Spring Data Elasticsearch的页面：<a target="_blank" rel="noopener" href="https://projects.spring.io/spring-data-elasticsearch/">https://projects.spring.io/spring-data-elasticsearch/</a></p>
-<p> <img src="assets/1531754111583.png" alt="1531754111583"></p>
+<p> <img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531754111583.png" alt="1531754111583"></p>
 <p>特征：</p>
 <ul>
 <li>支持Spring的基于<code>@Configuration</code>的java配置方式，或者XML配置方式</li>
@@ -1353,8 +1353,8 @@
 <li>根据持久层接口自动生成对应实现方法，无需人工编写基本操作代码（类似mybatis，根据接口自动得到实现）。当然，也支持人工定制查询</li>
 </ul>
 <h2 id="5-2-创建Demo工程"><a href="#5-2-创建Demo工程" class="headerlink" title="5.2.创建Demo工程"></a>5.2.创建Demo工程</h2><p>我们新建一个demo，学习Elasticsearch</p>
-<p><img src="assets/1531973082475.png" alt="1531973082475"></p>
-<p><img src="assets/1531974312212.png" alt="1531974312212"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531973082475.png" alt="1531973082475"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531974312212.png" alt="1531974312212"></p>
 <p>pom依赖：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.leyou.demo<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>elasticsearch<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">packaging</span>&gt;</span>jar<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>elasticsearch<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span>Demo project for Spring Boot<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.2.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span> <span class="comment">&lt;!-- lookup parent from repository --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">java.version</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-data-elasticsearch<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -1395,15 +1395,15 @@
 <h2 id="5-4-Template索引操作"><a href="#5-4-Template索引操作" class="headerlink" title="5.4.Template索引操作"></a>5.4.Template索引操作</h2><h3 id="5-4-1-创建索引和映射"><a href="#5-4-1-创建索引和映射" class="headerlink" title="5.4.1.创建索引和映射"></a>5.4.1.创建索引和映射</h3><blockquote>
 <p>创建索引</p>
 </blockquote>
-<p> <img src="assets/1531985485904.png" alt="1531985485904"></p>
+<p> <img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531985485904.png" alt="1531985485904"></p>
 <p>ElasticsearchTemplate中提供了创建索引的API：</p>
-<p><img src="assets/1531984923727.png" alt="1531984923727"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531984923727.png" alt="1531984923727"></p>
 <p>可以根据类的信息自动生成，也可以手动指定indexName和Settings</p>
 <blockquote>
 <p>映射</p>
 </blockquote>
 <p>映射相关的API：</p>
-<p><img src="assets/1531985337698.png" alt="1531985337698"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531985337698.png" alt="1531985337698"></p>
 <p>可以根据类的字节码信息（注解配置）来生成映射，或者手动编写映射</p>
 <p>我们这里采用类的字节码信息创建索引并映射：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith(SpringRunner.class)</span></span><br><span class="line"><span class="meta">@SpringBootTest(classes = ItcastElasticsearchApplication.class)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IndexTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> ElasticsearchTemplate elasticsearchTemplate;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testCreate</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">// 创建索引，会根据Item类的@Document注解信息来创建</span></span><br><span class="line">        elasticsearchTemplate.createIndex(Item.class);</span><br><span class="line">        <span class="comment">// 配置映射，会根据Item类中的id、Field等字段来自动完成映射</span></span><br><span class="line">        elasticsearchTemplate.putMapping(Item.class);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1414,23 +1414,23 @@
 
 
 <h3 id="5-3-2-删除索引"><a href="#5-3-2-删除索引" class="headerlink" title="5.3.2.删除索引"></a>5.3.2.删除索引</h3><p>删除索引的API：</p>
-<p><img src="assets/1531986474606.png" alt="1526544759120"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531986474606.png" alt="1526544759120"></p>
 <p>可以根据类名或索引名删除。</p>
 <p>示例：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteIndex</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    esTemplate.deleteIndex(<span class="string">&quot;heima&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>结果：</p>
-<p> <img src="assets/1531986618059.png" alt="1531986618059"></p>
+<p> <img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531986618059.png" alt="1531986618059"></p>
 <h2 id="5-4-Repository文档操作"><a href="#5-4-Repository文档操作" class="headerlink" title="5.4.Repository文档操作"></a>5.4.Repository文档操作</h2><p>Spring Data 的强大之处，就在于你不用写任何DAO处理，自动根据方法名或类的信息进行CRUD操作。只要你定义一个接口，然后继承Repository提供的一些子接口，就能具备各种基本的CRUD功能。</p>
 <p>我们只需要定义接口，然后继承它就OK了。</p>
-<p> <img src="../../../../%E6%95%99%E5%AD%A6/leyou1/day11/%E7%AC%94%E8%AE%B0/assets/1531987244855.png" alt="1531987244855"></p>
+<p> <img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/../../../%E6%95%99%E5%AD%A6/leyou1/day11/%E7%AC%94%E8%AE%B0/assets/1531987244855.png" alt="1531987244855"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">ItemRepository</span> <span class="keyword">extends</span> <span class="title">ElasticsearchRepository</span>&lt;<span class="title">Item</span>,<span class="title">Long</span>&gt; </span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="G:\SSM\ssm\乐优\乐优商城《项目笔记》\day11笔记\assets\1531987244855.png"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/SSM\ssm\乐优\乐优商城《项目笔记》\day11笔记\assets\1531987244855.png"></p>
 <p>来看下Repository的继承关系：</p>
-<p> <img src="assets/1531986965570.png" alt="1531986965570"></p>
+<p> <img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531986965570.png" alt="1531986965570"></p>
 <p>我们看到有一个ElasticsearchRepository接口：</p>
-<p><img src="assets/1531987044693.png" alt="1531987044693"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531987044693.png" alt="1531987044693"></p>
 <h3 id="5-4-1-新增文档"><a href="#5-4-1-新增文档" class="headerlink" title="5.4.1.新增文档"></a>5.4.1.新增文档</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> ItemRepository itemRepository;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">index</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Item item = <span class="keyword">new</span> Item(<span class="number">1L</span>, <span class="string">&quot;小米手机7&quot;</span>, <span class="string">&quot; 手机&quot;</span>,</span><br><span class="line">                         <span class="string">&quot;小米&quot;</span>, <span class="number">3499.00</span>, <span class="string">&quot;http://image.leyou.com/13123.jpg&quot;</span>);</span><br><span class="line">    itemRepository.save(item);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>去页面查询看看：</p>
@@ -1449,12 +1449,12 @@
 
 <h3 id="5-4-3-修改文档"><a href="#5-4-3-修改文档" class="headerlink" title="5.4.3.修改文档"></a>5.4.3.修改文档</h3><p>修改和新增是同一个接口，区分的依据就是id，这一点跟我们在页面发起PUT请求是类似的。</p>
 <h3 id="5-4-4-基本查询"><a href="#5-4-4-基本查询" class="headerlink" title="5.4.4.基本查询"></a>5.4.4.基本查询</h3><p>ElasticsearchRepository提供了一些基本的查询方法：</p>
-<p><img src="assets/1531989728869.png" alt="1531989728869"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531989728869.png" alt="1531989728869"></p>
 <p>我们来试试查询所有：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testFind</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">// 查询全部，并安装价格降序排序</span></span><br><span class="line">    Iterable&lt;Item&gt; items = <span class="keyword">this</span>.itemRepository.findAll(Sort.by(Sort.Direction.DESC, <span class="string">&quot;price&quot;</span>));</span><br><span class="line">    items.forEach(item-&gt; System.out.println(item));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>结果：</p>
-<p><img src="assets/1531990510740.png" alt="1531990510740"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531990510740.png" alt="1531990510740"></p>
 <h3 id="5-4-5-自定义方法"><a href="#5-4-5-自定义方法" class="headerlink" title="5.4.5.自定义方法"></a>5.4.5.自定义方法</h3><p>Spring Data 的另一个强大功能，是根据方法名称自动实现功能。</p>
 <p>比如：你的方法名叫做：findByTitle，那么它就知道你是根据title查询，然后自动帮你完成，无需写实现类。</p>
 <p>当然，方法名称要符合一定的约定：</p>
@@ -1574,16 +1574,16 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">queryByPriceBetween</span><span class="params">()</span></span>&#123;</span><br><span class="line">    List&lt;Item&gt; list = <span class="keyword">this</span>.itemRepository.findByPriceBetween(<span class="number">2000.00</span>, <span class="number">3500.00</span>);</span><br><span class="line">    <span class="keyword">for</span> (Item item : list) &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;item = &quot;</span> + item);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>结果：</p>
-<p><img src="assets/1531993518230.png" alt="1531993518230"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1531993518230.png" alt="1531993518230"></p>
 <p>虽然基本查询和自定义方法已经很强大了，但是如果是复杂查询（模糊、通配符、词条查询等）就显得力不从心了。此时，我们只能使用原生查询。</p>
 <h2 id="5-5-高级查询"><a href="#5-5-高级查询" class="headerlink" title="5.5.高级查询"></a>5.5.高级查询</h2><h3 id="5-5-1-基本查询"><a href="#5-5-1-基本查询" class="headerlink" title="5.5.1.基本查询"></a>5.5.1.基本查询</h3><p>先看看基本玩法</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQuery</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">// 词条查询</span></span><br><span class="line">    MatchQueryBuilder queryBuilder = QueryBuilders.matchQuery(<span class="string">&quot;title&quot;</span>, <span class="string">&quot;小米&quot;</span>);</span><br><span class="line">    <span class="comment">// 执行查询</span></span><br><span class="line">    Iterable&lt;Item&gt; items = <span class="keyword">this</span>.itemRepository.search(queryBuilder);</span><br><span class="line">    items.forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>Repository的search方法需要QueryBuilder参数，elasticSearch为我们提供了一个对象QueryBuilders：</p>
-<p> <img src="assets/1532008212626.png" alt="1532008212626"></p>
+<p> <img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1532008212626.png" alt="1532008212626"></p>
 <p>QueryBuilders提供了大量的静态方法，用于生成各种不同类型的查询对象，例如：词条、模糊、通配符等QueryBuilder对象。</p>
 <p>结果：</p>
-<p><img src="assets/1532008415257.png" alt="1532008415257"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1532008415257.png" alt="1532008415257"></p>
 <p>elasticsearch提供很多可用的查询方式，但是不够灵活。如果想玩过滤或者聚合查询等就很难了。</p>
 <h3 id="5-5-2-自定义查询"><a href="#5-5-2-自定义查询" class="headerlink" title="5.5.2.自定义查询"></a>5.5.2.自定义查询</h3><p>先来看最基本的match query：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testNativeQuery</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">// 构建查询条件</span></span><br><span class="line">    NativeSearchQueryBuilder queryBuilder = <span class="keyword">new</span> NativeSearchQueryBuilder();</span><br><span class="line">    <span class="comment">// 添加基本的分词查询</span></span><br><span class="line">    queryBuilder.withQuery(QueryBuilders.matchQuery(<span class="string">&quot;title&quot;</span>, <span class="string">&quot;小米&quot;</span>));</span><br><span class="line">    <span class="comment">// 执行搜索，获取结果</span></span><br><span class="line">    Page&lt;Item&gt; items = <span class="keyword">this</span>.itemRepository.search(queryBuilder.build());</span><br><span class="line">    <span class="comment">// 打印总条数</span></span><br><span class="line">    System.out.println(items.getTotalElements());</span><br><span class="line">    <span class="comment">// 打印总页数</span></span><br><span class="line">    System.out.println(items.getTotalPages());</span><br><span class="line">    items.forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1596,13 +1596,13 @@
 <li>Iterator：迭代器，本身实现了Iterator接口，因此可直接迭代得到当前页的数据</li>
 <li>其它属性：</li>
 </ul>
-<p><img src="assets/1532009679148.png" alt="1532009679148"></p>
-<p>结果：<img src="assets/1532009717623.png" alt="1532009717623"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1532009679148.png" alt="1532009679148"></p>
+<p>结果：<img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1532009717623.png" alt="1532009717623"></p>
 <h3 id="5-5-4-分页查询"><a href="#5-5-4-分页查询" class="headerlink" title="5.5.4.分页查询"></a>5.5.4.分页查询</h3><p>利用<code>NativeSearchQueryBuilder</code>可以方便的实现分页：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testNativeQuery</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">// 构建查询条件</span></span><br><span class="line">    NativeSearchQueryBuilder queryBuilder = <span class="keyword">new</span> NativeSearchQueryBuilder();</span><br><span class="line">    <span class="comment">// 添加基本的分词查询</span></span><br><span class="line">    queryBuilder.withQuery(QueryBuilders.termQuery(<span class="string">&quot;category&quot;</span>, <span class="string">&quot;手机&quot;</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 初始化分页参数</span></span><br><span class="line">    <span class="keyword">int</span> page = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> size = <span class="number">3</span>;</span><br><span class="line">    <span class="comment">// 设置分页参数</span></span><br><span class="line">    queryBuilder.withPageable(PageRequest.of(page, size));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 执行搜索，获取结果</span></span><br><span class="line">    Page&lt;Item&gt; items = <span class="keyword">this</span>.itemRepository.search(queryBuilder.build());</span><br><span class="line">    <span class="comment">// 打印总条数</span></span><br><span class="line">    System.out.println(items.getTotalElements());</span><br><span class="line">    <span class="comment">// 打印总页数</span></span><br><span class="line">    System.out.println(items.getTotalPages());</span><br><span class="line">    <span class="comment">// 每页大小</span></span><br><span class="line">    System.out.println(items.getSize());</span><br><span class="line">    <span class="comment">// 当前页</span></span><br><span class="line">    System.out.println(items.getNumber());</span><br><span class="line">    items.forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>结果：</p>
-<p><img src="assets/1532011610028.png" alt="1532011610028"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1532011610028.png" alt="1532011610028"></p>
 <p>可以发现，<strong>Elasticsearch中的分页是从第0页开始</strong>。</p>
 <h3 id="5-5-5-排序"><a href="#5-5-5-排序" class="headerlink" title="5.5.5.排序"></a>5.5.5.排序</h3><p>排序也通用通过<code>NativeSearchQueryBuilder</code>完成：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testSort</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">// 构建查询条件</span></span><br><span class="line">    NativeSearchQueryBuilder queryBuilder = <span class="keyword">new</span> NativeSearchQueryBuilder();</span><br><span class="line">    <span class="comment">// 添加基本的分词查询</span></span><br><span class="line">    queryBuilder.withQuery(QueryBuilders.termQuery(<span class="string">&quot;category&quot;</span>, <span class="string">&quot;手机&quot;</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 排序</span></span><br><span class="line">    queryBuilder.withSort(SortBuilders.fieldSort(<span class="string">&quot;price&quot;</span>).order(SortOrder.DESC));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 执行搜索，获取结果</span></span><br><span class="line">    Page&lt;Item&gt; items = <span class="keyword">this</span>.itemRepository.search(queryBuilder.build());</span><br><span class="line">    <span class="comment">// 打印总条数</span></span><br><span class="line">    System.out.println(items.getTotalElements());</span><br><span class="line">    items.forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1610,34 +1610,34 @@
 
 
 <p>结果：</p>
-<p><img src="assets/1532012155435.png" alt="1532012155435"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1532012155435.png" alt="1532012155435"></p>
 <h2 id="5-6-聚合"><a href="#5-6-聚合" class="headerlink" title="5.6.聚合"></a>5.6.聚合</h2><h3 id="5-6-1-聚合为桶"><a href="#5-6-1-聚合为桶" class="headerlink" title="5.6.1.聚合为桶"></a>5.6.1.聚合为桶</h3><p>桶就是分组，比如这里我们按照品牌brand进行分组：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testAgg</span><span class="params">()</span></span>&#123;</span><br><span class="line">    NativeSearchQueryBuilder queryBuilder = <span class="keyword">new</span> NativeSearchQueryBuilder();</span><br><span class="line">    <span class="comment">// 不查询任何结果</span></span><br><span class="line">    queryBuilder.withSourceFilter(<span class="keyword">new</span> FetchSourceFilter(<span class="keyword">new</span> String[]&#123;<span class="string">&quot;&quot;</span>&#125;, <span class="keyword">null</span>));</span><br><span class="line">    <span class="comment">// 1、添加一个新的聚合，聚合类型为terms，聚合名称为brands，聚合字段为brand</span></span><br><span class="line">    queryBuilder.addAggregation(</span><br><span class="line">        AggregationBuilders.terms(<span class="string">&quot;brands&quot;</span>).field(<span class="string">&quot;brand&quot;</span>));</span><br><span class="line">    <span class="comment">// 2、查询,需要把结果强转为AggregatedPage类型</span></span><br><span class="line">    AggregatedPage&lt;Item&gt; aggPage = (AggregatedPage&lt;Item&gt;) <span class="keyword">this</span>.itemRepository.search(queryBuilder.build());</span><br><span class="line">    <span class="comment">// 3、解析</span></span><br><span class="line">    <span class="comment">// 3.1、从结果中取出名为brands的那个聚合，</span></span><br><span class="line">    <span class="comment">// 因为是利用String类型字段来进行的term聚合，所以结果要强转为StringTerm类型</span></span><br><span class="line">    StringTerms agg = (StringTerms) aggPage.getAggregation(<span class="string">&quot;brands&quot;</span>);</span><br><span class="line">    <span class="comment">// 3.2、获取桶</span></span><br><span class="line">    List&lt;StringTerms.Bucket&gt; buckets = agg.getBuckets();</span><br><span class="line">    <span class="comment">// 3.3、遍历</span></span><br><span class="line">    <span class="keyword">for</span> (StringTerms.Bucket bucket : buckets) &#123;</span><br><span class="line">        <span class="comment">// 3.4、获取桶中的key，即品牌名称</span></span><br><span class="line">        System.out.println(bucket.getKeyAsString());</span><br><span class="line">        <span class="comment">// 3.5、获取桶中的文档数量</span></span><br><span class="line">        System.out.println(bucket.getDocCount());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
 <p>显示的结果：</p>
-<p><img src="assets/1532012598213.png" alt="1532012598213"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1532012598213.png" alt="1532012598213"></p>
 <p>关键API：</p>
 <ul>
 <li><p><code>AggregationBuilders</code>：聚合的构建工厂类。所有聚合都由这个类来构建，看看他的静态方法：</p>
-<p><img src="assets/1526567597724.png" alt="1526567597724"></p>
+<p><img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1526567597724.png" alt="1526567597724"></p>
 </li>
 <li><p><code>AggregatedPage</code>：聚合查询的结果类。它是<code>Page&lt;T&gt;</code>的子接口：</p>
-<p> <img src="assets/1526567748355.png" alt="1526567748355"></p>
+<p> <img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1526567748355.png" alt="1526567748355"></p>
 <p><code>AggregatedPage</code>在<code>Page</code>功能的基础上，拓展了与聚合相关的功能，它其实就是对聚合结果的一种封装，大家可以对照聚合结果的JSON结构来看。</p>
-<p> <img src="assets/1526567889455.png" alt="1526567889455"></p>
+<p> <img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1526567889455.png" alt="1526567889455"></p>
 <p>而返回的结果都是Aggregation类型对象，不过根据字段类型不同，又有不同的子类表示</p>
-<p> <img src="assets/1526568128210.png" alt="1526568128210"></p>
+<p> <img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1526568128210.png" alt="1526568128210"></p>
 </li>
 </ul>
 <p>我们看下页面的查询的JSON结果与Java类的对照关系：</p>
-<p> <img src="assets/1526571200130.png" alt="1526571200130"></p>
+<p> <img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1526571200130.png" alt="1526571200130"></p>
 <h3 id="5-6-2-嵌套聚合，求平均值"><a href="#5-6-2-嵌套聚合，求平均值" class="headerlink" title="5.6.2.嵌套聚合，求平均值"></a>5.6.2.嵌套聚合，求平均值</h3><p>代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testSubAgg</span><span class="params">()</span></span>&#123;</span><br><span class="line">    NativeSearchQueryBuilder queryBuilder = <span class="keyword">new</span> NativeSearchQueryBuilder();</span><br><span class="line">    <span class="comment">// 不查询任何结果</span></span><br><span class="line">    queryBuilder.withSourceFilter(<span class="keyword">new</span> FetchSourceFilter(<span class="keyword">new</span> String[]&#123;<span class="string">&quot;&quot;</span>&#125;, <span class="keyword">null</span>));</span><br><span class="line">    <span class="comment">// 1、添加一个新的聚合，聚合类型为terms，聚合名称为brands，聚合字段为brand</span></span><br><span class="line">    queryBuilder.addAggregation(</span><br><span class="line">        AggregationBuilders.terms(<span class="string">&quot;brands&quot;</span>).field(<span class="string">&quot;brand&quot;</span>)</span><br><span class="line">        .subAggregation(AggregationBuilders.avg(<span class="string">&quot;priceAvg&quot;</span>).field(<span class="string">&quot;price&quot;</span>)) <span class="comment">// 在品牌聚合桶内进行嵌套聚合，求平均值</span></span><br><span class="line">    );</span><br><span class="line">    <span class="comment">// 2、查询,需要把结果强转为AggregatedPage类型</span></span><br><span class="line">    AggregatedPage&lt;Item&gt; aggPage = (AggregatedPage&lt;Item&gt;) <span class="keyword">this</span>.itemRepository.search(queryBuilder.build());</span><br><span class="line">    <span class="comment">// 3、解析</span></span><br><span class="line">    <span class="comment">// 3.1、从结果中取出名为brands的那个聚合，</span></span><br><span class="line">    <span class="comment">// 因为是利用String类型字段来进行的term聚合，所以结果要强转为StringTerm类型</span></span><br><span class="line">    StringTerms agg = (StringTerms) aggPage.getAggregation(<span class="string">&quot;brands&quot;</span>);</span><br><span class="line">    <span class="comment">// 3.2、获取桶</span></span><br><span class="line">    List&lt;StringTerms.Bucket&gt; buckets = agg.getBuckets();</span><br><span class="line">    <span class="comment">// 3.3、遍历</span></span><br><span class="line">    <span class="keyword">for</span> (StringTerms.Bucket bucket : buckets) &#123;</span><br><span class="line">        <span class="comment">// 3.4、获取桶中的key，即品牌名称  3.5、获取桶中的文档数量</span></span><br><span class="line">        System.out.println(bucket.getKeyAsString() + <span class="string">&quot;，共&quot;</span> + bucket.getDocCount() + <span class="string">&quot;台&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3.6.获取子聚合结果：</span></span><br><span class="line">        InternalAvg avg = (InternalAvg) bucket.getAggregations().asMap().get(<span class="string">&quot;priceAvg&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;平均售价：&quot;</span> + avg.getValue());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>结果：</p>
-<p> <img src="assets/1526572198447.png" alt="1526572198447"></p>
+<p> <img src="/2018/10/11/leyou/day11-bi-ji/day11-elasticsearch/1526572198447.png" alt="1526572198447"></p>
 
             </div>
             <hr/>

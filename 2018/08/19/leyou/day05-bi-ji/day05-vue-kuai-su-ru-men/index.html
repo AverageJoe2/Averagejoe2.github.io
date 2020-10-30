@@ -476,7 +476,7 @@
 <li><p>2010年，NPM作为node.js的包管理系统首次发布，开发人员可以遵循Common.js规范来编写Node.js模块，然后发布到NPM上供其他开发人员使用。目前已经是世界最大的包模块管理系统。</p>
 </li>
 <li><p>随后，在node的基础上，涌现出了一大批的前端框架：</p>
-<p> <img src="assets/1525825983230.png" alt="1525825983230"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525825983230.png" alt="1525825983230"></p>
 </li>
 </ul>
 <blockquote>
@@ -494,38 +494,38 @@
 <li>当用户修改了View，Model中的数据也会跟着改变。</li>
 </ul>
 <p>把开发人员从繁琐的DOM操作中解放出来，把关注点放在如何操作Model上。</p>
-<p> <img src="assets/1525828854056.png" alt="1525828854056"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525828854056.png" alt="1525828854056"></p>
 <p>而我们今天要学习的，就是一款MVVM模式的框架：Vue</p>
 <h1 id="1-认识Vue"><a href="#1-认识Vue" class="headerlink" title="1.认识Vue"></a>1.认识Vue</h1><p>Vue (读音 /vjuː/，类似于 <strong>view</strong>) 是一套用于构建用户界面的<strong>渐进式框架</strong>。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与<a target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/guide/single-file-components.html">现代化的工具链</a>以及各种<a target="_blank" rel="noopener" href="https://github.com/vuejs/awesome-vue#libraries--plugins">支持类库</a>结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。</p>
 <p>​    前端框架三巨头：Vue.js、React.js、AngularJS，vue.js以期轻量易用著称，vue.js和React.js发展速度最快，AngularJS还是老大。</p>
 <p>官网：<a target="_blank" rel="noopener" href="https://cn.vuejs.org/">https://cn.vuejs.org/</a></p>
 <p>参考：<a target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/guide/">https://cn.vuejs.org/v2/guide/</a></p>
-<p><img src="assets/1525829249048.png" alt="1525829249048"></p>
+<p><img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525829249048.png" alt="1525829249048"></p>
 <p>Git地址：<a target="_blank" rel="noopener" href="https://github.com/vuejs">https://github.com/vuejs</a></p>
-<p><img src="assets/1525829030730.png" alt="1525829030730"></p>
+<p><img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525829030730.png" alt="1525829030730"></p>
 <p><strong>尤雨溪</strong>，Vue.js 创作者，Vue Technology创始人，致力于Vue的研究开发。</p>
 <h1 id="2-Node和NPM"><a href="#2-Node和NPM" class="headerlink" title="2.Node和NPM"></a>2.Node和NPM</h1><p>前面说过，NPM是Node提供的模块管理工具，可以非常方便的下载安装很多前端框架，包括Jquery、AngularJS、VueJs都有。为了后面学习方便，我们先安装node及NPM工具。</p>
 <h2 id="2-1-下载Node-js"><a href="#2-1-下载Node-js" class="headerlink" title="2.1.下载Node.js"></a>2.1.下载Node.js</h2><p>下载地址：<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
-<p><img src="assets/1525830686367.png" alt="1525830686367"></p>
+<p><img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525830686367.png" alt="1525830686367"></p>
 <p>推荐下载LTS版本。</p>
 <p>课程中采用的是8.9.0版本。目前最新的是8.11.1。大家自行下载。然后下一步安装即可。</p>
 <p>完成以后，在控制台输入：</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node <span class="literal">-v</span></span><br></pre></td></tr></table></figure>
 
 <p>看到版本信息：</p>
-<p> <img src="assets/1525831616514.png" alt="1525831616514"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525831616514.png" alt="1525831616514"></p>
 <h2 id="2-2-NPM"><a href="#2-2-NPM" class="headerlink" title="2.2.NPM"></a>2.2.NPM</h2><p>安装完成Node应该自带了NPM了，在控制台输入<code>npm -v</code>查看：</p>
-<p> <img src="assets/1525831670850.png" alt="1525831670850"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525831670850.png" alt="1525831670850"></p>
 <p>npm默认的仓库地址是在国外网站，速度较慢，建议大家设置到淘宝镜像。但是切换镜像是比较麻烦的。推荐一款切换镜像的工具：nrm</p>
 <p>我们首先安装nrm，这里<code>-g</code>代表全局安装</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install nrm -g</span><br></pre></td></tr></table></figure>
 
 <p>然后通过<code>nrm ls</code>命令查看npm的仓库列表,带*的就是当前选中的镜像仓库：</p>
-<p> <img src="assets/1525831918982.png" alt="1525831918982"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525831918982.png" alt="1525831918982"></p>
 <p>通过<code>nrm use taobao</code>来指定要使用的镜像源：</p>
-<p><img src="assets/1525831983603.png" alt="1525831983603"></p>
+<p><img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525831983603.png" alt="1525831983603"></p>
 <p>然后通过<code>nrm test npm </code>来测试速度：</p>
-<p> <img src="assets/1525832070968.png" alt="1525832070968"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525832070968.png" alt="1525832070968"></p>
 <p>注意：</p>
 <ul>
 <li>有教程推荐大家使用cnpm命令，但是使用发现cnpm有时会有bug，不推荐。</li>
@@ -535,15 +535,15 @@
 </ul>
 <h1 id="3-快速入门"><a href="#3-快速入门" class="headerlink" title="3.快速入门"></a>3.快速入门</h1><p>接下来，我们快速领略下vue的魅力</p>
 <h2 id="3-1-创建工程"><a href="#3-1-创建工程" class="headerlink" title="3.1.创建工程"></a>3.1.创建工程</h2><p>创建一个新的工程：</p>
-<p> <img src="assets/1525830180378.png" alt="1525830180378"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525830180378.png" alt="1525830180378"></p>
 <p>选中一个空的：</p>
-<p> <img src="assets/1525832233385.png" alt="1525832233385"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525832233385.png" alt="1525832233385"></p>
 <p>然后新建一个module：</p>
-<p> <img src="assets/1525832250071.png" alt="1525832250071"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525832250071.png" alt="1525832250071"></p>
 <p>选中static web，静态web项目：</p>
-<p> <img src="assets/1525832275532.png" alt="1525832275532"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525832275532.png" alt="1525832275532"></p>
 <p>位置信息：</p>
-<p> <img src="assets/1525832294322.png" alt="1525832294322"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525832294322.png" alt="1525832294322"></p>
 <h2 id="3-2-安装vue"><a href="#3-2-安装vue" class="headerlink" title="3.2.安装vue"></a>3.2.安装vue</h2><h3 id="3-2-1-下载安装"><a href="#3-2-1-下载安装" class="headerlink" title="3.2.1.下载安装"></a>3.2.1.下载安装</h3><p>下载地址：<a target="_blank" rel="noopener" href="https://github.com/vuejs/vue">https://github.com/vuejs/vue</a></p>
 <p>可以下载2.5.16版本<a target="_blank" rel="noopener" href="https://github.com/vuejs/vue/archive/v2.5.16.zip">https://github.com/vuejs/vue/archive/v2.5.16.zip</a></p>
 <p>下载解压，得到vue.js文件。</p>
@@ -556,19 +556,19 @@
 
 
 <h3 id="3-2-3-推荐npm安装"><a href="#3-2-3-推荐npm安装" class="headerlink" title="3.2.3.推荐npm安装"></a>3.2.3.推荐npm安装</h3><p>在idea的左下角，有个Terminal按钮，点击打开控制台：</p>
-<p> <img src="assets/1525832726161.png" alt="1525832726161"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525832726161.png" alt="1525832726161"></p>
 <p>进入hello-vue目录：</p>
-<p> <img src="assets/1525833019284.png" alt="1525833019284"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525833019284.png" alt="1525833019284"></p>
 <p>先输入：<code>npm init -y</code> 进行初始化</p>
-<p>  <img src="assets/1525833057884.png" alt="1525833057884"></p>
+<p>  <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525833057884.png" alt="1525833057884"></p>
 <p>安装Vue，输入命令：<code>npm install vue --save</code></p>
-<p><img src="assets/1525833109155.png" alt="1525833109155"></p>
+<p><img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525833109155.png" alt="1525833109155"></p>
 <p>然后就会在hello-vue目录发现一个node_modules目录，并且在下面有一个vue目录。</p>
-<p> <img src="assets/1525833163686.png" alt="1525833163686"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525833163686.png" alt="1525833163686"></p>
 <p>node_modules是通过npm安装的所有模块的默认位置。</p>
-<h2 id="3-3-vue入门案例"><a href="#3-3-vue入门案例" class="headerlink" title="3.3.vue入门案例"></a>3.3.vue入门案例</h2><h3 id="3-3-1-HTML模板"><a href="#3-3-1-HTML模板" class="headerlink" title="3.3.1.HTML模板"></a>3.3.1.HTML模板</h3><p> 在hello-vue目录新建一个HTML<img src="assets/1525833345526.png" alt="1525833345526"></p>
+<h2 id="3-3-vue入门案例"><a href="#3-3-vue入门案例" class="headerlink" title="3.3.vue入门案例"></a>3.3.vue入门案例</h2><h3 id="3-3-1-HTML模板"><a href="#3-3-1-HTML模板" class="headerlink" title="3.3.1.HTML模板"></a>3.3.1.HTML模板</h3><p> 在hello-vue目录新建一个HTML<img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525833345526.png" alt="1525833345526"></p>
 <p>在hello.html中，我们编写一段简单的代码：</p>
-<p><img src="assets/1525833809054.png" alt="1525833809054"></p>
+<p><img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525833809054.png" alt="1525833809054"></p>
 <p>h2中要输出一句话：xx 非常帅。前面的xx是要渲染的数据。</p>
 <h3 id="3-3-2-vue渲染"><a href="#3-3-2-vue渲染" class="headerlink" title="3.3.2.vue渲染"></a>3.3.2.vue渲染</h3><p>然后我们通过Vue进行渲染：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123;name&#125;&#125; 非常帅<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./node_modules/vue/dist/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="comment">// 生成一个Vue实例</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el:<span class="string">&quot;#app&quot;</span>, <span class="comment">// el,即element。要渲染的的页面元素</span></span></span><br><span class="line"><span class="javascript">        data:&#123; <span class="comment">// 数据</span></span></span><br><span class="line"><span class="javascript">            name:<span class="string">&quot;虎哥&quot;</span></span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -586,9 +586,9 @@
 <li>页面中的<code>h2</code>元素中，我们通过的方式，来渲染刚刚定义的name属性。</li>
 </ul>
 <p>打开页面查看效果：</p>
-<p> <img src="assets/1525834212902.png" alt="1525834212902"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525834212902.png" alt="1525834212902"></p>
 <p>更神奇的在于，当你修改name属性时，页面会跟着变化：</p>
-<p> <img src="assets/ScreenGif-1525834621341.gif"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/ScreenGif-1525834621341.gif"></p>
 <h3 id="3-3-3-双向绑定"><a href="#3-3-3-双向绑定" class="headerlink" title="3.3.3.双向绑定"></a>3.3.3.双向绑定</h3><p>我们对刚才的案例进行简单修改：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;num&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span></span><br><span class="line">        &#123;&#123;name&#125;&#125; 非常帅,</span><br><span class="line">        有&#123;&#123;num&#125;&#125;位女神为他着迷。</span><br><span class="line">    <span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./node_modules/vue/dist/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="comment">// 生成一个Vue实例</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el:<span class="string">&quot;#app&quot;</span>, <span class="comment">// el,即element。要渲染的的页面元素</span></span></span><br><span class="line"><span class="javascript">        data:&#123; <span class="comment">// 数据</span></span></span><br><span class="line"><span class="javascript">            name:<span class="string">&quot;虎哥&quot;</span>,</span></span><br><span class="line">            num:1</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -598,7 +598,7 @@
 <li>同时通过<code>&#123;&#123;num&#125;&#125;</code>在页面输出</li>
 </ul>
 <p>效果：</p>
-<p> <img src="assets/2.gif"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/2.gif"></p>
 <p>我们可以观察到，输入框的变化引起了data中的num的变化，同时页面输出也跟着变化。</p>
 <ul>
 <li>input与num绑定，input的value值变化，影响到了data中的num值</li>
@@ -613,7 +613,7 @@
 <li>普通click是无法直接操作num的。</li>
 </ul>
 <p>效果：</p>
-<p> <img src="assets/3.gif"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/3.gif"></p>
 <h1 id="4-Vue实例"><a href="#4-Vue实例" class="headerlink" title="4.Vue实例"></a>4.Vue实例</h1><h2 id="4-1-创建Vue实例"><a href="#4-1-创建Vue实例" class="headerlink" title="4.1.创建Vue实例"></a>4.1.创建Vue实例</h2><p>每个 Vue 应用都是通过用 <code>Vue</code> 函数创建一个新的 <strong>Vue 实例</strong>开始的：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  <span class="comment">// 选项</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
@@ -654,7 +654,7 @@
 
 <h2 id="4-5-生命周期钩子"><a href="#4-5-生命周期钩子" class="headerlink" title="4.5.生命周期钩子"></a>4.5.生命周期钩子</h2><h3 id="4-5-1-生命周期"><a href="#4-5-1-生命周期" class="headerlink" title="4.5.1.生命周期"></a>4.5.1.生命周期</h3><p>每个 Vue 实例在被创建时都要经过一系列的初始化过程 ：创建实例，装载模板，渲染模板等等。Vue为生命周期中的每个状态都设置了钩子函数（监听函数）。每当Vue实例处于不同的生命周期时，对应的函数就会被触发调用。</p>
 <p>生命周期：</p>
-<p><img src="assets/lifecycle.png" alt="Vue life cycle"></p>
+<p><img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/lifecycle.png" alt="Vue life cycle"></p>
 <h3 id="4-5-2-钩子函数"><a href="#4-5-2-钩子函数" class="headerlink" title="4.5.2.钩子函数"></a>4.5.2.钩子函数</h3><p>例如：created代表在vue实例创建后；</p>
 <p>我们可以在Vue中定义一个created函数，代表这个时期的构造函数：</p>
 <p>html:</p>
@@ -664,12 +664,12 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el:<span class="string">&quot;#app&quot;</span>,</span><br><span class="line">    data:&#123;</span><br><span class="line">        hello: <span class="string">&#x27;&#x27;</span> <span class="comment">// hello初始化为空</span></span><br><span class="line">    &#125;,</span><br><span class="line">    created()&#123;</span><br><span class="line">        <span class="built_in">this</span>.hello = <span class="string">&quot;hello, world！ 我出生了！&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <p>结果：</p>
-<p> <img src="assets/1525843098485.png" alt="1525843098485"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525843098485.png" alt="1525843098485"></p>
 <h3 id="4-5-3-this"><a href="#4-5-3-this" class="headerlink" title="4.5.3.this"></a>4.5.3.this</h3><p>我们可以看下在vue内部的this变量是谁，我们在created的时候，打印this</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el:<span class="string">&quot;#app&quot;</span>,</span><br><span class="line">    data:&#123;</span><br><span class="line">        hello: <span class="string">&#x27;&#x27;</span> <span class="comment">// hello初始化为空</span></span><br><span class="line">    &#125;,</span><br><span class="line">    created()&#123;</span><br><span class="line">        <span class="built_in">this</span>.hello = <span class="string">&quot;hello, world！ 我出生了！&quot;</span>;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <p> 控制台的输出：</p>
-<p><img src="assets/1525843381094.png" alt="1525843381094"></p>
+<p><img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525843381094.png" alt="1525843381094"></p>
 <h1 id="5-指令"><a href="#5-指令" class="headerlink" title="5.指令"></a>5.指令</h1><p>什么是指令？</p>
 <p>指令 (Directives) 是带有 <code>v-</code> 前缀的特殊特性。指令特性的预期值是：<strong>单个 JavaScript 表达式</strong>。指令的职责是，当表达式的值改变时，将其产生的连带影响，响应式地作用于 DOM。 </p>
 <p>例如我们在入门案例中的v-on，代表绑定事件。</p>
@@ -693,9 +693,9 @@
 
 <h3 id="5-1-2-插值闪烁"><a href="#5-1-2-插值闪烁" class="headerlink" title="5.1.2.插值闪烁"></a>5.1.2.插值闪烁</h3><p>使用<code>&#123;&#123;&#125;&#125;`方式在网速较慢时会出现问题。在数据未加载完成时，页面会显示出原始的`&#123;&#123;&#125;&#125;</code>，加载完毕后才显示正确数据，我们称为插值闪烁。</p>
 <p>我们将网速调慢一些，然后试试看刚才的案例：</p>
-<p><img src="assets/1525843894502.png" alt="1525843894502"></p>
+<p><img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525843894502.png" alt="1525843894502"></p>
 <p>刷新页面：</p>
-<p> <img src="assets/4.gif"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/4.gif"></p>
 <h3 id="5-1-3-v-text和v-html"><a href="#5-1-3-v-text和v-html" class="headerlink" title="5.1.3.v-text和v-html"></a>5.1.3.v-text和v-html</h3><p>使用v-text和v-html指令来替代<code>&#123;&#123;&#125;&#125;</code></p>
 <p>说明：</p>
 <ul>
@@ -710,7 +710,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el:<span class="string">&quot;#app&quot;</span>,</span><br><span class="line">    data:&#123;</span><br><span class="line">        hello: <span class="string">&quot;&lt;h1&gt;大家好，我是虎哥&lt;/h1&gt;&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <p>效果：</p>
-<p> <img src="assets/1525844448278.png" alt="1525844448278"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525844448278.png" alt="1525844448278"></p>
 <p>并且不会出现插值闪烁，当没有数据时，会显示空白。</p>
 <h2 id="5-2-v-model"><a href="#5-2-v-model" class="headerlink" title="5.2.v-model"></a>5.2.v-model</h2><p>刚才的v-text和v-html可以看做是单向绑定，数据影响了视图渲染，但是反过来就不行。接下来学习的v-model是双向绑定，视图（View）和模型（Model）之间会互相影响。</p>
 <p>既然是双向绑定，一定是在视图中可以修改数据，这样就限定了视图的元素类型。目前v-model的可使用元素有：</p>
@@ -734,7 +734,7 @@
 <li><code>select</code>单选对应字符串，多选对应也是数组</li>
 </ul>
 <p>效果：</p>
-<p> <img src="assets/1525845481512.png" alt="1525845481512"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525845481512.png" alt="1525845481512"></p>
 <h2 id="5-3-v-on"><a href="#5-3-v-on" class="headerlink" title="5.3.v-on"></a>5.3.v-on</h2><h3 id="5-3-1-基本用法"><a href="#5-3-1-基本用法" class="headerlink" title="5.3.1.基本用法"></a>5.3.1.基本用法</h3><p>v-on指令用于给页面元素绑定事件。</p>
 <p>语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v-on:事件名&#x3D;&quot;js片段或函数名&quot;</span><br></pre></td></tr></table></figure>
@@ -743,7 +743,7 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--事件中直接写js片段--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">&quot;num++&quot;</span>&gt;</span>增加<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--事件指定一个回调函数，必须是Vue实例中定义的函数--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">&quot;decrement&quot;</span>&gt;</span>减少<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>num: &#123;&#123;num&#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./node_modules/vue/dist/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el:<span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data:&#123;</span><br><span class="line">            num:1</span><br><span class="line">        &#125;,</span><br><span class="line">        methods:&#123;</span><br><span class="line">            decrement()&#123;</span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.num--;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>效果：</p>
-<p> <img src="assets/5.gif"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/5.gif"></p>
 <p>另外，事件绑定可以简写，例如<code>v-on:click=&#39;add&#39;</code>可以简写为<code>@click=&#39;add&#39;</code></p>
 <h3 id="5-3-2-事件修饰符"><a href="#5-3-2-事件修饰符" class="headerlink" title="5.3.2.事件修饰符"></a>5.3.2.事件修饰符</h3><p>在事件处理程序中调用 <code>event.preventDefault()</code> 或 <code>event.stopPropagation()</code> 是非常常见的需求。尽管我们可以在方法中轻松实现这点，但更好的方式是：方法只有纯粹的数据逻辑，而不是去处理 DOM 事件细节。</p>
 <p>为了解决这个问题，Vue.js 为 <code>v-on</code> 提供了<strong>事件修饰符</strong>。之前提过，修饰符是由点开头的指令后缀来表示的。</p>
@@ -801,7 +801,7 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">&quot;user in users&quot;</span>&gt;</span></span><br><span class="line">            &#123;&#123;user.name&#125;&#125; : &#123;&#123;user.gender&#125;&#125; : &#123;&#123;user.age&#125;&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./node_modules/vue/dist/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el:<span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data:&#123;</span><br><span class="line">            users:[</span><br><span class="line"><span class="javascript">                &#123;<span class="attr">name</span>:<span class="string">&#x27;柳岩&#x27;</span>, <span class="attr">gender</span>:<span class="string">&#x27;女&#x27;</span>, <span class="attr">age</span>: <span class="number">21</span>&#125;,</span></span><br><span class="line"><span class="javascript">                &#123;<span class="attr">name</span>:<span class="string">&#x27;虎哥&#x27;</span>, <span class="attr">gender</span>:<span class="string">&#x27;男&#x27;</span>, <span class="attr">age</span>: <span class="number">30</span>&#125;,</span></span><br><span class="line"><span class="javascript">                &#123;<span class="attr">name</span>:<span class="string">&#x27;范冰冰&#x27;</span>, <span class="attr">gender</span>:<span class="string">&#x27;女&#x27;</span>, <span class="attr">age</span>: <span class="number">24</span>&#125;,</span></span><br><span class="line"><span class="javascript">                &#123;<span class="attr">name</span>:<span class="string">&#x27;刘亦菲&#x27;</span>, <span class="attr">gender</span>:<span class="string">&#x27;女&#x27;</span>, <span class="attr">age</span>: <span class="number">18</span>&#125;,</span></span><br><span class="line"><span class="javascript">                &#123;<span class="attr">name</span>:<span class="string">&#x27;古力娜扎&#x27;</span>, <span class="attr">gender</span>:<span class="string">&#x27;女&#x27;</span>, <span class="attr">age</span>: <span class="number">25</span>&#125;</span></span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>效果：</p>
-<p> <img src="assets/1525848812000.png" alt="1525848812000"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525848812000.png" alt="1525848812000"></p>
 <h3 id="5-4-2-数组角标"><a href="#5-4-2-数组角标" class="headerlink" title="5.4.2.数组角标"></a>5.4.2.数组角标</h3><p>在遍历的过程中，如果我们需要知道数组角标，可以指定第二个参数：</p>
 <blockquote>
 <p>语法</p>
@@ -821,7 +821,7 @@
 <blockquote>
 <p>效果：</p>
 </blockquote>
-<p> <img src="assets/1525849039930.png" alt="1525849039930"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525849039930.png" alt="1525849039930"></p>
 <h3 id="5-4-3-遍历对象"><a href="#5-4-3-遍历对象" class="headerlink" title="5.4.3.遍历对象"></a>5.4.3.遍历对象</h3><p>v-for除了可以迭代数组，也可以迭代对象。语法基本类似</p>
 <blockquote>
 <p>语法：</p>
@@ -841,7 +841,7 @@
 <blockquote>
 <p>效果：</p>
 </blockquote>
-<p> <img src="assets/1525849552865.png" alt="1525849552865"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525849552865.png" alt="1525849552865"></p>
 <h3 id="5-4-4-key"><a href="#5-4-4-key" class="headerlink" title="5.4.4.key"></a>5.4.4.key</h3><p>当 Vue.js 用 <code>v-for</code> 正在更新已渲染过的元素列表时，它默认用“就地复用”策略。如果数据项的顺序被改变，Vue 将不会移动 DOM 元素来匹配数据项的顺序， 而是简单复用此处每个元素，并且确保它在特定索引下显示已被渲染过的每个元素。 </p>
 <p>这个功能可以有效的提高渲染的效率。</p>
 <p>但是要实现这个功能，你需要给Vue一些提示，以便它能跟踪每个节点的身份，从而重用和重新排序现有元素，你需要为每项提供一个唯一 <code>key</code> 属性。理想的 <code>key</code> 值是每项都有的且唯一的 id。 </p>
@@ -866,13 +866,13 @@
 <blockquote>
 <p>效果：</p>
 </blockquote>
-<p> <img src="assets/ScreenGif-1525850553649.gif"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/ScreenGif-1525850553649.gif"></p>
 <h3 id="5-5-2-与v-for结合"><a href="#5-5-2-与v-for结合" class="headerlink" title="5.5.2.与v-for结合"></a>5.5.2.与v-for结合</h3><p>当v-if和v-for出现在一起时，v-for优先级更高。也就是说，会先遍历，再判断条件。</p>
 <p>示例：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">&quot;(user,index) in users&quot;</span> <span class="attr">v-if</span>=<span class="string">&quot;user.gender === &#x27;女&#x27;&quot;</span>&gt;</span></span><br><span class="line">            &#123;&#123;index&#125;&#125; - &#123;&#123;user.name&#125;&#125; : &#123;&#123;user.gender&#125;&#125; : &#123;&#123;user.age&#125;&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./node_modules/vue/dist/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el:<span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data:&#123;</span><br><span class="line">            users:[</span><br><span class="line"><span class="javascript">                &#123;<span class="attr">name</span>:<span class="string">&#x27;柳岩&#x27;</span>, <span class="attr">gender</span>:<span class="string">&#x27;女&#x27;</span>, <span class="attr">age</span>: <span class="number">21</span>&#125;,</span></span><br><span class="line"><span class="javascript">                &#123;<span class="attr">name</span>:<span class="string">&#x27;虎哥&#x27;</span>, <span class="attr">gender</span>:<span class="string">&#x27;男&#x27;</span>, <span class="attr">age</span>: <span class="number">30</span>&#125;,</span></span><br><span class="line"><span class="javascript">                &#123;<span class="attr">name</span>:<span class="string">&#x27;范冰冰&#x27;</span>, <span class="attr">gender</span>:<span class="string">&#x27;女&#x27;</span>, <span class="attr">age</span>: <span class="number">24</span>&#125;,</span></span><br><span class="line"><span class="javascript">                &#123;<span class="attr">name</span>:<span class="string">&#x27;刘亦菲&#x27;</span>, <span class="attr">gender</span>:<span class="string">&#x27;女&#x27;</span>, <span class="attr">age</span>: <span class="number">18</span>&#125;,</span></span><br><span class="line"><span class="javascript">                &#123;<span class="attr">name</span>:<span class="string">&#x27;古力娜扎&#x27;</span>, <span class="attr">gender</span>:<span class="string">&#x27;女&#x27;</span>, <span class="attr">age</span>: <span class="number">25</span>&#125;</span></span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>效果：</p>
-<p> <img src="assets/1525850816434.png" alt="1525850816434"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525850816434.png" alt="1525850816434"></p>
 <h3 id="5-5-3-v-else"><a href="#5-5-3-v-else" class="headerlink" title="5.5.3.v-else"></a>5.5.3.v-else</h3><p>你可以使用 <code>v-else</code> 指令来表示 <code>v-if</code> 的“else 块”：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-if&#x3D;&quot;Math.random() &gt; 0.5&quot;&gt;</span><br><span class="line">  Now you see me</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div v-else&gt;</span><br><span class="line">  Now you don&#39;t</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
 
@@ -891,7 +891,7 @@
 
 
 <p>代码：</p>
-<p> <img src="assets/1.gif"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1.gif"></p>
 <h2 id="5-6-v-bind"><a href="#5-6-v-bind" class="headerlink" title="5.6.v-bind"></a>5.6.v-bind</h2><h3 id="5-6-1-绑定class样式"><a href="#5-6-1-绑定class样式" class="headerlink" title="5.6.1.绑定class样式"></a>5.6.1.绑定class样式</h3><p>假如我们想动态的修改页面元素的属性，比如class属性，这样写是错误的：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;&#123;&#123;isAcctive&#125;&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -946,13 +946,13 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">h1</span>&gt;</span>您的生日是：&#123;&#123;birth&#125;&#125; <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>效果：</p>
-<p> <img src="assets/1525861635758.png" alt="1525861635758"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525861635758.png" alt="1525861635758"></p>
 <h2 id="5-8-watch"><a href="#5-8-watch" class="headerlink" title="5.8.watch"></a>5.8.watch</h2><p>watch可以让我们监控一个值的变化。从而做出相应的反应。</p>
 <p>示例：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;message&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./node_modules/vue/dist/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el:<span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data:&#123;</span><br><span class="line"><span class="javascript">            message:<span class="string">&quot;&quot;</span></span></span><br><span class="line">        &#125;,</span><br><span class="line">        watch:&#123;</span><br><span class="line">            message(newVal, oldVal)&#123;</span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(newVal, oldVal);</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>效果：</p>
-<p> <img src="assets/1525865657611.png" alt="1525865657611"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525865657611.png" alt="1525865657611"></p>
 <h1 id="6-组件化"><a href="#6-组件化" class="headerlink" title="6.组件化"></a>6.组件化</h1><p>在大型应用开发的时候，页面可以划分成很多部分。往往不同的页面，也会有相同的部分。例如可能会有相同的头部导航。</p>
 <p>但是如果每个页面都独自开发，这无疑增加了我们开发的成本。所以我们会把页面的不同部分拆分成独立的组件，然后在不同页面就可以共享这些组件，避免重复开发。</p>
 <h2 id="6-1-定义全局组件"><a href="#6-1-定义全局组件" class="headerlink" title="6.1.定义全局组件"></a>6.1.定义全局组件</h2><p>我们通过Vue的component方法来定义一个全局组件。</p>
@@ -966,12 +966,12 @@
 <li>data的定义方式比较特殊，必须是一个函数。</li>
 </ul>
 <p>效果：</p>
-<p> <img src="assets/6.gif"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/6.gif"></p>
 <h2 id="6-2-组件的复用"><a href="#6-2-组件的复用" class="headerlink" title="6.2.组件的复用"></a>6.2.组件的复用</h2><p>定义好的组件，可以任意复用多次：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--使用定义好的全局组件--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">counter</span>&gt;</span><span class="tag">&lt;/<span class="name">counter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">counter</span>&gt;</span><span class="tag">&lt;/<span class="name">counter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">counter</span>&gt;</span><span class="tag">&lt;/<span class="name">counter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>效果：</p>
-<p> <img src="assets/1525854127169.png" alt="1525854127169"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525854127169.png" alt="1525854127169"></p>
 <p>你会发现每个组件互不干扰，都有自己的count值。怎么实现的？</p>
 <blockquote>
 <p><strong>组件的data属性必须是函数</strong>！</p>
@@ -1000,7 +1000,7 @@
 <li>效果与刚才的全局注册是类似的，不同的是，这个counter组件只能在当前的Vue实例中使用</li>
 </ul>
 <h2 id="6-3-组件通信"><a href="#6-3-组件通信" class="headerlink" title="6.3.组件通信"></a>6.3.组件通信</h2><p>通常一个单页应用会以一棵嵌套的组件树的形式来组织：</p>
-<p><img src="assets/1525855149491.png" alt="1525855149491"></p>
+<p><img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525855149491.png" alt="1525855149491"></p>
 <ul>
 <li>页面首先分成了顶部导航、左侧内容区、右侧边栏三部分</li>
 <li>左侧内容区又分为上下两个组件</li>
@@ -1018,7 +1018,7 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>打个招呼：<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--使用子组件，同时传递title属性--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">introduce</span> <span class="attr">title</span>=<span class="string">&quot;大家好，我是虎哥&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./node_modules/vue/dist/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">    Vue.component(<span class="string">&quot;introduce&quot;</span>,&#123;</span></span><br><span class="line"><span class="javascript">        <span class="comment">// 直接使用props接收到的属性来渲染页面</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">        template:&#x27;<span class="tag">&lt;<span class="name">h1</span>&gt;</span></span><span class="template-variable">&#123;&#123;<span class="name">title</span>&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span>&#x27;,</span></span></span><br><span class="line"><span class="javascript">        props:[<span class="string">&#x27;title&#x27;</span>] <span class="comment">// 通过props来接收一个父组件传递的属性</span></span></span><br><span class="line">    &#125;)</span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el:<span class="string">&quot;#app&quot;</span></span></span><br><span class="line">    &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>效果：</p>
-<p>  <img src="assets/1525857338270.png" alt="1525857338270"></p>
+<p>  <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525857338270.png" alt="1525857338270"></p>
 <h3 id="6-3-2-传递复杂数据"><a href="#6-3-2-传递复杂数据" class="headerlink" title="6.3.2.传递复杂数据"></a>6.3.2.传递复杂数据</h3><p>我们定义一个子组件：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> myList = &#123;</span><br><span class="line">    template:<span class="string">&#x27;\</span></span><br><span class="line"><span class="string">        &lt;ul&gt;\</span></span><br><span class="line"><span class="string">            &lt;li v-for=&quot;item in items&quot; :key=&quot;item.id&quot;&gt;&#123;&#123;item.id&#125;&#125; : &#123;&#123;item.name&#125;&#125;&lt;/li&gt;\</span></span><br><span class="line"><span class="string">        &lt;/ul&gt;\</span></span><br><span class="line"><span class="string">        &#x27;</span>,</span><br><span class="line">    props:&#123; <span class="comment">// 通过props来接收父组件传递来的属性</span></span><br><span class="line">        items:&#123;<span class="comment">// 这里定义items属性</span></span><br><span class="line">            type:<span class="built_in">Array</span>,<span class="comment">// 要求必须是Array类型</span></span><br><span class="line">            <span class="keyword">default</span>:[] <span class="comment">// 如果父组件没有传，那么给定默认值是[]</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -1040,7 +1040,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el:<span class="string">&quot;#app&quot;</span>,</span><br><span class="line">    components:&#123;</span><br><span class="line">        myList <span class="comment">// 当key和value一样时，可以只写一个</span></span><br><span class="line">    &#125;,</span><br><span class="line">    data:&#123;</span><br><span class="line">        lessons:[</span><br><span class="line">            &#123;<span class="attr">id</span>:<span class="number">1</span>, <span class="attr">name</span>: <span class="string">&#x27;java&#x27;</span>&#125;,</span><br><span class="line">            &#123;<span class="attr">id</span>:<span class="number">2</span>, <span class="attr">name</span>: <span class="string">&#x27;php&#x27;</span>&#125;,</span><br><span class="line">            &#123;<span class="attr">id</span>:<span class="number">3</span>, <span class="attr">name</span>: <span class="string">&#x27;ios&#x27;</span>&#125;,</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <p>效果：</p>
-<p>  <img src="assets/1525857477274.png" alt="1525857477274"></p>
+<p>  <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525857477274.png" alt="1525857477274"></p>
 <h3 id="6-3-3-子向父的通信"><a href="#6-3-3-子向父的通信" class="headerlink" title="6.3.3.子向父的通信"></a>6.3.3.子向父的通信</h3><p>来看这样的一个案例：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>num: &#123;&#123;num&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--使用子组件的时候，传递num到子组件中--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">counter</span> <span class="attr">:num</span>=<span class="string">&quot;num&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">counter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./node_modules/vue/dist/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">    Vue.component(<span class="string">&quot;counter&quot;</span>, &#123;<span class="comment">// 子组件，定义了两个按钮，点击数字num会加或减</span></span></span><br><span class="line">        template:&#x27;\</span><br><span class="line"><span class="handlebars"><span class="xml">            <span class="tag">&lt;<span class="name">div</span>&gt;</span>\</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;num++&quot;</span>&gt;</span>加<span class="tag">&lt;/<span class="name">button</span>&gt;</span>  \</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">                <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;num--&quot;</span>&gt;</span>减<span class="tag">&lt;/<span class="name">button</span>&gt;</span>  \</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span>&#x27;,</span></span></span><br><span class="line"><span class="javascript">        props:[<span class="string">&#x27;num&#x27;</span>]<span class="comment">// count是从父组件获取的。</span></span></span><br><span class="line">    &#125;)</span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        el:<span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">        data:&#123;</span><br><span class="line">            num:0</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -1049,9 +1049,9 @@
 <li>子组件定义点击按钮，点击后对num进行加或减操作</li>
 </ul>
 <p>我们尝试运行：</p>
-<p> <img src="assets/1525859093172.png" alt="1525859093172"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525859093172.png" alt="1525859093172"></p>
 <p>好像没问题，点击按钮试试：</p>
-<p><img src="assets/1525859138607.png" alt="1525859138607"></p>
+<p><img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/1525859138607.png" alt="1525859138607"></p>
 <p>子组件接收到父组件属性后，默认是不允许修改的。怎么办？</p>
 <p>既然只有父组件能修改，那么加和减的操作一定是放在父组件：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el:<span class="string">&quot;#app&quot;</span>,</span><br><span class="line">    data:&#123;</span><br><span class="line">        num:<span class="number">0</span></span><br><span class="line">    &#125;,</span><br><span class="line">    methods:&#123; <span class="comment">// 父组件中定义操作num的方法</span></span><br><span class="line">        increment()&#123;</span><br><span class="line">            <span class="built_in">this</span>.num++;</span><br><span class="line">        &#125;,</span><br><span class="line">        decrement()&#123;</span><br><span class="line">            <span class="built_in">this</span>.num--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
@@ -1069,7 +1069,7 @@
 <li>vue提供了一个内置的this.$emit函数，用来调用父组件绑定的函数</li>
 </ul>
 <p>效果：</p>
-<p> <img src="assets/7.gif"></p>
+<p> <img src="/2018/08/19/leyou/day05-bi-ji/day05-vue-kuai-su-ru-men/7.gif"></p>
 
             </div>
             <hr/>

@@ -440,7 +440,7 @@
 <h2 id="1-1-SPU和SKU"><a href="#1-1-SPU和SKU" class="headerlink" title="1.1.SPU和SKU"></a>1.1.SPU和SKU</h2><p>SPU：Standard Product Unit （标准产品单位） ，一组具有共同属性的商品集</p>
 <p>SKU：Stock Keeping Unit（库存量单位），SPU商品集因具体特性不同而细分的每个商品</p>
 <p>以图为例来看：</p>
-<p><img src="assets/1526085541996.png" alt="1526085541996"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526085541996.png" alt="1526085541996"></p>
 <ul>
 <li>本页的 华为Mate10 就是一个商品集（SPU）</li>
 <li>因为颜色、内存等不同，而细分出不同的Mate10，如亮黑色128G版。（SKU）</li>
@@ -455,7 +455,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">id:主键</span><br><span class="line">title：标题</span><br><span class="line">description：描述</span><br><span class="line">specification：规格</span><br><span class="line">packaging_list：包装</span><br><span class="line">after_service：售后服务</span><br><span class="line">comment：评价</span><br><span class="line">category_id：商品分类</span><br><span class="line">brand_id：品牌</span><br></pre></td></tr></table></figure>
 
 <p>似乎并不复杂，但是大家仔细思考一下，商品的规格字段你如何填写？</p>
-<p> <img src="assets/1526086539789.png" alt="1526086539789"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526086539789.png" alt="1526086539789"></p>
 <p>不同商品的规格不一定相同，数据库中要如何保存？</p>
 <p>再看下SKU，大家觉得应该有什么字段？</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">id：主键</span><br><span class="line">spu_id：关联的spu</span><br><span class="line">price：价格</span><br><span class="line">images：图片</span><br><span class="line">stock：库存</span><br><span class="line">颜色？</span><br><span class="line">内存？</span><br><span class="line">硬盘？</span><br></pre></td></tr></table></figure>
@@ -466,31 +466,31 @@
 <blockquote>
 <p>华为的规格：</p>
 </blockquote>
-<p> <img src="assets/1526087063700.png" alt="1526087063700"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526087063700.png" alt="1526087063700"></p>
 <blockquote>
 <p>三星的规格：</p>
 </blockquote>
-<p> <img src="assets/1526087142454.png" alt="1526087142454"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526087142454.png" alt="1526087142454"></p>
 <p>也就是说，商品的规格参数应该是与分类绑定的。<strong>每一个分类都有统一的规格参数模板，但不同商品其参数值可能不同</strong>。</p>
 <p>如下图所示：</p>
-<p> <img src="assets/1526088168565.png" alt="1526088168565"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526088168565.png" alt="1526088168565"></p>
 <h3 id="1-2-3-SKU的特有属性"><a href="#1-2-3-SKU的特有属性" class="headerlink" title="1.2.3.SKU的特有属性"></a>1.2.3.SKU的特有属性</h3><p>SPU中会有一些特殊属性，用来区分不同的SKU，我们称为SKU特有属性。如华为META10的颜色、内存属性。</p>
 <p>不同种类的商品，一个手机，一个衣服，其SKU属性不相同。</p>
 <p>同一种类的商品，比如都是衣服，SKU属性基本是一样的，都是颜色、尺码等。</p>
 <p>这样说起来，似乎SKU的特有属性也是与分类相关的？事实上，仔细观察你会发现，<strong>SKU的特有属性是商品规格参数的一部分</strong>：</p>
-<p><img src="assets/1526088981953.png" alt="1526088981953"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526088981953.png" alt="1526088981953"></p>
 <p>也就是说，我们没必要单独对SKU的特有属性进行设计，它可以看做是规格参数中的一部分。这样规格参数中的属性可以标记成两部分：</p>
 <ul>
 <li>所有sku共享的规格属性（称为全局属性）</li>
 <li>每个sku不同的规格属性（称为特有属性）</li>
 </ul>
-<p><img src="assets/1526089506566.png" alt="1526089506566"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526089506566.png" alt="1526089506566"></p>
 <h3 id="1-2-4-搜索属性"><a href="#1-2-4-搜索属性" class="headerlink" title="1.2.4.搜索属性"></a>1.2.4.搜索属性</h3><p>打开一个搜索页，我们来看看过滤的条件：</p>
-<p><img src="assets/1526090072535.png" alt="1526090072535"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526090072535.png" alt="1526090072535"></p>
 <p>你会发现，过滤条件中的屏幕尺寸、运行内存、网路、机身内存、电池容量、CPU核数等，在规格参数中都能找到：</p>
-<p> <img src="assets/1526090228171.png" alt="1526090228171"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526090228171.png" alt="1526090228171"></p>
 <p>也就是说，规格参数中的数据，将来会有一部分作为搜索条件来使用。我们可以在设计时，将这部分属性标记出来，将来做搜索的时候，作为过滤条件。要注意的是，无论是SPU的全局属性，还是SKU的特有属性，都有可能作为搜索过滤条件的，并不冲突，而是有一个交集：</p>
-<p> <img src="assets/1526091216124.png" alt="1526091216124"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526091216124.png" alt="1526091216124"></p>
 <h2 id="1-3-规格参数表"><a href="#1-3-规格参数表" class="headerlink" title="1.3.规格参数表"></a>1.3.规格参数表</h2><h3 id="1-3-1-表结构"><a href="#1-3-1-表结构" class="headerlink" title="1.3.1.表结构"></a>1.3.1.表结构</h3><p>先看下规格参数表：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &#96;tb_specification&#96; (</span><br><span class="line">  &#96;category_id&#96; bigint(20) NOT NULL COMMENT &#39;规格模板所属商品分类id&#39;,</span><br><span class="line">  &#96;specifications&#96; varchar(3000) NOT NULL DEFAULT &#39;&#39; COMMENT &#39;规格参数模板，json格式&#39;,</span><br><span class="line">  PRIMARY KEY (&#96;category_id&#96;)</span><br><span class="line">) ENGINE&#x3D;InnoDB DEFAULT CHARSET&#x3D;utf8 COMMENT&#x3D;&#39;商品规格参数模板，json格式。&#39;;</span><br></pre></td></tr></table></figure>
 
@@ -499,7 +499,7 @@
 <li>specificatons：规格参数模板，json格式</li>
 </ul>
 <p>为什么是一个json？我们看下规格参数的格式：</p>
-<p><img src="assets/1526092179381.png" alt="1526092179381"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526092179381.png" alt="1526092179381"></p>
 <p>如果按照传统数据库设计，这里至少需要3张表：</p>
 <ul>
 <li>group：代表组，与商品分类关联</li>
@@ -511,7 +511,7 @@
 <h3 id="1-3-2-json结构分析"><a href="#1-3-2-json结构分析" class="headerlink" title="1.3.2.json结构分析"></a>1.3.2.json结构分析</h3><blockquote>
 <p>先整体看一下：</p>
 </blockquote>
-<p> <img src="assets/1526092693138.png" alt="1526092693138"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526092693138.png" alt="1526092693138"></p>
 <ul>
 <li>因为规格参数分为很多组，所以json最外层是一个数组。</li>
 <li>数组中是对象类型，每个对象代表一个组的数据，对象的属性包括：<ul>
@@ -523,7 +523,7 @@
 <blockquote>
 <p>接下来是params：</p>
 </blockquote>
-<p> <img src="assets/1526093111370.png" alt="1526093111370"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526093111370.png" alt="1526093111370"></p>
 <p>以<code>主芯片</code>这一组为例：</p>
 <ul>
 <li><p>group：注明，这里是主芯片</p>
@@ -540,7 +540,7 @@
 </li>
 </ul>
 <p>上面的截图中所有属性都是全局属性，我们来看看内存，应该是特有属性：</p>
-<p>  <img src="assets/1526262641446.png" alt="1526262641446"></p>
+<p>  <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526262641446.png" alt="1526262641446"></p>
 <p>总结下：</p>
 <ul>
 <li>规格参数分组，每组有多个参数</li>
@@ -555,9 +555,9 @@
 </ul>
 <h1 id="2-商品规格参数管理"><a href="#2-商品规格参数管理" class="headerlink" title="2.商品规格参数管理"></a>2.商品规格参数管理</h1><h2 id="2-1-页面实现"><a href="#2-1-页面实现" class="headerlink" title="2.1.页面实现"></a>2.1.页面实现</h2><p>页面比较复杂，这里就不带着大家去实现完整页面效果了，我们一起分析一下即可。</p>
 <h3 id="2-1-1-整体布局"><a href="#2-1-1-整体布局" class="headerlink" title="2.1.1.整体布局"></a>2.1.1.整体布局</h3><p>打开规格参数页面，看到如下内容：</p>
-<p><img src="assets/1526095296462.png" alt="1526095296462"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526095296462.png" alt="1526095296462"></p>
 <p>因为规格是跟商品分类绑定的，因此首先会展现商品分类树，并且提示你要选择商品分类，才能看到规格参数的模板。一起了解下页面的实现：</p>
-<p><img src="assets/1526095548672.png" alt="1526095548672"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526095548672.png" alt="1526095548672"></p>
 <p>可以看出页面分成3个部分：</p>
 <ul>
 <li><p><code>v-card-title</code>：标题部分，这里是提示信息，告诉用户要先选择分类，才能看到模板</p>
@@ -573,7 +573,7 @@
 </li>
 </ul>
 <h3 id="2-1-2-data中定义的属性"><a href="#2-1-2-data中定义的属性" class="headerlink" title="2.1.2.data中定义的属性"></a>2.1.2.data中定义的属性</h3><p>接下来，看看Vue实例中data定义了哪些属性，对页面会产生怎样的影响：</p>
-<p> <img src="assets/1526287774316.png" alt="1526287774316"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526287774316.png" alt="1526287774316"></p>
 <ul>
 <li>specifications：选中一个商品分类后，需要查询后台获取规格参数信息，保存在这个对象中，Vue会完成页面渲染。</li>
 <li>oldSpec：当前页兼具了规格的增、改、查等功能，这个对象记录被修改前的规格参数，以防用户撤销修改，用来恢复数据。</li>
@@ -584,7 +584,7 @@
 <h2 id="2-2-规格参数的查询"><a href="#2-2-规格参数的查询" class="headerlink" title="2.2.规格参数的查询"></a>2.2.规格参数的查询</h2><p>点击树节点后要显示规格参数，因此查询功能应该编写在点击事件中。</p>
 <p>了解一下：</p>
 <h3 id="2-2-1-树节点的点击事件"><a href="#2-2-1-树节点的点击事件" class="headerlink" title="2.2.1.树节点的点击事件"></a>2.2.1.树节点的点击事件</h3><p>当我们点击树节点时，要将<code>v-dialog</code>打开，因此必须绑定一个点击事件：</p>
-<p> <img src="assets/1526095959539.png" alt="1526095959539"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526095959539.png" alt="1526095959539"></p>
 <p>我们来看下<code>handleClick</code>方法：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">handleClick(node) &#123;</span><br><span class="line">    <span class="comment">// 判断点击的节点是否是父节点（只有点击到叶子节点才会弹窗）</span></span><br><span class="line">    <span class="keyword">if</span> (!node.isParent) &#123;</span><br><span class="line">        <span class="comment">// 如果是叶子节点，那么就发起ajax请求，去后台查询商品规格数据。</span></span><br><span class="line">        <span class="built_in">this</span>.$http.get(<span class="string">&quot;/item/spec/&quot;</span> + node.id)</span><br><span class="line">            .then(<span class="function"><span class="params">resp</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="comment">// 查询成功后，把响应结果赋值给specifications属性，Vue会进行自动渲染。</span></span><br><span class="line">            <span class="built_in">this</span>.specifications = resp.data;</span><br><span class="line">            <span class="comment">// 记录下此时的规格数据，当页面撤销修改时，用来恢复原始数据</span></span><br><span class="line">            <span class="built_in">this</span>.oldSpec = resp.data;</span><br><span class="line">            <span class="comment">// 打开弹窗</span></span><br><span class="line">            <span class="built_in">this</span>.dialog = <span class="literal">true</span>;</span><br><span class="line">            <span class="comment">// 标记此时要进行修改操作</span></span><br><span class="line">            <span class="built_in">this</span>.isInsert = <span class="literal">false</span>;</span><br><span class="line">        &#125;)</span><br><span class="line">            .catch(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            <span class="comment">// 如果没有查询成功，那么询问是否添加规格</span></span><br><span class="line">            <span class="built_in">this</span>.$message.confirm(<span class="string">&#x27;该分类还没有规格参数，是否添加?&#x27;</span>)</span><br><span class="line">                .then(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">                <span class="comment">// 如果要添加，则将specifications初始化为空</span></span><br><span class="line">                <span class="built_in">this</span>.specifications = [&#123;</span><br><span class="line">                    group: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">                    params: []</span><br><span class="line">                &#125;];</span><br><span class="line">                <span class="comment">// 打开弹窗</span></span><br><span class="line">                <span class="built_in">this</span>.dialog = <span class="literal">true</span>;</span><br><span class="line">                <span class="comment">// 标记为新增</span></span><br><span class="line">                <span class="built_in">this</span>.isInsert = <span class="literal">true</span>;</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -613,7 +613,7 @@
 <li><p>请求参数：商品分类id</p>
 </li>
 <li><p>返回结果：页面是直接把<code>resp.data</code>赋值给了specifications：</p>
-<p><img src="assets/1526104087329.png" alt="1526104087329"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526104087329.png" alt="1526104087329"></p>
 <p>那么我们返回的应该是规格参数的字符串</p>
 </li>
 </ul>
@@ -633,13 +633,13 @@
 <p>页面访问测试：</p>
 </blockquote>
 <p>目前，我们数据库只提供了3条规格参数信息：</p>
-<p> <img src="assets/1526104551227.png" alt="1526104551227"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526104551227.png" alt="1526104551227"></p>
 <p>我们访问：<a target="_blank" rel="noopener" href="http://api.leyou.com/api/item/spec/76">http://api.leyou.com/api/item/spec/76</a></p>
-<p> <img src="assets/1526104475036.png" alt="1526104475036"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526104475036.png" alt="1526104475036"></p>
 <p>然后在后台系统中测试：</p>
-<p><img src="assets/1526104599452.png" alt="1526104599452"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526104599452.png" alt="1526104599452"></p>
 <p>当我们点击一个还不存在的规格参数的商品分类：</p>
-<p><img src="assets/1526104769276.png" alt="1526104769276"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526104769276.png" alt="1526104769276"></p>
 <h2 id="2-3-增、删、改（作业）"><a href="#2-3-增、删、改（作业）" class="headerlink" title="2.3.增、删、改（作业）"></a>2.3.增、删、改（作业）</h2><p>增删改的作业就留给大家去完成了。页面中接口都已定义，你要做的就是实现后台接口。</p>
 <h1 id="3-SPU和SKU数据结构"><a href="#3-SPU和SKU数据结构" class="headerlink" title="3.SPU和SKU数据结构"></a>3.SPU和SKU数据结构</h1><p>规格确定以后，就可以添加商品了,先看下数据库表</p>
 <h2 id="3-1-SPU表"><a href="#3-1-SPU表" class="headerlink" title="3.1.SPU表"></a>3.1.SPU表</h2><h3 id="3-1-1-表结构"><a href="#3-1-1-表结构" class="headerlink" title="3.1.1.表结构"></a>3.1.1.表结构</h3><p>SPU表：</p>
@@ -669,30 +669,30 @@
 <blockquote>
 <p>整体来看：</p>
 </blockquote>
-<p> <img src="assets/1526262279963.png" alt="1526262279963"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526262279963.png" alt="1526262279963"></p>
 <p>整体看上去与规格参数表中的数据一样，也是一个数组，并且分组，每组下有多个参数</p>
 <blockquote>
 <p>展开一组来看</p>
 </blockquote>
-<p> <img src="assets/1526262389233.png" alt="1526262389233"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526262389233.png" alt="1526262389233"></p>
 <p>可以看到，与规格参数表中的模板相比，最大的区别就是，这里指定了具体的值，因为商品确定了，其参数值肯定也确定了。</p>
 <blockquote>
 <p>特有属性</p>
 </blockquote>
 <p>刚才看到的是全局属性，那么特有属性在这个字段中如何存储呢？</p>
-<p> <img src="assets/1526263214087.png" alt="1526263214087"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526263214087.png" alt="1526263214087"></p>
 <p>我们发现特有属性也是有的，但是，注意看这里是不确定具体值的，因为特有属性只有在SKU中才能确定。这里只是保存了options，所有SKU属性的可选项。</p>
 <p>在哪里会用到这个字段的值呢，商品详情页的规格参数信息中：</p>
-<p> <img src="assets/1526267700765.png" alt="1526267700765"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526267700765.png" alt="1526267700765"></p>
 <h4 id="3-1-2-2-spec-template字段"><a href="#3-1-2-2-spec-template字段" class="headerlink" title="3.1.2.2.spec_template字段"></a>3.1.2.2.spec_template字段</h4><p>既然specifications已经包含了所有的规格参数，那么为什么又多出了一个spec_template呢？</p>
 <p>里面又有哪些内容呢？</p>
 <p>来看数据格式：</p>
-<p> <img src="assets/1526267952827.png" alt="1526267952827"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526267952827.png" alt="1526267952827"></p>
 <p>可以看出，里面只保存了规格参数中的特有属性，而且格式进行了大大的简化，只有属性的key，和待选项。</p>
 <p>为什么要冗余保存一份？</p>
 <p>因为很多场景下我们只需要查询特有规格属性，如果放在一起，每次查询再去分离比较麻烦。</p>
 <p>比如，商品详情页展示可选的规格参数时：</p>
-<p>   <img src="assets/1526267828817.png" alt="1526267828817"></p>
+<p>   <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526267828817.png" alt="1526267828817"></p>
 <h2 id="3-2-SKU表"><a href="#3-2-SKU表" class="headerlink" title="3.2.SKU表"></a>3.2.SKU表</h2><h3 id="3-2-1-表结构"><a href="#3-2-1-表结构" class="headerlink" title="3.2.1.表结构"></a>3.2.1.表结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &#96;tb_sku&#96; (</span><br><span class="line">  &#96;id&#96; bigint(20) NOT NULL AUTO_INCREMENT COMMENT &#39;sku id&#39;,</span><br><span class="line">  &#96;spu_id&#96; bigint(20) NOT NULL COMMENT &#39;spu id&#39;,</span><br><span class="line">  &#96;title&#96; varchar(255) NOT NULL COMMENT &#39;商品标题&#39;,</span><br><span class="line">  &#96;images&#96; varchar(1000) DEFAULT &#39;&#39; COMMENT &#39;商品的图片，多个图片以‘,’分割&#39;,</span><br><span class="line">  &#96;price&#96; bigint(15) NOT NULL DEFAULT &#39;0&#39; COMMENT &#39;销售价格，单位为分&#39;,</span><br><span class="line">  &#96;indexes&#96; varchar(100) COMMENT &#39;特有规格属性在spu属性模板中的对应下标组合&#39;,</span><br><span class="line">  &#96;own_spec&#96; varchar(1000) COMMENT &#39;sku的特有规格参数，json格式，反序列化时应使用linkedHashMap，保证有序&#39;,</span><br><span class="line">  &#96;enable&#96; tinyint(1) NOT NULL DEFAULT &#39;1&#39; COMMENT &#39;是否有效，0无效，1有效&#39;,</span><br><span class="line">  &#96;create_time&#96; datetime NOT NULL COMMENT &#39;添加时间&#39;,</span><br><span class="line">  &#96;last_update_time&#96; datetime NOT NULL COMMENT &#39;最后修改时间&#39;,</span><br><span class="line">  PRIMARY KEY (&#96;id&#96;),</span><br><span class="line">  KEY &#96;key_spu_id&#96; (&#96;spu_id&#96;) USING BTREE</span><br><span class="line">) ENGINE&#x3D;InnoDB DEFAULT CHARSET&#x3D;utf8 COMMENT&#x3D;&#39;sku表,该表表示具体的商品实体,如黑色的64GB的iphone 8&#39;;</span><br></pre></td></tr></table></figure>
 
 <p>还有一张表，代表库存：</p>
@@ -716,9 +716,9 @@
 <li>红米4X，2,0,1</li>
 </ul>
 <p>既然如此，我们是不是可以将不同角标串联起来，作为SPU下不同SKU的标示。这就是我们的indexes字段。</p>
-<p> <img src="assets/1526266901335.png" alt="1526266901335"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526266901335.png" alt="1526266901335"></p>
 <p>这个设计在商品详情页会特别有用：</p>
-<p> <img src="assets/1526267180997.png" alt="1526267180997"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526267180997.png" alt="1526267180997"></p>
 <p>当用户点击选中一个特有属性，你就能根据 角标快速定位到sku。</p>
 <h4 id="3-2-2-2-own-spec字段"><a href="#3-2-2-2-own-spec字段" class="headerlink" title="3.2.2.2.own_spec字段"></a>3.2.2.2.own_spec字段</h4><p>看结构：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attr">&quot;机身颜色&quot;</span>:<span class="string">&quot;香槟金&quot;</span>,<span class="attr">&quot;内存&quot;</span>:<span class="string">&quot;2GB&quot;</span>,<span class="attr">&quot;机身存储&quot;</span>:<span class="string">&quot;16GB&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
@@ -728,7 +728,7 @@
 <p>这样，在页面展示规格参数信息时，就可以根据key来获取值，用于显示。</p>
 <h2 id="3-3-导入图片信息"><a href="#3-3-导入图片信息" class="headerlink" title="3.3.导入图片信息"></a>3.3.导入图片信息</h2><p>现在商品表中虽然有数据，但是所有的图片信息都是无法访问的，我们需要把图片导入到虚拟机：</p>
 <p>首先，把课前资料提供的数据上传到虚拟机下：<code>/leyou/static</code>目录：</p>
-<p><img src="assets/1527823423289.png" alt="1527823423289"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1527823423289.png" alt="1527823423289"></p>
 <p>然后，使用命令解压缩：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip images.zip</span><br></pre></td></tr></table></figure>
 
@@ -743,21 +743,21 @@
 
 
 <h1 id="4-商品查询"><a href="#4-商品查询" class="headerlink" title="4.商品查询"></a>4.商品查询</h1><h2 id="4-1-效果预览"><a href="#4-1-效果预览" class="headerlink" title="4.1.效果预览"></a>4.1.效果预览</h2><p>接下来，我们实现商品管理的页面，先看下我们要实现的效果：</p>
-<p><img src="assets/1526268595873.png" alt="1526268595873"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526268595873.png" alt="1526268595873"></p>
 <p>可以看出整体是一个table，然后有新增按钮。是不是跟昨天写品牌管理很像？</p>
 <p>模板代码在分别在Goods.vue</p>
-<p> <img src="assets/1526269215532.png" alt="1526269215532"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526269215532.png" alt="1526269215532"></p>
 <h2 id="4-2-从0开始"><a href="#4-2-从0开始" class="headerlink" title="4.2.从0开始"></a>4.2.从0开始</h2><p>接下来，我们自己来实现一下，新建两个组件：MyGoods.vue和MyGoodsForm.vue</p>
-<p> <img src="assets/1526269362233.png" alt="1526269362233"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526269362233.png" alt="1526269362233"></p>
 <p>内容先随意：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;v-card&gt;</span><br><span class="line">      MyGoods</span><br><span class="line">  &lt;&#x2F;v-card&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line">  export default &#123;</span><br><span class="line">    name: &quot;my-goods&quot;,</span><br><span class="line">    data() &#123;</span><br><span class="line">      return &#123;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
 
 <p>然后修改menu.js,新建一个菜单：</p>
-<p> <img src="assets/1526269555118.png" alt="1526269555118"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526269555118.png" alt="1526269555118"></p>
 <p>修改router/index.js，添加一个路由：</p>
-<p> <img src="assets/1526269615639.png" alt="1526269615639"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526269615639.png" alt="1526269615639"></p>
 <p>预览一下：</p>
-<p> <img src="assets/1526269739468.png" alt="1526269739468"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526269739468.png" alt="1526269739468"></p>
 <h2 id="4-3-页面实现"><a href="#4-3-页面实现" class="headerlink" title="4.3.页面实现"></a>4.3.页面实现</h2><h3 id="4-3-1-页面基本表格"><a href="#4-3-1-页面基本表格" class="headerlink" title="4.3.1.页面基本表格"></a>4.3.1.页面基本表格</h3><p>商品列表页与品牌列表页几乎一样，我们可以直接去复制一份过来，然后进行一些修改。</p>
 <p>首先，字段不一样，商品列表也展示的SPU信息，包含以下字段：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">id：</span><br><span class="line">title：标题</span><br><span class="line">cname：商品分类名称</span><br><span class="line">bname：品牌名称</span><br></pre></td></tr></table></figure>
@@ -785,14 +785,14 @@
 </li>
 </ul>
 <p>查看效果：</p>
-<p><img src="assets/1526272476614.png" alt="1526272476614"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526272476614.png" alt="1526272476614"></p>
 <p>因为没有编写查询功能，表格一直处于loading状态。</p>
 <p>接下来看弹窗：</p>
-<p><img src="assets/1526272537552.png" alt="1526272537552"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526272537552.png" alt="1526272537552"></p>
 <h3 id="4-3-2-上下架状态按钮"><a href="#4-3-2-上下架状态按钮" class="headerlink" title="4.3.2.上下架状态按钮"></a>4.3.2.上下架状态按钮</h3><p>另外，似乎页面少了对上下架商品的过滤，在原始效果图中是有的：</p>
-<p> <img src="assets/1526277614649.png" alt="1526277614649"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526277614649.png" alt="1526277614649"></p>
 <p>这在Vuetify中是一组按钮，我们查看帮助文档：</p>
-<p> <img src="assets/1526277713391.png" alt="1526277713391"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526277713391.png" alt="1526277713391"></p>
 <p>查看实例得到以下信息：</p>
 <p><code>v-btn</code>：一个按钮</p>
 <p><code>v-btn-toggle</code>：按钮组，内部可以有多个按钮，点击切换，有以下属性：</p>
@@ -883,10 +883,10 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CategoryMapper</span> <span class="keyword">extends</span> <span class="title">Mapper</span>&lt;<span class="title">Category</span>&gt;, <span class="title">SelectByIdListMapper</span>&lt;<span class="title">Category</span>, <span class="title">Long</span>&gt; </span>&#123; </span><br><span class="line">    <span class="comment">// ...coding</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="4-5-测试"><a href="#4-5-测试" class="headerlink" title="4.5.测试"></a>4.5.测试</h2><p>刷新页面，查看效果：</p>
-<p> <img src="assets/1526280777975.png" alt="1526280777975"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526280777975.png" alt="1526280777975"></p>
 <p>基本与预览的效果一致，OK！</p>
 <h1 id="5-商品新增"><a href="#5-商品新增" class="headerlink" title="5.商品新增"></a>5.商品新增</h1><h2 id="5-1-效果预览"><a href="#5-1-效果预览" class="headerlink" title="5.1.效果预览"></a>5.1.效果预览</h2><p>新增商品窗口：</p>
-<p> <img src="../../../%E4%B9%90%E4%BC%98%E5%95%86%E5%9F%8E/%E7%AC%94%E8%AE%B0/day08/assets/1526268739827.png" alt="1526268739827"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/../../%E4%B9%90%E4%BC%98%E5%95%86%E5%9F%8E/%E7%AC%94%E8%AE%B0/day08/assets/1526268739827.png" alt="1526268739827"></p>
 <p>这个表单比较复杂，因为商品的信息比较多，分成了4个部分来填写：</p>
 <ul>
 <li>基本信息</li>
@@ -914,11 +914,11 @@
 
 
 <p>不过弹窗中没有任何数据：</p>
-<p> <img src="assets/1526281134046.png" alt="1526281134046"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526281134046.png" alt="1526281134046"></p>
 <h2 id="5-3-新增商品页的基本框架"><a href="#5-3-新增商品页的基本框架" class="headerlink" title="5.3.新增商品页的基本框架"></a>5.3.新增商品页的基本框架</h2><h3 id="5-3-1-Steppers，步骤线"><a href="#5-3-1-Steppers，步骤线" class="headerlink" title="5.3.1.Steppers，步骤线"></a>5.3.1.Steppers，步骤线</h3><p>预览效果图中，分四个步骤显示商品表单的组件，叫做stepper，看下文档：</p>
-<p><img src="assets/1526281659782.png" alt="1526281659782"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526281659782.png" alt="1526281659782"></p>
 <p>其基本结构如图：</p>
-<p><img src="assets/1526282309386.png" alt="1526282309386"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526282309386.png" alt="1526282309386"></p>
 <p>一个步骤线（v-stepper）总的分为两部分：</p>
 <ul>
 <li>v-stepper-header：代表步骤的头部进度条，只能有一个<ul>
@@ -973,11 +973,11 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">v-stepper</span> <span class="attr">v-model</span>=<span class="string">&quot;step&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">v-stepper-header</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">v-stepper-step</span> <span class="attr">:complete</span>=<span class="string">&quot;step &gt; 1&quot;</span> <span class="attr">step</span>=<span class="string">&quot;1&quot;</span>&gt;</span>基本信息<span class="tag">&lt;/<span class="name">v-stepper-step</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">v-divider</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">v-stepper-step</span> <span class="attr">:complete</span>=<span class="string">&quot;step &gt; 2&quot;</span> <span class="attr">step</span>=<span class="string">&quot;2&quot;</span>&gt;</span>商品描述<span class="tag">&lt;/<span class="name">v-stepper-step</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">v-divider</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">v-stepper-step</span> <span class="attr">:complete</span>=<span class="string">&quot;step &gt; 3&quot;</span> <span class="attr">step</span>=<span class="string">&quot;3&quot;</span>&gt;</span>规格参数<span class="tag">&lt;/<span class="name">v-stepper-step</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">v-divider</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">v-stepper-step</span> <span class="attr">step</span>=<span class="string">&quot;4&quot;</span>&gt;</span>SKU属性<span class="tag">&lt;/<span class="name">v-stepper-step</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">v-stepper-header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">v-stepper-items</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">v-stepper-content</span> <span class="attr">step</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">        基本信息</span><br><span class="line">      <span class="tag">&lt;/<span class="name">v-stepper-content</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">v-stepper-content</span> <span class="attr">step</span>=<span class="string">&quot;2&quot;</span>&gt;</span></span><br><span class="line">        商品描述</span><br><span class="line">      <span class="tag">&lt;/<span class="name">v-stepper-content</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">v-stepper-content</span> <span class="attr">step</span>=<span class="string">&quot;3&quot;</span>&gt;</span></span><br><span class="line">        规格参数</span><br><span class="line">      <span class="tag">&lt;/<span class="name">v-stepper-content</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">v-stepper-content</span> <span class="attr">step</span>=<span class="string">&quot;4&quot;</span>&gt;</span></span><br><span class="line">        SKU属性</span><br><span class="line">      <span class="tag">&lt;/<span class="name">v-stepper-content</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">v-stepper-items</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">v-stepper</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>效果：</p>
-<p><img src="assets/1526283729193.png" alt="1526283729193"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526283729193.png" alt="1526283729193"></p>
 <p>步骤线出现了！</p>
 <p>那么问题来了：该如何让这几个步骤切换呢？</p>
 <h3 id="5-3-3-步骤切换按钮"><a href="#5-3-3-步骤切换按钮" class="headerlink" title="5.3.3.步骤切换按钮"></a>5.3.3.步骤切换按钮</h3><h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>如果改变step的值与指定的步骤索引一致，就可以实现步骤切换了：</p>
-<p><img src="assets/1526283971416.png" alt="1526283971416"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526283971416.png" alt="1526283971416"></p>
 <p>因此，我们需要定义两个按钮，点击后修改step的值，让步骤前进或后退。</p>
 <p>那么这两个按钮放哪里？</p>
 <p>如果放在MyGoodsForm内，当表单内容过多时，按钮会被挤压到屏幕最下方，不够友好。最好是能够悬停状态。</p>
@@ -985,14 +985,14 @@
 <p>父组件的对话框是一个card，card组件提供了一个滚动效果，scrollable，如果为true，card的内容滚动时，其头部和底部是可以静止的。</p>
 <p>现在card的头部是弹框的标题，card的中间就是表单内容。如果我们把按钮放到底部，就可以实现悬停效果。</p>
 <h4 id="页面添加按钮"><a href="#页面添加按钮" class="headerlink" title="页面添加按钮"></a>页面添加按钮</h4><p>改造MyGoods的对话框组件：</p>
-<p>  <img src="assets/1526285123845.png" alt="1526285123845"></p>
+<p>  <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526285123845.png" alt="1526285123845"></p>
 <p>查看页面：</p>
-<p><img src="assets/1526285086042.png" alt="1526285086042"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526285086042.png" alt="1526285086042"></p>
 <h4 id="添加点击事件"><a href="#添加点击事件" class="headerlink" title="添加点击事件"></a>添加点击事件</h4><p>现在这两个按钮点击后没有任何反应。我们需要给他们绑定点击事件，来修改MyGoodsForm中的step的值。</p>
 <p>也就是说，父组件要修改子组件的属性状态。想到什么了？</p>
 <p>props属性。</p>
 <p>我们先在父组件定义一个step属性：</p>
-<p> <img src="assets/1526285364638.png" alt="1526285364638"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526285364638.png" alt="1526285364638"></p>
 <p>然后在点击事件中修改它：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">previous()&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">this</span>.step &gt; <span class="number">1</span>)&#123;</span><br><span class="line">        <span class="built_in">this</span>.step--</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">next()&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">this</span>.step &lt; <span class="number">4</span>)&#123;</span><br><span class="line">        <span class="built_in">this</span>.step++</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -1003,9 +1003,9 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--对话框的内容，表单--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">v-card-text</span> <span class="attr">class</span>=<span class="string">&quot;px-3&quot;</span> <span class="attr">style</span>=<span class="string">&quot;height: 600px&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">my-goods-form</span> <span class="attr">:oldGoods</span>=<span class="string">&quot;oldGoods&quot;</span> <span class="attr">:step</span>=<span class="string">&quot;step&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">v-card-text</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>子组件中接收属性：</p>
-<p> <img src="assets/1526285994382.png" alt="1526285994382"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526285994382.png" alt="1526285994382"></p>
 <p>测试效果：</p>
-<p> <img src="assets/10.gif"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/10.gif"></p>
 <h2 id="5-4-商品基本信息"><a href="#5-4-商品基本信息" class="headerlink" title="5.4.商品基本信息"></a>5.4.商品基本信息</h2><p>商品基本信息，主要是一些纯文本比较简单的SPU属性，例如：</p>
 <p>商品分类、商品品牌、商品标题、商品卖点（子标题），包装清单，售后服务</p>
 <p>接下来，我们一一添加这些表单项。</p>
@@ -1023,11 +1023,11 @@
 <li>商品SPU中要保存3级商品分类，因此我们这里需要选择showAllLevels属性，显示所有3级分类</li>
 </ul>
 <p>效果：</p>
-<p> <img src="assets/1526290196168.png" alt="1526290196168"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526290196168.png" alt="1526290196168"></p>
 <p>查看goods的属性，三级类目都在：</p>
-<p> <img src="assets/1526290263252.png" alt="1526290263252"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526290263252.png" alt="1526290263252"></p>
 <h3 id="5-4-3-品牌选择"><a href="#5-4-3-品牌选择" class="headerlink" title="5.4.3.品牌选择"></a>5.4.3.品牌选择</h3><h4 id="select组件"><a href="#select组件" class="headerlink" title="select组件"></a>select组件</h4><p>品牌不分级别，使用普通下拉选框即可。我们查看官方文档的下拉选框说明：</p>
-<p> <img src="assets/1526287929674.png" alt="1526287929674"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526287929674.png" alt="1526287929674"></p>
 <p>组件名：v-select</p>
 <p>比较重要的一些属性：</p>
 <ul>
@@ -1052,7 +1052,7 @@
 </ul>
 <h4 id="页面实现"><a href="#页面实现" class="headerlink" title="页面实现"></a>页面实现</h4><p>备选项items需要我们去后台查询，而且必须是在用户选择商品分类后去查询。</p>
 <p>我们定义一个属性，保存品牌的待选项信息：</p>
-<p> <img src="assets/1526289926110.png" alt="1526289926110"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526289926110.png" alt="1526289926110"></p>
 <p>然后编写一个watch，监控goods.categories的变化：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">watch: &#123;</span><br><span class="line">    <span class="string">&#x27;goods.categories&#x27;</span>: &#123;</span><br><span class="line">        deep: <span class="literal">true</span>,</span><br><span class="line">            handler(val) &#123;</span><br><span class="line">            <span class="comment">// 判断商品分类是否存在，存在才查询</span></span><br><span class="line">            <span class="keyword">if</span> (val &amp;&amp; val.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="comment">// 根据分类查询品牌</span></span><br><span class="line">                <span class="built_in">this</span>.$http.get(<span class="string">&quot;/item/brand/cid/&quot;</span> + <span class="built_in">this</span>.goods.categories[<span class="number">2</span>].id)</span><br><span class="line">                    .then(<span class="function">(<span class="params">&#123;data&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">                    <span class="built_in">this</span>.brandOptions = data;</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -1087,7 +1087,7 @@
 
 
 
-<h4 id="测试效果"><a href="#测试效果" class="headerlink" title="测试效果"></a>测试效果</h4><p> <img src="assets/1526290461916.png" alt="1526290461916"></p>
+<h4 id="测试效果"><a href="#测试效果" class="headerlink" title="测试效果"></a>测试效果</h4><p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526290461916.png" alt="1526290461916"></p>
 <h3 id="5-4-4-标题等其它字段"><a href="#5-4-4-标题等其它字段" class="headerlink" title="5.4.4.标题等其它字段"></a>5.4.4.标题等其它字段</h3><p>标题等字段都是普通文本，直接使用<code>v-text-field</code>即可：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">v-text-field</span> <span class="attr">label</span>=<span class="string">&quot;商品标题&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;goods.title&quot;</span> <span class="attr">:counter</span>=<span class="string">&quot;200&quot;</span> <span class="attr">required</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">v-text-field</span> <span class="attr">label</span>=<span class="string">&quot;商品卖点&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;goods.subTitle&quot;</span> <span class="attr">:counter</span>=<span class="string">&quot;200&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">v-text-field</span> <span class="attr">label</span>=<span class="string">&quot;包装清单&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;goods.spuDetail.packingList&quot;</span> <span class="attr">:counter</span>=<span class="string">&quot;1000&quot;</span> <span class="attr">multi-line</span> <span class="attr">:rows</span>=<span class="string">&quot;3&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">v-text-field</span> <span class="attr">label</span>=<span class="string">&quot;售后服务&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;goods.spuDetail.afterService&quot;</span> <span class="attr">:counter</span>=<span class="string">&quot;1000&quot;</span> <span class="attr">multi-line</span> <span class="attr">:rows</span>=<span class="string">&quot;3&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -1097,17 +1097,17 @@
 <li>rows：文本域的行数</li>
 <li>multi-line：把单行文本变成文本域</li>
 </ul>
-<p><img src="assets/1526290761721.png" alt="1526290761721"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526290761721.png" alt="1526290761721"></p>
 <h2 id="5-5-商品描述信息"><a href="#5-5-商品描述信息" class="headerlink" title="5.5.商品描述信息"></a>5.5.商品描述信息</h2><p>商品描述信息比较复杂，而且图文并茂，甚至包括视频。</p>
 <p>这样的内容，一般都会使用富文本编辑器。</p>
 <h3 id="5-5-1-什么是富文本编辑器"><a href="#5-5-1-什么是富文本编辑器" class="headerlink" title="5.5.1.什么是富文本编辑器"></a>5.5.1.什么是富文本编辑器</h3><p>百度百科：</p>
-<p><img src="assets/1526290914491.png" alt="1526290914491"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526290914491.png" alt="1526290914491"></p>
 <p>通俗来说：富文本，就是比较丰富的文本编辑器。普通的框只能输入文字，而富文本还能给文字加颜色样式等。</p>
 <p>富文本编辑器有很多，例如：KindEditor、Ueditor。但并不原生支持vue</p>
 <p>但是我们今天要说的，是一款支持Vue的富文本编辑器：<code>vue-quill-editor</code></p>
 <h3 id="5-5-2-Vue-Quill-Editor"><a href="#5-5-2-Vue-Quill-Editor" class="headerlink" title="5.5.2.Vue-Quill-Editor"></a>5.5.2.Vue-Quill-Editor</h3><p>GitHub的主页：<a target="_blank" rel="noopener" href="https://github.com/surmon-china/vue-quill-editor">https://github.com/surmon-china/vue-quill-editor</a></p>
 <p>Vue-Quill-Editor是一个基于Quill的富文本编辑器：<a target="_blank" rel="noopener" href="https://quilljs.com/">Quill的官网</a></p>
-<p><img src="assets/1526291232678.png" alt="1526291232678"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526291232678.png" alt="1526291232678"></p>
 <h3 id="5-5-3-使用指南"><a href="#5-5-3-使用指南" class="headerlink" title="5.5.3.使用指南"></a>5.5.3.使用指南</h3><p>使用非常简单：</p>
 <p>第一步：安装，使用npm命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue-quill-editor --save</span><br></pre></td></tr></table></figure>
@@ -1129,7 +1129,7 @@
 
 
 <h3 id="5-5-4-自定义的富文本编辑器"><a href="#5-5-4-自定义的富文本编辑器" class="headerlink" title="5.5.4.自定义的富文本编辑器"></a>5.5.4.自定义的富文本编辑器</h3><p>不过这个组件有个小问题，就是图片上传的无法直接上传到后台，因此我们对其进行了封装，支持了图片的上传。</p>
-<p> <img src="assets/1526296083605.png" alt="1526296083605.png"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526296083605.png" alt="1526296083605.png"></p>
 <p>使用也非常简单：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">v-stepper-content</span> <span class="attr">step</span>=<span class="string">&quot;2&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">v-editor</span> <span class="attr">v-model</span>=<span class="string">&quot;goods.spuDetail.description&quot;</span> <span class="attr">upload-url</span>=<span class="string">&quot;/upload/image&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">v-stepper-content</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -1137,14 +1137,14 @@
 <li>upload-url：是图片上传的路径</li>
 <li>v-model：双向绑定，将富文本编辑器的内容绑定到goods.spuDetail.description</li>
 </ul>
-<h3 id="5-5-5-效果："><a href="#5-5-5-效果：" class="headerlink" title="5.5.5.效果："></a>5.5.5.效果：</h3><p><img src="assets/1526297276667.png" alt="1526297276667"></p>
+<h3 id="5-5-5-效果："><a href="#5-5-5-效果：" class="headerlink" title="5.5.5.效果："></a>5.5.5.效果：</h3><p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526297276667.png" alt="1526297276667"></p>
 <h2 id="5-6-规格参数"><a href="#5-6-规格参数" class="headerlink" title="5.6.规格参数"></a>5.6.规格参数</h2><p>商品规格参数与商品分类绑定，因此我们需要在用户选择商品分类后，去后台查询对应的规格参数模板。</p>
 <h3 id="5-6-1-查询商品规格"><a href="#5-6-1-查询商品规格" class="headerlink" title="5.6.1.查询商品规格"></a>5.6.1.查询商品规格</h3><p>首先，我们在data中定义变量，记录查询到的规格参数模板：</p>
-<p> <img src="assets/1526297766476.png" alt="1526297766476"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526297766476.png" alt="1526297766476"></p>
 <p>然后，我们通过watch监控goods.categories的变化，然后去查询规格：</p>
-<p>  <img src="assets/1526375545366.png" alt="1526375545366"></p>
+<p>  <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526375545366.png" alt="1526375545366"></p>
 <p>查看是否查询到：</p>
-<p> <img src="assets/1526297980403.png" alt="1526297980403"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526297980403.png" alt="1526297980403"></p>
 <h3 id="5-6-2-页面展示规格属性"><a href="#5-6-2-页面展示规格属性" class="headerlink" title="5.6.2.页面展示规格属性"></a>5.6.2.页面展示规格属性</h3><p>获取到了规格参数，还需要把它展示到页面中。</p>
 <p>现在查询到的规格参数只有key，并没有值。值需要用户来根据SPU信息填写，因此规格参数最终需要处理为表单。</p>
 <blockquote>
@@ -1155,7 +1155,7 @@
 <p>注意事项：</p>
 </blockquote>
 <p>规格参数中的属性有一些需要我们特殊处理：</p>
-<p> <img src="assets/1526298277201.png" alt="1526298277201"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526298277201.png" alt="1526298277201"></p>
 <ul>
 <li>global：是否是全局属性，规格参数中一部分是SPU共享，属于全局属性，另一部是SKU特有，需要根据SKU来填写。因此，在当前版面中，只展示global为true的，即全局属性。sku特有属性放到最后一个面板</li>
 <li>numerical：是否是数值类型，如果是，把单位补充在页面表单，不允许用户填写，并且要验证用户输入的数据格式</li>
@@ -1167,19 +1167,19 @@
 
 
 <p>效果：</p>
-<p> <img src="assets/1526302470344.png" alt="1526302470344"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526302470344.png" alt="1526302470344"></p>
 <h2 id="5-7-SKU特有属性"><a href="#5-7-SKU特有属性" class="headerlink" title="5.7.SKU特有属性"></a>5.7.SKU特有属性</h2><p>sku特有属性也存在与specifications中，但是我们现在只想展示特有属性，而不是从头遍历一次。因此，我们应该从specifications中把特有规格属性拆分出来独立保存。</p>
 <h3 id="5-7-1-筛选特有规格参数"><a href="#5-7-1-筛选特有规格参数" class="headerlink" title="5.7.1.筛选特有规格参数"></a>5.7.1.筛选特有规格参数</h3><p>首先：我们在data中新建一个属性，保存特有的规格参数：</p>
-<p> <img src="assets/1526306568822.png" alt="1526306568822"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526306568822.png" alt="1526306568822"></p>
 <p>然后，在查询完成规格模板后，立刻对规格参数进行处理，筛选出特有规格参数，保存到specialSpecs中：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 根据分类查询规格参数</span></span><br><span class="line"><span class="built_in">this</span>.$http.get(<span class="string">&quot;/item/spec/&quot;</span> + <span class="built_in">this</span>.goods.categories[<span class="number">2</span>].id)</span><br><span class="line">    .then(<span class="function">(<span class="params">&#123;data&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 保存全部规格</span></span><br><span class="line">        <span class="built_in">this</span>.specifications = data;</span><br><span class="line">        <span class="comment">// 对特有规格进行筛选</span></span><br><span class="line">        <span class="keyword">const</span> temp = [];</span><br><span class="line">        data.forEach(<span class="function">(<span class="params">&#123;params&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">            params.forEach(<span class="function">(<span class="params">&#123;k, options, <span class="built_in">global</span>&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (!<span class="built_in">global</span>) &#123;</span><br><span class="line">                    temp.push(&#123;</span><br><span class="line">                        k, options,<span class="attr">selected</span>:[]</span><br><span class="line">                    &#125;)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="built_in">this</span>.specialSpecs = temp;</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
 
 <p>要注意：我们添加了一个selected属性，用于保存用户填写的信息</p>
 <p>查看数据：</p>
-<p> <img src="assets/1526306826026.png" alt="1526306826026"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526306826026.png" alt="1526306826026"></p>
 <h3 id="5-7-2-页面渲染SKU属性"><a href="#5-7-2-页面渲染SKU属性" class="headerlink" title="5.7.2.页面渲染SKU属性"></a>5.7.2.页面渲染SKU属性</h3><p>接下来，我们把筛选出的特有规格参数，渲染到SKU页面：</p>
 <p>我们的目标效果是这样的：</p>
-<p> <img src="assets/1526307835157.png" alt="1526307835157"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526307835157.png" alt="1526307835157"></p>
 <p>可以看到，</p>
 <ul>
 <li>每一个特有属性自成一组，都包含标题和选项。我们可以使用card达到这个效果。</li>
@@ -1189,28 +1189,28 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--4、SKU属性--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">v-stepper-content</span> <span class="attr">step</span>=<span class="string">&quot;4&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">v-flex</span> <span class="attr">class</span>=<span class="string">&quot;mx-auto&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--遍历特有规格参数--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">v-card</span> <span class="attr">flat</span> <span class="attr">v-for</span>=<span class="string">&quot;spec in specialSpecs&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;spec.k&quot;</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--特有参数的标题--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">v-card-title</span> <span class="attr">class</span>=<span class="string">&quot;subheading&quot;</span>&gt;</span>&#123;&#123;spec.k&#125;&#125;:<span class="tag">&lt;/<span class="name">v-card-title</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--特有参数的待选项，需要判断是否有options，如果没有，展示文本框，让用户自己输入--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">v-card-text</span> <span class="attr">v-if</span>=<span class="string">&quot;spec.options.length &lt;= 0&quot;</span> <span class="attr">class</span>=<span class="string">&quot;px-5&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">v-text-field</span> <span class="attr">:label</span>=<span class="string">&quot;&#x27;输入新的&#x27; + spec.k&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;spec.selected&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">v-card-text</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--如果有options，需要展示成多个checkbox--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">v-card-text</span> <span class="attr">v-else</span> <span class="attr">class</span>=<span class="string">&quot;container fluid grid-list-xs&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">v-layout</span> <span class="attr">row</span> <span class="attr">wrap</span> <span class="attr">class</span>=<span class="string">&quot;px-5&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">v-checkbox</span> <span class="attr">color</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">v-for</span>=<span class="string">&quot;o in spec.options&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;o&quot;</span> <span class="attr">class</span>=<span class="string">&quot;flex xs3&quot;</span></span></span><br><span class="line"><span class="tag">                                <span class="attr">:label</span>=<span class="string">&quot;o&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;spec.selected&quot;</span> <span class="attr">:value</span>=<span class="string">&quot;o&quot;</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">v-layout</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">v-card-text</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">v-card</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">v-flex</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">v-stepper-content</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>我们的实现效果：</p>
-<p><img src="assets/1526308151513.png" alt="1526308151513"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526308151513.png" alt="1526308151513"></p>
 <p>测试下，勾选checkbox或填写文本会发生什么：</p>
-<p> <img src="assets/1526308483766.png" alt="1526308483766"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526308483766.png" alt="1526308483766"></p>
 <p>看下规格模板的值：</p>
-<p> <img src="assets/1526308513342.png" alt="1526308513342"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526308513342.png" alt="1526308513342"></p>
 <h3 id="5-7-3-自由添加或删除文本框"><a href="#5-7-3-自由添加或删除文本框" class="headerlink" title="5.7.3.自由添加或删除文本框"></a>5.7.3.自由添加或删除文本框</h3><p>刚才的实现中，普通文本项只有一个，如果用户想添加更多值就不行。我们需要让用户能够自由添加新的文本框，而且还能删除。</p>
 <p>这里有个取巧的方法：</p>
 <p>还记得我们初始化 特有规格参数时，新增了一个selected属性吗，用来保存用户填写的值，是一个数组。每当用户新加一个值，该数组的长度就会加1，而初始长度为0</p>
 <p>另外，v-for指令有个特殊之处，就在于它可以遍历数字。比如 v-for=”i in 10”，你会得到1~10</p>
 <p>因此，我们可以遍历selected的长度，每当我们输入1个文本，selected长度会加1，自然会多出一个文本框。</p>
 <p>代码如下：</p>
-<p><img src="assets/1526309463115.png" alt="1526309463115"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526309463115.png" alt="1526309463115"></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">v-card</span> <span class="attr">flat</span> <span class="attr">v-for</span>=<span class="string">&quot;spec in specialSpecs&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;spec.k&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--特有参数的标题--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">v-card-title</span> <span class="attr">class</span>=<span class="string">&quot;subheading&quot;</span>&gt;</span>&#123;&#123;spec.k&#125;&#125;:<span class="tag">&lt;/<span class="name">v-card-title</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--特有参数的待选项，需要判断是否有options，如果没有，展示文本框，让用户自己输入--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">v-card-text</span> <span class="attr">v-if</span>=<span class="string">&quot;spec.options.length &lt;= 0&quot;</span> <span class="attr">class</span>=<span class="string">&quot;px-5&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">&quot;i in spec.selected.length+1&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;i&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">v-text-field</span> <span class="attr">:label</span>=<span class="string">&quot;&#x27;输入新的&#x27; + spec.k&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;spec.selected[i-1]&quot;</span> <span class="attr">v-bind:value</span>=<span class="string">&quot;i&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">v-card-text</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--如果有options，需要展示成多个checkbox--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">v-card-text</span> <span class="attr">v-else</span> <span class="attr">class</span>=<span class="string">&quot;container fluid grid-list-xs&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">v-layout</span> <span class="attr">row</span> <span class="attr">wrap</span> <span class="attr">class</span>=<span class="string">&quot;px-5&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">v-checkbox</span> <span class="attr">color</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">v-for</span>=<span class="string">&quot;o in spec.options&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;o&quot;</span> <span class="attr">class</span>=<span class="string">&quot;flex xs3&quot;</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">:label</span>=<span class="string">&quot;o&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;spec.selected&quot;</span> <span class="attr">:value</span>=<span class="string">&quot;o&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">v-layout</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">v-card-text</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">v-card</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>效果：</p>
-<p> <img src="assets/11.gif"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/11.gif"></p>
 <p>而删除文本框相对就比较简单了，只要在文本框末尾添加一个按钮，添加点击事件即可，代码：</p>
-<p> <img src="assets/1526310720065.png" alt="1526310720065"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526310720065.png" alt="1526310720065"></p>
 <p>添加了一些布局样式，以及一个按钮，在点击事件中删除一个值。</p>
 <h2 id="5-8-展示SKU列表"><a href="#5-8-展示SKU列表" class="headerlink" title="5.8.展示SKU列表"></a>5.8.展示SKU列表</h2><h3 id="5-8-1-效果预览"><a href="#5-8-1-效果预览" class="headerlink" title="5.8.1.效果预览"></a>5.8.1.效果预览</h3><p>当我们选定SKU的特有属性时，就会对应出不同排列组合的SKU。</p>
 <p>举例：</p>
-<p><img src="assets/1526311110498.png" alt="1526311110498"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526311110498.png" alt="1526311110498"></p>
 <p>当你选择了上图中的这些选项时：</p>
 <ul>
 <li>颜色共2种：土豪金，绚丽红</li>
@@ -1219,7 +1219,7 @@
 </ul>
 <p>此时会产生多少种SKU呢？ 应该是 2 * 2 * 1 = 4种。</p>
 <p>因此，接下来应该由用户来对这4种sku的信息进行详细填写，比如库存和价格等。而多种sku的最佳展示方式，是表格（淘宝、京东都是这么做的），如图：</p>
-<p><img src="assets/1526311330409.png" alt="1526311330409"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526311330409.png" alt="1526311330409"></p>
 <p>而且这个表格应该随着用户选择的不同而动态变化。如何实现？</p>
 <h3 id="5-8-2-算法：求数组笛卡尔积"><a href="#5-8-2-算法：求数组笛卡尔积" class="headerlink" title="5.8.2.算法：求数组笛卡尔积"></a>5.8.2.算法：求数组笛卡尔积</h3><p>大家看这个结果就能发现，这其实是在求多个数组的笛卡尔积。作为一个程序员，这应该是基本功了吧。</p>
 <blockquote>
@@ -1233,7 +1233,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;3&#x27;</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> result = [];</span><br><span class="line"></span><br><span class="line">arr1.forEach(<span class="function"><span class="params">e1</span> =&gt;</span> &#123;</span><br><span class="line">    arr2.forEach(<span class="function"><span class="params">e2</span> =&gt;</span> &#123;</span><br><span class="line">        result.push(e1 + <span class="string">&quot;_&quot;</span> + e2)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(result);</span><br></pre></td></tr></table></figure>
 
 <p>结果：</p>
-<p> <img src="assets/1526354069684.png" alt="1526354069684"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526354069684.png" alt="1526354069684"></p>
 <p>完美实现。</p>
 <blockquote>
 <p>N个数组的笛卡尔积</p>
@@ -1262,7 +1262,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;3&#x27;</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>];</span><br><span class="line"><span class="comment">// 用来作为运算的二维数组</span></span><br><span class="line"><span class="keyword">const</span> arr3 = [arr1, arr2, [<span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;y&#x27;</span>]]</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> result = arr3.reduce(<span class="function">(<span class="params">last, el</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> arr = [];</span><br><span class="line">    <span class="comment">// last：上次运算结果</span></span><br><span class="line">    <span class="comment">// el：数组中的当前元素</span></span><br><span class="line">    last.forEach(<span class="function"><span class="params">e1</span> =&gt;</span> &#123;</span><br><span class="line">        el.forEach(<span class="function"><span class="params">e2</span> =&gt;</span> &#123;</span><br><span class="line">            arr.push(e1 + <span class="string">&quot;_&quot;</span> + e2)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> arr</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(result);</span><br></pre></td></tr></table></figure>
 
 <p>结果：</p>
-<p> <img src="assets/1526355132141.png" alt="1526355132141"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526355132141.png" alt="1526355132141"></p>
 <h3 id="5-8-3-算法结合业务"><a href="#5-8-3-算法结合业务" class="headerlink" title="5.8.3.算法结合业务"></a>5.8.3.算法结合业务</h3><p>来看我们的业务逻辑：</p>
 <p>首先，我们已经有了一个特有参数的规格模板：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="string">&quot;k&quot;</span>: <span class="string">&quot;机身颜色&quot;</span>,</span><br><span class="line">    <span class="string">&quot;selected&quot;</span>: [<span class="string">&quot;红色&quot;</span>,<span class="string">&quot;黑色&quot;</span>]</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="string">&quot;k&quot;</span>: <span class="string">&quot;内存&quot;</span>,</span><br><span class="line">    <span class="string">&quot;selected&quot;</span>: [<span class="string">&quot;8GB&quot;</span>,<span class="string">&quot;6GB&quot;</span>]</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="string">&quot;k&quot;</span>: <span class="string">&quot;机身存储&quot;</span>,</span><br><span class="line">    <span class="string">&quot;selected&quot;</span>: [<span class="string">&quot;64GB&quot;</span>,<span class="string">&quot;256GB&quot;</span>]</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
@@ -1280,7 +1280,7 @@
 <li>然后再把结果与下一个规格求笛卡尔积，依次类推</li>
 </ul>
 <p>如果：</p>
-<p><img src="assets/skus.png" alt="skus."></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/skus.png" alt="skus."></p>
 <p>代码：</p>
 <p>我们在Vue中新增一个计算属性，按照上面所讲的逻辑，计算所有规格参数的笛卡尔积</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">    skus() &#123;</span><br><span class="line">        <span class="comment">// 过滤掉用户没有填写数据的规格参数</span></span><br><span class="line">        <span class="keyword">const</span> arr = <span class="built_in">this</span>.specialSpecs.filter(<span class="function"><span class="params">s</span> =&gt;</span> s.selected.length &gt; <span class="number">0</span>);</span><br><span class="line">        <span class="comment">// 通过reduce进行累加笛卡尔积</span></span><br><span class="line">        <span class="keyword">return</span> arr.reduce(<span class="function">(<span class="params">last, spec</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">const</span> result = [];</span><br><span class="line">            last.forEach(<span class="function"><span class="params">o</span> =&gt;</span> &#123;</span><br><span class="line">                spec.selected.forEach(<span class="function"><span class="params">option</span> =&gt;</span> &#123;</span><br><span class="line">                    <span class="keyword">const</span> obj = &#123;&#125;;</span><br><span class="line">                    <span class="built_in">Object</span>.assign(obj, o);</span><br><span class="line">                    obj[spec.k] = option;</span><br><span class="line">                    result.push(obj);</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;)</span><br><span class="line">            <span class="keyword">return</span> result</span><br><span class="line">        &#125;, [&#123;&#125;])</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1288,7 +1288,7 @@
 
 
 <p>结果：</p>
-<p> <img src="assets/1526356312119.png" alt="1526356312119"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526356312119.png" alt="1526356312119"></p>
 <p>优化：这里生成的是SKU的数组。因此只包含SKU的规格参数是不够的。结合数据库知道，还需要有下面的字段：</p>
 <ul>
 <li>price：价格</li>
@@ -1303,7 +1303,7 @@
 
 
 <p>查看生成的数据：</p>
-<p> <img src="assets/1526363824808.png" alt="1526363824808"></p>
+<p> <img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526363824808.png" alt="1526363824808"></p>
 <h3 id="5-8-4-页面展现"><a href="#5-8-4-页面展现" class="headerlink" title="5.8.4.页面展现"></a>5.8.4.页面展现</h3><p>页面展现是一个表格。我们之前已经用过。表格需要以下信息：</p>
 <ul>
 <li>items：表格内的数据</li>
@@ -1318,7 +1318,7 @@
 
 <p>接下来编写页面，实现table。</p>
 <p>需要注意的是，price、stock字段需要用户填写数值，不能直接展示。enable要展示为checkbox，让用户选择，如图：</p>
-<p><img src="assets/1526364758744.png" alt="1526364758744"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526364758744.png" alt="1526364758744"></p>
 <p>代码：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">v-card</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--标题--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">v-card-title</span> <span class="attr">class</span>=<span class="string">&quot;subheading&quot;</span>&gt;</span>SKU列表<span class="tag">&lt;/<span class="name">v-card-title</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--SKU表格，hide-actions因此分页等工具条--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">v-data-table</span> <span class="attr">:items</span>=<span class="string">&quot;skus&quot;</span> <span class="attr">:headers</span>=<span class="string">&quot;headers&quot;</span> <span class="attr">hide-actions</span> <span class="attr">item-key</span>=<span class="string">&quot;indexes&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">template</span> <span class="attr">slot</span>=<span class="string">&quot;items&quot;</span> <span class="attr">slot-scope</span>=<span class="string">&quot;props&quot;</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--价格和库存展示为文本框--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">v-for</span>=<span class="string">&quot;(v,k) in props.item&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;k&quot;</span> <span class="attr">v-if</span>=<span class="string">&quot;[&#x27;price&#x27;, &#x27;stock&#x27;].includes(k)&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">class</span>=<span class="string">&quot;text-xs-center&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">v-text-field</span> <span class="attr">single-line</span> <span class="attr">v-model.number</span>=<span class="string">&quot;props.item[k]&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--enable展示为checkbox--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">&quot;text-xs-center&quot;</span> <span class="attr">v-else-if</span>=<span class="string">&quot;k === &#x27;enable&#x27;&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">v-checkbox</span> <span class="attr">v-model</span>=<span class="string">&quot;props.item[k]&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--indexes和images不展示，其它展示为普通文本--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">&quot;text-xs-center&quot;</span> <span class="attr">v-else-if</span>=<span class="string">&quot;![&#x27;indexes&#x27;,&#x27;images&#x27;].includes(k)&quot;</span>&gt;</span>&#123;&#123;v&#125;&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">v-data-table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">v-card</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -1329,21 +1329,21 @@
 
 
 <p>效果：</p>
-<p><img src="assets/1526365039421.png" alt="1526365039421"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526365039421.png" alt="1526365039421"></p>
 <h3 id="5-8-5-图片上传列表"><a href="#5-8-5-图片上传列表" class="headerlink" title="5.8.5.图片上传列表"></a>5.8.5.图片上传列表</h3><p>这个表格中只展示了基本信息，当用户需要上传图片时，该怎么做呢？</p>
 <p>Vuetify的table有一个展开功能，可以提供额外的展示空间：</p>
-<p><img src="assets/1526366340741.png" alt="1526366340741"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526366340741.png" alt="1526366340741"></p>
 <p>用法也非常简单，添加一个template，把其slot属性指定为expand即可：</p>
-<p><img src="assets/1526366667064.png" alt="1526366667064"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526366667064.png" alt="1526366667064"></p>
 <p>效果：</p>
-<p><img src="assets/1526366997943.png" alt="1526366997943"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526366997943.png" alt="1526366997943"></p>
 <p>接下来就是我们的图片上传组件：v-upload</p>
-<p><img src="assets/1526367719809.png" alt="1526367719809"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526367719809.png" alt="1526367719809"></p>
 <h2 id="5-9-表单提交"><a href="#5-9-表单提交" class="headerlink" title="5.9.表单提交"></a>5.9.表单提交</h2><h3 id="5-9-1-添加提交按钮"><a href="#5-9-1-添加提交按钮" class="headerlink" title="5.9.1.添加提交按钮"></a>5.9.1.添加提交按钮</h3><p>我们在step=4，也就是SKU属性列表页面， 添加一个提交按钮。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--提交按钮--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">v-flex</span> <span class="attr">xs3</span> <span class="attr">offset-xs9</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">v-btn</span> <span class="attr">color</span>=<span class="string">&quot;info&quot;</span>&gt;</span>保存商品信息<span class="tag">&lt;/<span class="name">v-btn</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">v-flex</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>效果：</p>
-<p><img src="assets/1526366187195.png" alt="1526366187195"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526366187195.png" alt="1526366187195"></p>
 <h3 id="5-9-2点击事件"><a href="#5-9-2点击事件" class="headerlink" title="5.9.2点击事件"></a>5.9.2点击事件</h3><p>当用户点击保存，我们就需要对页面的数据进行整理，然后提交到后台服务。</p>
 <p>现在我们页面包含了哪些信息呢？我们与数据库对比，看看少什么</p>
 <ul>
@@ -1388,7 +1388,7 @@
 
 
 <p>点击测试，看效果：</p>
-<p><img src="assets/1526391630336.png" alt="1526391630336"></p>
+<p><img src="/2018/08/19/leyou/day09-bi-ji/day09-shang-pin-gui-ge-guan-li/1526391630336.png" alt="1526391630336"></p>
 <p>向后台发起请求，因为请求体复杂，我们直接发起Json请求：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">this</span>.$http.post(<span class="string">&quot;/item/goods&quot;</span>,goodsParams)</span><br><span class="line">    .then(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 成功，关闭窗口</span></span><br><span class="line">    <span class="built_in">this</span>.$emit(<span class="string">&#x27;close&#x27;</span>);</span><br><span class="line">    <span class="comment">// 提示成功</span></span><br><span class="line">    <span class="built_in">this</span>.$message.success(<span class="string">&quot;新增成功了&quot;</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">    .catch(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.$message.error(<span class="string">&quot;保存失败！&quot;</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
