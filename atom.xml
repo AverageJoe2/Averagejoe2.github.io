@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.averagejoe.top/"/>
-  <updated>2020-10-30T10:28:21.837Z</updated>
+  <updated>2020-10-31T01:41:20.771Z</updated>
   <id>http://www.averagejoe.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.averagejoe.top/2020/10/30/diary-1030/"/>
     <id>http://www.averagejoe.top/2020/10/30/diary-1030/</id>
     <published>2020-10-30T09:47:35.000Z</published>
-    <updated>2020-10-30T10:28:21.837Z</updated>
+    <updated>2020-10-31T01:41:20.771Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
       
         
         
-          &lt;p&gt;有时候心情就像现在一样…什么都不想说又什么都说不出来.&lt;/p&gt;
+          &lt;p&gt;有时候心情就像现在一样…什么都不想说也什么都说不出来.&lt;/p&gt;
 &lt;img src=&quot;/2020/10/30/diary-1030/bPw0COdWK3U.jpg&quot; class
         
       
@@ -47,7 +47,7 @@
     <link href="http://www.averagejoe.top/2020/09/10/diary/diary-tips/"/>
     <id>http://www.averagejoe.top/2020/09/10/diary/diary-tips/</id>
     <published>2020-09-10T01:23:06.114Z</published>
-    <updated>2020-10-30T10:18:00.827Z</updated>
+    <updated>2020-10-31T01:30:00.607Z</updated>
     
     <summary type="html">
     
@@ -108,29 +108,6 @@
         
         
           &lt;p&gt;设置jenkins开机自启&lt;br&gt;sudo launchctl load -w /Library/LaunchDaemons/org.jenkins-ci.plist&lt;br&gt;sudo launchctl unload -w
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/08/28/password-tips/"/>
-    <id>http://www.averagejoe.top/2020/08/28/password-tips/</id>
-    <published>2020-08-28T08:41:38.906Z</published>
-    <updated>2020-10-23T00:59:32.534Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;1）新津腾华智控科技有限公司，做研发、出口，部分贸易:&lt;a href=&quot;http://www.thcon.cn/&quot;&gt;www.thcon.cn&lt;/a&gt;&lt;br&gt;2）四川精控光华科技有限公司，做研发，目前不做实际业务，但是研发部门通常喜欢叫精控公司，&lt;a
         
       
     
@@ -489,6 +466,31 @@
         
           &lt;p&gt;#!/bin/sh&lt;/p&gt;
 &lt;p&gt;yum install docker -y&amp;amp;&amp;amp;service docker start&amp;amp;&amp;amp;chkconfig docker on&amp;amp;&amp;amp;docker pull
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2020/08/18/mac-tips/"/>
+    <id>http://www.averagejoe.top/2020/08/18/mac-tips/</id>
+    <published>2020-08-18T07:51:13.579Z</published>
+    <updated>2020-10-30T03:48:55.049Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;nginx -h&lt;br&gt;nginx -s  stop&lt;br&gt;开启读写权限:&lt;br&gt;sudo mount -uw /&lt;/p&gt;
+&lt;p&gt;ln -s source destination&lt;/p&gt;
+&lt;p&gt;ln -s
         
       
     
