@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.averagejoe.top/"/>
-  <updated>2020-10-31T01:41:20.771Z</updated>
+  <updated>2020-12-10T07:29:13.948Z</updated>
   <id>http://www.averagejoe.top/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>diary-1030</title>
-    <link href="http://www.averagejoe.top/2020/10/30/diary-1030/"/>
-    <id>http://www.averagejoe.top/2020/10/30/diary-1030/</id>
-    <published>2020-10-30T09:47:35.000Z</published>
-    <updated>2020-10-31T01:41:20.771Z</updated>
+    <title></title>
+    <link href="http://www.averagejoe.top/2020/11/25/mall-cloud-alibaba/"/>
+    <id>http://www.averagejoe.top/2020/11/25/mall-cloud-alibaba/</id>
+    <published>2020-11-25T02:12:16.307Z</published>
+    <updated>2020-12-10T07:29:13.948Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,7 @@
       
         
         
-          &lt;p&gt;有时候心情就像现在一样…什么都不想说也什么都说不出来.&lt;/p&gt;
-&lt;img src=&quot;/2020/10/30/diary-1030/bPw0COdWK3U.jpg&quot; class
+          &lt;p&gt;===========================================================&lt;br&gt;服务列表:&lt;br&gt;nacos:&lt;br&gt;&lt;a
         
       
     
@@ -38,7 +37,32 @@
     
     
     
-      <category term="情感" scheme="http://www.averagejoe.top/tags/%E6%83%85%E6%84%9F/"/>
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2020/11/04/jd-investigation/"/>
+    <id>http://www.averagejoe.top/2020/11/04/jd-investigation/</id>
+    <published>2020-11-04T02:47:17.123Z</published>
+    <updated>2020-11-06T01:55:11.533Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;京东开店调研&lt;/p&gt;
+&lt;p&gt;自营:&lt;br&gt;放到京东自己全国各地的仓库出售,物流快.&lt;/p&gt;
+&lt;p&gt;旗舰店:&lt;br&gt;避免旗舰店商品和自营的冲突旗舰店商品会少些.&lt;/p&gt;
+&lt;p&gt;自营还是旗舰店?&lt;/p&gt;
+&lt;p&gt;标品:更适合自营物流速度比较快,售后有保证.&lt;br&gt;非标品:
+        
+      
+    
+    </summary>
+    
+    
     
   </entry>
   
@@ -217,7 +241,7 @@
     <link href="http://www.averagejoe.top/2020/08/28/vi-tips/"/>
     <id>http://www.averagejoe.top/2020/08/28/vi-tips/</id>
     <published>2020-08-28T08:41:05.817Z</published>
-    <updated>2020-08-28T08:41:05.819Z</updated>
+    <updated>2020-11-18T03:18:26.841Z</updated>
     
     <summary type="html">
     
@@ -240,7 +264,7 @@
     <link href="http://www.averagejoe.top/2020/08/28/docker-tips/"/>
     <id>http://www.averagejoe.top/2020/08/28/docker-tips/</id>
     <published>2020-08-28T08:40:24.910Z</published>
-    <updated>2020-09-22T09:09:56.417Z</updated>
+    <updated>2020-12-10T03:00:01.511Z</updated>
     
     <summary type="html">
     
@@ -430,7 +454,7 @@
     <link href="http://www.averagejoe.top/2020/08/28/linux-command-tips/"/>
     <id>http://www.averagejoe.top/2020/08/28/linux-command-tips/</id>
     <published>2020-08-28T08:38:01.368Z</published>
-    <updated>2020-09-30T07:36:27.005Z</updated>
+    <updated>2020-11-26T01:09:35.200Z</updated>
     
     <summary type="html">
     
@@ -456,7 +480,7 @@
     <link href="http://www.averagejoe.top/2020/08/28/vpm-tips/"/>
     <id>http://www.averagejoe.top/2020/08/28/vpm-tips/</id>
     <published>2020-08-28T07:54:51.741Z</published>
-    <updated>2020-08-28T08:29:22.654Z</updated>
+    <updated>2020-11-02T00:55:26.749Z</updated>
     
     <summary type="html">
     
@@ -466,31 +490,6 @@
         
           &lt;p&gt;#!/bin/sh&lt;/p&gt;
 &lt;p&gt;yum install docker -y&amp;amp;&amp;amp;service docker start&amp;amp;&amp;amp;chkconfig docker on&amp;amp;&amp;amp;docker pull
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/08/18/mac-tips/"/>
-    <id>http://www.averagejoe.top/2020/08/18/mac-tips/</id>
-    <published>2020-08-18T07:51:13.579Z</published>
-    <updated>2020-10-30T03:48:55.049Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;nginx -h&lt;br&gt;nginx -s  stop&lt;br&gt;开启读写权限:&lt;br&gt;sudo mount -uw /&lt;/p&gt;
-&lt;p&gt;ln -s source destination&lt;/p&gt;
-&lt;p&gt;ln -s
         
       
     
