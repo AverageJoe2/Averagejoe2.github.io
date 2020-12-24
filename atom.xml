@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.averagejoe.top/"/>
-  <updated>2020-12-22T08:45:28.965Z</updated>
+  <updated>2020-12-24T01:37:34.814Z</updated>
   <id>http://www.averagejoe.top/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>diary shortcuts</title>
+    <link href="http://www.averagejoe.top/2020/12/24/diary/diary-tips/"/>
+    <id>http://www.averagejoe.top/2020/12/24/diary/diary-tips/</id>
+    <published>2020-12-24T01:37:34.581Z</published>
+    <updated>2020-12-24T01:37:34.814Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;创建带有文件目录的.md文档&lt;br&gt;hexo n 1030.md&lt;br&gt;Attach img!&lt;/p&gt;
+&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="diary" scheme="http://www.averagejoe.top/categories/diary/"/>
+    
+    
+      <category term="diary-tips" scheme="http://www.averagejoe.top/tags/diary-tips/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1224.md</title>
+    <link href="http://www.averagejoe.top/2020/12/24/1224-md/"/>
+    <id>http://www.averagejoe.top/2020/12/24/1224-md/</id>
+    <published>2020-12-24T01:34:44.000Z</published>
+    <updated>2020-12-24T01:36:14.970Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+
+
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="diary-tips" scheme="http://www.averagejoe.top/tags/diary-tips/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -39,36 +94,6 @@
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>10771</title>
-    <link href="http://www.averagejoe.top/2020/12/20/diary/10771/10771/"/>
-    <id>http://www.averagejoe.top/2020/12/20/diary/10771/10771/</id>
-    <published>2020-12-20T13:18:08.665Z</published>
-    <updated>2020-12-24T01:19:55.228Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;pre&gt;&lt;code&gt;&amp;#123;% asset_img  bPw0COdWK3U.jpg test %&amp;#125;
-    来到人世间的第10771天,人生的第二段感情走到了尽头,似乎所有的言行举止都掩盖不住内心的绝望.
-尽管我极力想从这件事情阴影里挣脱.
-   
-        
-      
-    
-    </summary>
-    
-    
-      <category term="diary" scheme="http://www.averagejoe.top/categories/diary/"/>
-    
-    
-      <category term="日记" scheme="http://www.averagejoe.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
@@ -139,8 +164,8 @@
   
   <entry>
     <title>diary shortcuts</title>
-    <link href="http://www.averagejoe.top/2020/09/10/diary/diary-tips/"/>
-    <id>http://www.averagejoe.top/2020/09/10/diary/diary-tips/</id>
+    <link href="http://www.averagejoe.top/2020/09/10/diary/2020/diary-tips/"/>
+    <id>http://www.averagejoe.top/2020/09/10/diary/2020/diary-tips/</id>
     <published>2020-09-10T01:23:06.114Z</published>
     <updated>2020-10-31T01:30:00.607Z</updated>
     
@@ -461,30 +486,6 @@
         
         
           &lt;p&gt;最小化当前窗口：&lt;br&gt;alt+esc&lt;br&gt;ctrl+d ===ctrl+c 退出&lt;br&gt;alt+f4 close current window&lt;br&gt;ctrl+W close tab&lt;br&gt;win+m minimum window&lt;br&gt;win+D show
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/08/28/vpn/"/>
-    <id>http://www.averagejoe.top/2020/08/28/vpn/</id>
-    <published>2020-08-28T08:38:40.980Z</published>
-    <updated>2020-08-28T09:37:29.031Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;#!/bin/sh&lt;/p&gt;
-&lt;p&gt;yum install docker -y&amp;amp;&amp;amp;service docker start&amp;amp;&amp;amp;chkconfig docker on&amp;amp;&amp;amp;docker pull
         
       
     
