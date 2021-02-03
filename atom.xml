@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.averagejoe.top/"/>
-  <updated>2020-12-24T01:55:01.161Z</updated>
+  <updated>2021-01-23T06:09:08.197Z</updated>
   <id>http://www.averagejoe.top/</id>
   
   <author>
@@ -17,11 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>1224</title>
-    <link href="http://www.averagejoe.top/2020/12/24/1224/"/>
-    <id>http://www.averagejoe.top/2020/12/24/1224/</id>
-    <published>2020-12-24T01:51:18.000Z</published>
-    <updated>2020-12-24T01:55:01.161Z</updated>
+    <title></title>
+    <link href="http://www.averagejoe.top/2021/01/23/logo/"/>
+    <id>http://www.averagejoe.top/2021/01/23/logo/</id>
+    <published>2021-01-23T06:09:08.197Z</published>
+    <updated>2021-01-23T06:09:08.197Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2021/01/19/maintenance/"/>
+    <id>http://www.averagejoe.top/2021/01/19/maintenance/</id>
+    <published>2021-01-19T14:02:44.156Z</published>
+    <updated>2021-01-20T01:04:07.315Z</updated>
     
     <summary type="html">
     
@@ -29,18 +44,14 @@
       
         
         
-          &lt;pre&gt;&lt;code&gt;&amp;#123;% asset_img  1a06jK4yqx0.jpg %&amp;#125;
-    来到人世间的第10771天,人生的第二段感情走到了尽头,似乎所有的言行举止都掩盖不住内心的绝望.
-尽管我极力想从这件事情阴影里挣脱.
-   
+          &lt;p&gt;tools:&lt;br&gt;1.台虎钳&lt;/p&gt;
+
         
       
     
     </summary>
     
     
-    
-      <category term="日记" scheme="http://www.averagejoe.top/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
@@ -118,7 +129,7 @@
     <link href="http://www.averagejoe.top/2020/11/25/mall-cloud-alibaba/"/>
     <id>http://www.averagejoe.top/2020/11/25/mall-cloud-alibaba/</id>
     <published>2020-11-25T02:12:16.307Z</published>
-    <updated>2020-12-23T03:11:37.384Z</updated>
+    <updated>2020-12-29T02:43:50.571Z</updated>
     
     <summary type="html">
     
@@ -141,7 +152,7 @@
     <link href="http://www.averagejoe.top/2020/11/04/jd-investigation/"/>
     <id>http://www.averagejoe.top/2020/11/04/jd-investigation/</id>
     <published>2020-11-04T02:47:17.123Z</published>
-    <updated>2020-11-06T01:55:11.533Z</updated>
+    <updated>2021-01-10T08:09:59.383Z</updated>
     
     <summary type="html">
     
@@ -164,34 +175,6 @@
   </entry>
   
   <entry>
-    <title>diary shortcuts</title>
-    <link href="http://www.averagejoe.top/2020/09/10/diary/2020/diary-tips/"/>
-    <id>http://www.averagejoe.top/2020/09/10/diary/2020/diary-tips/</id>
-    <published>2020-09-10T01:23:06.114Z</published>
-    <updated>2020-10-31T01:30:00.607Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;创建带有文件目录的.md文档&lt;br&gt;hexo n 1030.md&lt;br&gt;Attach img!&lt;/p&gt;
-&lt;p&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="diary" scheme="http://www.averagejoe.top/categories/diary/"/>
-    
-    
-      <category term="diary-tips" scheme="http://www.averagejoe.top/tags/diary-tips/"/>
-    
-  </entry>
-  
-  <entry>
     <title></title>
     <link href="http://www.averagejoe.top/2020/09/04/springboot-tips/"/>
     <id>http://www.averagejoe.top/2020/09/04/springboot-tips/</id>
@@ -206,52 +189,6 @@
         
           &lt;p&gt;==================springboot=======================&lt;br&gt;ymal - 可配置集合&lt;br&gt;ymal 属性前需要空格&lt;/p&gt;
 &lt;p&gt;resource 本身就是classpath&lt;br&gt;classpath:static
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/08/28/jenkins-tips/"/>
-    <id>http://www.averagejoe.top/2020/08/28/jenkins-tips/</id>
-    <published>2020-08-28T08:42:02.863Z</published>
-    <updated>2020-09-04T02:49:11.847Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;设置jenkins开机自启&lt;br&gt;sudo launchctl load -w /Library/LaunchDaemons/org.jenkins-ci.plist&lt;br&gt;sudo launchctl unload -w
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/08/28/shortcut-tips/"/>
-    <id>http://www.averagejoe.top/2020/08/28/shortcut-tips/</id>
-    <published>2020-08-28T08:41:34.062Z</published>
-    <updated>2020-10-30T08:52:31.365Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;1,command + shift +delete  :jump to last edit&lt;br&gt;2,F8 step over Shift+F8      Step Out 
         
       
     
@@ -361,7 +298,7 @@
     <link href="http://www.averagejoe.top/2020/08/28/docker-tips/"/>
     <id>http://www.averagejoe.top/2020/08/28/docker-tips/</id>
     <published>2020-08-28T08:40:24.910Z</published>
-    <updated>2020-12-10T03:00:01.511Z</updated>
+    <updated>2021-01-18T05:56:18.088Z</updated>
     
     <summary type="html">
     
@@ -371,29 +308,6 @@
         
           &lt;p&gt;启动docker服务:&lt;br&gt;service docker start&lt;/p&gt;
 &lt;p&gt;命令启动mysql容器 并设置密码:&lt;br&gt;docker run –name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/08/28/git-shortcuts-tips/"/>
-    <id>http://www.averagejoe.top/2020/08/28/git-shortcuts-tips/</id>
-    <published>2020-08-28T08:40:19.651Z</published>
-    <updated>2020-09-25T09:39:41.506Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;gd - git diff&lt;br&gt;gdc - git diff –cached&lt;br&gt;gdv - git diff -w “$@” | view&lt;br&gt;gc - git commit -v&lt;br&gt;gc! - git commit -v –amend&lt;br&gt;gca -
         
       
     
@@ -487,6 +401,82 @@
         
         
           &lt;p&gt;最小化当前窗口：&lt;br&gt;alt+esc&lt;br&gt;ctrl+d ===ctrl+c 退出&lt;br&gt;alt+f4 close current window&lt;br&gt;ctrl+W close tab&lt;br&gt;win+m minimum window&lt;br&gt;win+D show
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2020/08/28/vpn/"/>
+    <id>http://www.averagejoe.top/2020/08/28/vpn/</id>
+    <published>2020-08-28T08:38:40.980Z</published>
+    <updated>2020-08-28T09:37:29.031Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;#!/bin/sh&lt;/p&gt;
+&lt;p&gt;yum install docker -y&amp;amp;&amp;amp;service docker start&amp;amp;&amp;amp;chkconfig docker on&amp;amp;&amp;amp;docker pull
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2020/08/28/node-js-tips/"/>
+    <id>http://www.averagejoe.top/2020/08/28/node-js-tips/</id>
+    <published>2020-08-28T08:38:36.103Z</published>
+    <updated>2020-08-28T08:38:36.105Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;angular:&lt;br&gt;grunt serve 启动前端web界面 &lt;/p&gt;
+&lt;p&gt;bower install angular#1.6.9 –save&lt;/p&gt;
+&lt;p&gt;node:&lt;br&gt;npm start &lt;/p&gt;
+&lt;p&gt;bower install &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2020/08/28/linux-command-tips/"/>
+    <id>http://www.averagejoe.top/2020/08/28/linux-command-tips/</id>
+    <published>2020-08-28T08:38:01.368Z</published>
+    <updated>2020-11-26T01:09:35.200Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;echo $SHELL&lt;/p&gt;
+&lt;p&gt;chsh -s /bin/zsh&lt;/p&gt;
+&lt;p&gt;cmd&amp;gt;&amp;gt;bash切换至：&lt;br&gt;bash on Ubuntu on Windows&lt;/p&gt;
+&lt;p&gt;gi first search box
         
       
     
