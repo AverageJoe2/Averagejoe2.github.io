@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.averagejoe.top/"/>
-  <updated>2021-01-23T06:09:08.197Z</updated>
+  <updated>2021-11-04T02:20:06.484Z</updated>
   <id>http://www.averagejoe.top/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title></title>
-    <link href="http://www.averagejoe.top/2021/01/23/logo/"/>
-    <id>http://www.averagejoe.top/2021/01/23/logo/</id>
-    <published>2021-01-23T06:09:08.197Z</published>
-    <updated>2021-01-23T06:09:08.197Z</updated>
+    <link href="http://www.averagejoe.top/2021/11/01/mac-tips/"/>
+    <id>http://www.averagejoe.top/2021/11/01/mac-tips/</id>
+    <published>2021-11-01T01:51:13.057Z</published>
+    <updated>2021-11-04T02:20:06.484Z</updated>
     
     <summary type="html">
     
@@ -33,10 +33,10 @@
   
   <entry>
     <title></title>
-    <link href="http://www.averagejoe.top/2021/01/19/maintenance/"/>
-    <id>http://www.averagejoe.top/2021/01/19/maintenance/</id>
-    <published>2021-01-19T14:02:44.156Z</published>
-    <updated>2021-01-20T01:04:07.315Z</updated>
+    <link href="http://www.averagejoe.top/2021/09/11/shorthand/"/>
+    <id>http://www.averagejoe.top/2021/09/11/shorthand/</id>
+    <published>2021-09-11T07:15:02.603Z</published>
+    <updated>2021-09-13T07:53:00.670Z</updated>
     
     <summary type="html">
     
@@ -44,8 +44,245 @@
       
         
         
-          &lt;p&gt;tools:&lt;br&gt;1.台虎钳&lt;/p&gt;
-
+          &lt;p&gt;1.pdf
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2021/08/18/to-do/"/>
+    <id>http://www.averagejoe.top/2021/08/18/to-do/</id>
+    <published>2021-08-18T09:52:37.830Z</published>
+    <updated>2021-08-19T08:27:01.737Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;一:&lt;br&gt;1.首页-&amp;gt;直接产品&lt;br&gt;2.banner
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2021/07/02/short-hand/"/>
+    <id>http://www.averagejoe.top/2021/07/02/short-hand/</id>
+    <published>2021-07-02T02:15:27.381Z</published>
+    <updated>2021-09-17T06:21:03.254Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;1.警示灯场景图拍摄&lt;br&gt;2.banner 场景图&lt;br&gt;#3.原价&lt;br&gt;#4.8980 remove&lt;br&gt;#5.最低起批100&lt;br&gt;#6.参数 文字&lt;br&gt;7.产品图接应用场景图&lt;br&gt;#8.pdf
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2021/06/22/mytop10/"/>
+    <id>http://www.averagejoe.top/2021/06/22/mytop10/</id>
+    <published>2021-06-22T05:47:03.740Z</published>
+    <updated>2021-06-23T09:48:58.317Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;备案服务号:&lt;br&gt;e9b85354-8b55-4f8f-aa6f-b4f9e15ad80a&lt;/p&gt;
+&lt;p&gt;四川巴根科技有限公司&lt;br&gt;91510107331990440R&lt;br&gt;成都市武侯区机投正街26号&lt;br&gt;mytop10.cn&lt;/p&gt;
+&lt;p&gt;微信支付:&lt;br&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2021/06/17/uniapp-tips/"/>
+    <id>http://www.averagejoe.top/2021/06/17/uniapp-tips/</id>
+    <published>2021-06-17T06:27:34.776Z</published>
+    <updated>2021-06-19T07:34:58.175Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;1.用jdk keytool生成签名:&lt;br&gt;keytool -list -v -keystore  top3.keystore&lt;/p&gt;
+&lt;p&gt;Android
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2021/06/03/docker-tips/"/>
+    <id>http://www.averagejoe.top/2021/06/03/docker-tips/</id>
+    <published>2021-06-03T06:11:04.426Z</published>
+    <updated>2021-10-30T03:13:44.105Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;启动docker服务:&lt;br&gt;service docker start&lt;/p&gt;
+&lt;p&gt;命令启动mysql容器 并设置密码:&lt;br&gt;docker run –name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2021/05/19/elk/"/>
+    <id>http://www.averagejoe.top/2021/05/19/elk/</id>
+    <published>2021-05-19T02:05:21.175Z</published>
+    <updated>2021-06-10T01:42:20.102Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;GET _search&lt;br&gt;{&lt;br&gt;  “query”: {&lt;br&gt;    “match_all”: {}&lt;br&gt;  }&lt;br&gt;}&lt;/p&gt;
+&lt;p&gt;GET shard_goods/_settings&lt;br&gt;GET
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2021/05/10/ele-tigger/"/>
+    <id>http://www.averagejoe.top/2021/05/10/ele-tigger/</id>
+    <published>2021-05-10T07:57:51.978Z</published>
+    <updated>2021-06-29T07:53:06.625Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;http://www.7895.com/&quot;&gt;www.7895.com&lt;/a&gt; 主站入口 (商城,活动,工厂,培训课堂,广告,网址导航…)&lt;/p&gt;
+&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2021/04/19/git-tips/"/>
+    <id>http://www.averagejoe.top/2021/04/19/git-tips/</id>
+    <published>2021-04-19T02:09:05.196Z</published>
+    <updated>2021-07-16T01:02:13.018Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;强制覆盖远端分支:&lt;br&gt;git push origin 分支名 –force&lt;br&gt;git push origin master –force&lt;/p&gt;
+&lt;p&gt;git show commitId fileName
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2021/03/22/mian-shi-liu-cheng-zhun-bei/"/>
+    <id>http://www.averagejoe.top/2021/03/22/mian-shi-liu-cheng-zhun-bei/</id>
+    <published>2021-03-22T08:40:20.814Z</published>
+    <updated>2021-07-28T00:49:07.851Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;公司面试流程准备:&lt;/p&gt;
+&lt;p&gt;1.个人介绍&lt;br&gt;2.项目介绍&lt;br&gt;3.根据项目提出问题,及前公司系统架构.&lt;br&gt;4.数据结构(现场面试:最好现场简单实现一个(ArrayList,单向链表,堆栈,二维数组,queue)&lt;br&gt;5.HashMap不同版本jdk实现&lt;b
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.averagejoe.top/2021/03/06/mvn-tips/"/>
+    <id>http://www.averagejoe.top/2021/03/06/mvn-tips/</id>
+    <published>2021-03-06T02:31:58.933Z</published>
+    <updated>2021-04-17T07:46:17.392Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;mvn install:install-file
         
       
     
@@ -60,7 +297,7 @@
     <link href="http://www.averagejoe.top/2020/12/24/diary/diary-tips/"/>
     <id>http://www.averagejoe.top/2020/12/24/diary/diary-tips/</id>
     <published>2020-12-24T01:37:34.581Z</published>
-    <updated>2021-02-03T06:33:43.390Z</updated>
+    <updated>2021-03-31T00:49:26.031Z</updated>
     
     <summary type="html">
     
@@ -100,71 +337,6 @@
 &lt;p&gt;0.店铺类型:Bagene品牌旗舰店.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;人群定位:学生,白领.
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/12/19/jd/"/>
-    <id>http://www.averagejoe.top/2020/12/19/jd/</id>
-    <published>2020-12-19T06:43:28.441Z</published>
-    <updated>2020-12-19T06:43:28.441Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/11/25/mall-cloud-alibaba/"/>
-    <id>http://www.averagejoe.top/2020/11/25/mall-cloud-alibaba/</id>
-    <published>2020-11-25T02:12:16.307Z</published>
-    <updated>2020-12-29T02:43:50.571Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;===========================================================&lt;br&gt;服务列表:&lt;br&gt;nacos:&lt;br&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/11/04/jd-investigation/"/>
-    <id>http://www.averagejoe.top/2020/11/04/jd-investigation/</id>
-    <published>2020-11-04T02:47:17.123Z</published>
-    <updated>2021-01-10T08:09:59.383Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;京东开店调研&lt;/p&gt;
-&lt;p&gt;自营:&lt;br&gt;放到京东自己全国各地的仓库出售,物流快.&lt;/p&gt;
-&lt;p&gt;旗舰店:&lt;br&gt;避免旗舰店商品和自营的冲突旗舰店商品会少些.&lt;/p&gt;
-&lt;p&gt;自营还是旗舰店?&lt;/p&gt;
-&lt;p&gt;标品:更适合自营物流速度比较快,售后有保证.&lt;br&gt;非标品:
         
       
     
@@ -275,7 +447,7 @@
     <link href="http://www.averagejoe.top/2020/08/28/vi-tips/"/>
     <id>http://www.averagejoe.top/2020/08/28/vi-tips/</id>
     <published>2020-08-28T08:41:05.817Z</published>
-    <updated>2020-11-18T03:18:26.841Z</updated>
+    <updated>2021-05-14T01:29:59.817Z</updated>
     
     <summary type="html">
     
@@ -284,30 +456,6 @@
         
         
           &lt;p&gt;进入vi的命令 ：&lt;br&gt;vi +/pattern filename：打开文件，并将光标置于第一个与pattern匹配的串处&lt;br&gt;vi -r filename ：在上次正用vi编辑时发生系统崩溃，恢复filename&lt;br&gt;vi filename….filename
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/08/28/docker-tips/"/>
-    <id>http://www.averagejoe.top/2020/08/28/docker-tips/</id>
-    <published>2020-08-28T08:40:24.910Z</published>
-    <updated>2021-01-18T05:56:18.088Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;启动docker服务:&lt;br&gt;service docker start&lt;/p&gt;
-&lt;p&gt;命令启动mysql容器 并设置密码:&lt;br&gt;docker run –name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d
         
       
     
@@ -331,152 +479,6 @@
         
         
           &lt;p&gt;hadoop非实时计算体验不好.mapper/reduce /批处理而生&lt;br&gt;storm:实时计算 监控预警/婚恋网/推荐&lt;br&gt;hive :
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/08/28/teamviewer-crack/"/>
-    <id>http://www.averagejoe.top/2020/08/28/teamviewer-crack/</id>
-    <published>2020-08-28T08:39:56.519Z</published>
-    <updated>2020-08-28T08:39:56.522Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;teamviewer 刷新mac地址:&lt;br&gt;/Users/AverageJoe/Devs/idea/gitSource/mac-teamviewer-crack&lt;br&gt;sudo python
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/08/28/python-tips/"/>
-    <id>http://www.averagejoe.top/2020/08/28/python-tips/</id>
-    <published>2020-08-28T08:39:16.351Z</published>
-    <updated>2020-08-28T08:39:16.352Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;opt目录任何用户都有权限&lt;/p&gt;
-&lt;h1 id=&quot;注释需要空格单行注释一个空格&quot;&gt;&lt;a href=&quot;#注释需要空格单行注释一个空格&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/08/28/windows-tips/"/>
-    <id>http://www.averagejoe.top/2020/08/28/windows-tips/</id>
-    <published>2020-08-28T08:38:59.972Z</published>
-    <updated>2020-09-15T09:27:53.356Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;最小化当前窗口：&lt;br&gt;alt+esc&lt;br&gt;ctrl+d ===ctrl+c 退出&lt;br&gt;alt+f4 close current window&lt;br&gt;ctrl+W close tab&lt;br&gt;win+m minimum window&lt;br&gt;win+D show
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/08/28/vpn/"/>
-    <id>http://www.averagejoe.top/2020/08/28/vpn/</id>
-    <published>2020-08-28T08:38:40.980Z</published>
-    <updated>2020-08-28T09:37:29.031Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;#!/bin/sh&lt;/p&gt;
-&lt;p&gt;yum install docker -y&amp;amp;&amp;amp;service docker start&amp;amp;&amp;amp;chkconfig docker on&amp;amp;&amp;amp;docker pull
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/08/28/node-js-tips/"/>
-    <id>http://www.averagejoe.top/2020/08/28/node-js-tips/</id>
-    <published>2020-08-28T08:38:36.103Z</published>
-    <updated>2020-08-28T08:38:36.105Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;angular:&lt;br&gt;grunt serve 启动前端web界面 &lt;/p&gt;
-&lt;p&gt;bower install angular#1.6.9 –save&lt;/p&gt;
-&lt;p&gt;node:&lt;br&gt;npm start &lt;/p&gt;
-&lt;p&gt;bower install &lt;a
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://www.averagejoe.top/2020/08/28/linux-command-tips/"/>
-    <id>http://www.averagejoe.top/2020/08/28/linux-command-tips/</id>
-    <published>2020-08-28T08:38:01.368Z</published>
-    <updated>2020-11-26T01:09:35.200Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;echo $SHELL&lt;/p&gt;
-&lt;p&gt;chsh -s /bin/zsh&lt;/p&gt;
-&lt;p&gt;cmd&amp;gt;&amp;gt;bash切换至：&lt;br&gt;bash on Ubuntu on Windows&lt;/p&gt;
-&lt;p&gt;gi first search box
         
       
     
