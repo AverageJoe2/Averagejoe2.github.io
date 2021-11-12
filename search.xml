@@ -5,8 +5,8 @@
     
     <entry>
       <title></title>
-      <link href="2021/11/01/mac-tips/"/>
-      <url>2021/11/01/mac-tips/</url>
+      <link href="/2021/11/01/mac-tips/"/>
+      <url>/2021/11/01/mac-tips/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -18,8 +18,8 @@
     
     <entry>
       <title></title>
-      <link href="2021/09/11/shorthand/"/>
-      <url>2021/09/11/shorthand/</url>
+      <link href="/2021/09/11/shorthand/"/>
+      <url>/2021/09/11/shorthand/</url>
       
         <content type="html"><![CDATA[<p>1.pdf 下载文件待补充<br>2.底部导航文章待完善<br>3.</p><p>1.电路板保护结构专利<br>2.防水等级IP67<br>3.工作电流&lt;150mA<br>4.静态电流&lt;5uA<br>5.警示灯场景图拍摄<br>6.</p>]]></content>
       
@@ -31,8 +31,8 @@
     
     <entry>
       <title></title>
-      <link href="2021/08/18/to-do/"/>
-      <url>2021/08/18/to-do/</url>
+      <link href="/2021/08/18/to-do/"/>
+      <url>/2021/08/18/to-do/</url>
       
         <content type="html"><![CDATA[<p>一:<br>1.首页-&gt;直接产品<br>2.banner remove<br>3.系列名称<br>4.图片特点描述<br>5.<br>二:</p>]]></content>
       
@@ -44,8 +44,8 @@
     
     <entry>
       <title></title>
-      <link href="2021/07/02/short-hand/"/>
-      <url>2021/07/02/short-hand/</url>
+      <link href="/2021/07/02/short-hand/"/>
+      <url>/2021/07/02/short-hand/</url>
       
         <content type="html"><![CDATA[<p>1.警示灯场景图拍摄<br>2.banner 场景图<br>#3.原价<br>#4.8980 remove<br>#5.最低起批100<br>#6.参数 文字<br>7.产品图接应用场景图<br>#8.pdf delete<br>#9.联系我们重排版<br>10.企业简介补充实景图片<br>#11.资质(人才..)<br>#12.专利重排<br>#13.qq号对应sales</p>]]></content>
       
@@ -57,10 +57,10 @@
     
     <entry>
       <title></title>
-      <link href="2021/06/22/mytop10/"/>
-      <url>2021/06/22/mytop10/</url>
+      <link href="/2021/06/22/mytop10/"/>
+      <url>/2021/06/22/mytop10/</url>
       
-        <content type="html"><![CDATA[<p>备案服务号:<br>e9b85354-8b55-4f8f-aa6f-b4f9e15ad80a</p><p>四川巴根科技有限公司<br>91510107331990440R<br>成都市武侯区机投正街26号<br>mytop10.cn</p><p>微信支付:<br><a href="mailto:&#x31;&#x30;&#x37;&#48;&#51;&#48;&#x39;&#x35;&#x39;&#64;&#113;&#x71;&#x2e;&#99;&#111;&#x6d;">&#x31;&#x30;&#x37;&#48;&#51;&#48;&#x39;&#x35;&#x39;&#64;&#113;&#x71;&#x2e;&#99;&#111;&#x6d;</a><br>_pass123</p>]]></content>
+        <content type="html"><![CDATA[<p>备案服务号:<br>e9b85354-8b55-4f8f-aa6f-b4f9e15ad80a</p><p>四川巴根科技有限公司<br>91510107331990440R<br>成都市武侯区机投正街26号<br>mytop10.cn</p><p>微信支付:<br><a href="mailto:&#x31;&#x30;&#x37;&#48;&#x33;&#x30;&#x39;&#x35;&#x39;&#x40;&#113;&#113;&#46;&#99;&#111;&#x6d;">&#x31;&#x30;&#x37;&#48;&#x33;&#x30;&#x39;&#x35;&#x39;&#x40;&#113;&#113;&#46;&#99;&#111;&#x6d;</a><br>_pass123</p>]]></content>
       
       
       
@@ -70,8 +70,8 @@
     
     <entry>
       <title></title>
-      <link href="2021/06/17/uniapp-tips/"/>
-      <url>2021/06/17/uniapp-tips/</url>
+      <link href="/2021/06/17/uniapp-tips/"/>
+      <url>/2021/06/17/uniapp-tips/</url>
       
         <content type="html"><![CDATA[<p>1.用jdk keytool生成签名:<br>keytool -list -v -keystore  top3.keystore</p><p>Android 证书签名SHA1:<br>88:E9:75:9C:C4:83:35:04:C2:77:03:FB:6F:95:5B:0A:99:0E:FC:D0</p><p>2.根据sha1签名获取打包key</p><p>iOS：<br>80303979c6c7ec1daa161050d5e59514</p><p>Android：<br>e9bd00a95095124eea21c6ac9ae9c9ec</p><p>3.APPID<br>__UNI__BE4B0E5</p><p>打包Androd包名:<br>com.bagene.top3</p><p>Hbuilder导出路径:<br>/Users/AverageJoe/idea-projects/Top3_app/unpackage/resources/__UNI__BE4B0E5/www</p><p>v2:</p><hr><p>APPID:<br>__UNI__424120C</p><p>################################系统升级记录################################<br>备份:</p>]]></content>
       
@@ -83,8 +83,8 @@
     
     <entry>
       <title></title>
-      <link href="2021/06/03/docker-tips/"/>
-      <url>2021/06/03/docker-tips/</url>
+      <link href="/2021/06/03/docker-tips/"/>
+      <url>/2021/06/03/docker-tips/</url>
       
         <content type="html"><![CDATA[<p>启动docker服务:<br>service docker start</p><p>命令启动mysql容器 并设置密码:<br>docker run –name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql</p><p>docker 中运行的镜像进程:<br>docker ps -l</p><p>宿主机的url/ip<br>docker-machine ls<br>tcp://192.168.99.100:2376<br>docker-machine ip default</p><p>查看容器配置:<br>docker inspect f5d9260ac2a2</p><p>5.进入容器</p><p>docker exec -it 0b7737e0e3c5 /bin/bash</p><p>查看mysql所有配置文件路径:<br>/etc/mysql/mysql.conf.d/mysqld.cnf</p><p>设置server字符编码<br>character-set-server = utf8</p><p>echo  character-set-server = utf8 &gt;&gt; /etc/mysql/mysql.conf.d/mysqld.cnf</p><p>停止并删除容器<br>docker stop f5d9260ac2a2<br>docker rm e1066fe2db35</p><p>mysql -uroot -p -h192.168.99.100 -P3306</p><p>mysql允许任意IP连接 user<br>root host %</p><p>重启服务:<br>service mysql restart</p><p>导出mysql数据<br>mysqldump -uroot -p YourDatabaseName &gt; wantedsqlfile.sql</p><p>编辑容器中文件<br>vim scp://remoteuser@containerip//path/to/document</p><p>vim scp://root@192.168.99.100//usr/local/tomcat/webapps/manager/META-INF/context.xml</p><p>把文件cp到宿主机修改:<br>docker cp tomcat-manager:/usr/local/tomcat/webapps/manager/META-INF/context.xml  /Users/kinderice/Pictures/docker/path_to_edit/tomcat-users.xml<br>修改后传到容器:<br>docker cp /Users/kinderice/Pictures/docker/path_to_edit/tomcat-users.xml  tomcat-manager:/usr/local/tomcat/webapps</p><p>查看docker容器信息:<br>docker info</p><p>docker账号和密码:<br>user: docker<br>pass: tcuser</p><p>停用网卡:<br>ifconfig tun0 down</p><p>查看容器id<br>docker ps -a –no-trunc</p><p>阿里云镜像加速:<br><a href="https://1yguejoq.mirror.aliyuncs.com/">https://1yguejoq.mirror.aliyuncs.com</a></p><p>docker ps :查看容器名字<br>tomcat-manager</p><p>docker日志:<br>./var/log/messages</p><p>动态查看docker容器日志:<br>docker logs –tail 50 –follow –timestamps 0ef4809ed9d0</p><p>storage<br>rm /var/fdfs/storage/data/fdfs_storaged.pid</p><p>/Users/AverageJoe/nexus-data</p><p>docker run -d -p 10010:10010 –name nexus -v /Users/AverageJoe/nexus-data:/var/nexus-data –restart=always sonatype/nexus3</p><p>docker logs gitlab</p><p>docker run <br>    –detach <br>    –publish 8443:443 <br>    –publish 10086:80 <br>    –name gitlab <br>    –restart unless-stopped <br>    -v /Users/AverageJoe/gitlab/etc:/etc/gitlab <br>    -v /Users/AverageJoe/gitlab/log:/var/log/gitlab  \<br>    -v /Users/AverageJoe/gitlab/data:/var/opt/gitlab  <br>    –privileged=true <br>    beginor/gitlab-ce:11.0.1-ce.0 </p><p>docker commit</p><p>#推送镜像前登陆远程仓库<br>docker login<br>tag加上用户名:<br>docker tag  ubuntu  shen6409175/ubuntu<br>docker push shen6409175/ubuntu</p><p>docker run -d -p 9411:9411 openzipkin/zipkin<br>docker update –restart=no nexus</p><p>#开启docker远程api控制端口<br>socat -d TCP-LISTEN:2375,reuseaddr,fork UNIX:/var/run/docker.sock<br>后台运行:<br>socat -d TCP-LISTEN:2375,reuseaddr,fork UNIX:/var/run/docker.sock &amp;<br>#======================================================</p><p>docker run -p 3306:3306 –name mysql -d <br>–restart=always <br>–network host <br>-v $PWD/conf:/etc/mysql/conf.d <br>-v $PWD/logs:/logs <br>-v $PWD/data:/data <br>-e MYSQL_ROOT_PASSWORD=root <br>mysql:latest</p><p>docker run -d -p 10010:8081 –name nexus -v /home/nexus_data:/var/nexus-data –restart=always sonatype/nexus3</p><p>docker run –network mysql-nacos-network –restart=always –env MODE=standalone –name nacos -d -p 8848:8848 nacos/nacos-server</p><p>docker network inspect mysql-nacos-network</p><p>docker run -p 6379:6379 –name redis –restart=always -v /home/redis_docker/redis.conf:/etc/redis/redis.conf -v /home/redis_docker/data:/data -d redis:latest redis-server /etc/redis/redis.conf –appendonly yes</p><p>docker run -it -p 9000:9000 -d minio/minio server /data</p><p>docker run –network my-network –env MODE=standalone –name nacos -d -p 8848:8848 nacos/nacos-server</p><p>docker run -it -p 9000:9000 -d minio/minio server /data</p><p>docker run -p 9000:9000 –name minio <br>-d –restart=always <br>-e “MINIO_ACCESS_KEY=admin” <br>-e “MINIO_SECRET_KEY=admin” <br>-v /home/data:/data <br>-v /home/config:/root/.minio <br>minio/minio server /data<br>#======================================================</p><p>docker logs -f –tail 100 38a19051f7005b2594d7314a2ea6b324f8c17206f9e2f2084c094af4eb20666b</p><p>docker run –restart=always -d -p 7005:7005 –name=deploy registry.cn-beijing.aliyuncs.com/javashop-k8s-images/deploy:7.2.2</p><p>rabbitmq_delayed_message_exchange:<a href="https://www.jianshu.com/p/197715cea172?from=singlemessage">https://www.jianshu.com/p/197715cea172?from=singlemessage</a></p><p>docker run –restart=always -d –name elasticsearch -p 9200:9200 -p 9300:9300  -e “discovery.type=single-node” -e ES_JAVA_OPTS=”-Xms64m -Xmx128m” -v /home/es_docker/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml -v /home/es_docker/data:/usr/share/elasticsearch/data -v /home/es_docker/plugins:/usr/share/elasticsearch/plugins docker.elastic.co/elasticsearch/elasticsearch:5.5.0</p><p>docker run –restart=always –name kibana -e ELASTICSEARCH_URL=<a href="http://172.17.0.3:9200/">http://172.17.0.3:9200</a> -p 5601:5601 -d kibana:5.5.0</p><p>docker run –restart=always -d -itd –name rabbit -v /home/rabbitmq/etc/rabbitmq:/etc/rabbitmq -v /home/rabbitmq/lib/rabbitmq:/var/lib/rabbitmq -v /home/rabbitmq/log/rabbitmq/:/var/log/rabbitmq -p 1884:1883 -p 5672:5672 -p 15672:15672 -p 25673:25672 -p 61614:61613 docker.io/rabbitmq:3-management</p><p> docker run -itd –name rabbit -v /home/rabbitmq/etc:/etc/rabbitmq -v /home/rabbitmq/lib:/var/lib/rabbitmq -v /home/rabbitmq/log/:/var/log/rabbitmq -p 1884:1883 -p 5673:5672 -p 15673:15672 -p 25673:25672 -p 61614:61613 docker.io/rabbitmq:3-management</p><p>docker run –restart=always -d –name rabbit -e RABBITMQ_DEFAULT_USER=averagejoe -e RABBITMQ_DEFAULT_PASS=joe@burningfire -p 15672:15672 -p 5672:5672 -p 25672:25672 -p 61613:61613 -p 1883:1883 rabbitmq:management</p><p>docker run –restart=always -d –name openresty -p 8081:80 -v /opt/server/deploy-script/openresty:/usr/local/openresty/nginx/conf/  registry.cn-beijing.aliyuncs.com/javashop-k8s-images/openresty:nok8s-v1</p><p>docker run –restart=always   -p 9080:9080  -p 6999:6999 -v /tmp:/data/applogs –name xxl-job-admin  -d  my_xxl_job:latest</p><p>docker run –restart=always  -e PARAMS=”–spring.datasource.url=jdbc:mysql://101.200.187.69:3306/xxl_job?Unicode=true&amp;characterEncoding=UTF-8  –spring.datasource.username=bagene –spring.datasource.password=bg@82448299” -p 8080:8080 -v /tmp:/data/applogs –name xxl-job-admin  -d  registry.cn-beijing.aliyuncs.com/javashop-k8s-images/xxl-job-admin:2.0.0</p><p>docker run –restart=always -d -p 6379:6379 <br>-v /opt/data/redisdata:/data <br>–name redis registry.cn-beijing.aliyuncs.com/javashop-k8s-images/redis:5.0.4-alpine <br>redis-server –appendonly yes –requirepass “82448299”</p><p>docker run –restart=always -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=bg@82448299 –name mysql -v /home/mysql/conf/my.cnf:/etc/mysql/my.cnf -v /home/mysql/logs:/logs -v /home/mysql/data/mysql:/var/lib/mysql   registry.cn-beijing.aliyuncs.com/javashop-k8s-images/mysql:5.6.35</p><p>docker container update –restart=always 容器名字</p>]]></content>
       
@@ -96,8 +96,8 @@
     
     <entry>
       <title></title>
-      <link href="2021/05/19/elk/"/>
-      <url>2021/05/19/elk/</url>
+      <link href="/2021/05/19/elk/"/>
+      <url>/2021/05/19/elk/</url>
       
         <content type="html"><![CDATA[<p>GET _search<br>{<br>  “query”: {<br>    “match_all”: {}<br>  }<br>}</p><p>GET shard_goods/_settings<br>GET shard_goods/_mapping<br>DELETE shard_goods</p><p>GET _settings</p><p>GET shard_goods/goods/265<br>POST _analyze<br>{<br>  “analyzer”: “ik_max_word”<br>  , “text”: “TLA11-多功能护眼台灯”<br>}</p><p>GET shard_goods/_search<br>  {<br>  “from” : 0,<br>  “size” : 10,<br>  “query” : {<br>    “bool” : {<br>      “must” : [<br>        {<br>          “wildcard” : {<br>            “categoryPath” : {<br>              “wildcard” : “307c3439317c3439327c*”,<br>              “boost” : 1.0<br>            }<br>          }<br>        },<br>        {<br>          “term” : {<br>            “disabled” : {<br>              “value” : “1”,<br>              “boost” : 1.0<br>            }<br>          }<br>        },<br>        {<br>          “term” : {<br>            “marketEnable” : {<br>              “value” : “1”,<br>              “boost” : 1.0<br>            }<br>          }<br>        },<br>        {<br>          “term” : {<br>            “isAuth” : {<br>              “value” : “1”,<br>              “boost” : 1.0<br>            }<br>          }<br>        }<br>      ],<br>      “disable_coord” : false,<br>      “adjust_pure_negative” : true,<br>      “boost” : 1.0<br>    }<br>  },<br>  “explain” : true,<br>  “sort” : [<br>    {<br>      “priority” : {<br>        “order” : “desc”<br>      }<br>    }<br>  ]<br>}</p>]]></content>
       
@@ -109,8 +109,8 @@
     
     <entry>
       <title></title>
-      <link href="2021/05/10/ele-tigger/"/>
-      <url>2021/05/10/ele-tigger/</url>
+      <link href="/2021/05/10/ele-tigger/"/>
+      <url>/2021/05/10/ele-tigger/</url>
       
         <content type="html"><![CDATA[<p><a href="http://www.7895.com/">www.7895.com</a> 主站入口 (商城,活动,工厂,培训课堂,广告,网址导航…)</p><p><a href="http://7895.laohugy.com/">http://7895.laohugy.com/</a> 根据产品找工厂 询价</p><p><a href="http://www.ydc7895.com/">http://www.ydc7895.com/</a> 电力材料采购配送平台</p><p><a href="http://shop.e7895.com/">http://shop.e7895.com/</a> 自营商城,可提供金融支持 </p><p><a href="http://zb.e7895.com/">http://zb.e7895.com/</a> 做招标的 (招投标.询标,等)标书下载投标</p><p><a href="http://www.e7895.com/dqdh/index.php">http://www.e7895.com/dqdh/index.php</a> 网址导航(全部是电气供应商,可能是内定的厂家)</p><p><a href="http://jr.e7895.com/">http://jr.e7895.com/</a> 金融服务板块(保函,资金流设计服务,贴现主要服务包括银行承兑汇票和商业承兑汇票，也可票据直接抵押融资，快速实现变现，缓解企业资金压力,存货质押融资服务</p><p>云电材app  移动端“采购/选型/报价”应用</p><p>工业易代app 是链接厂家与代理商的云服务平台</p><p>1.our vision:<br>打造电力电气行业-京东</p><p>2.team</p><p>3.reference /optimization </p>]]></content>
       
@@ -122,8 +122,8 @@
     
     <entry>
       <title></title>
-      <link href="2021/04/19/git-tips/"/>
-      <url>2021/04/19/git-tips/</url>
+      <link href="/2021/04/19/git-tips/"/>
+      <url>/2021/04/19/git-tips/</url>
       
         <content type="html"><![CDATA[<p>强制覆盖远端分支:<br>git push origin 分支名 –force<br>git push origin master –force</p><p>git show commitId fileName 查看历史提交点的修改内容</p>]]></content>
       
@@ -135,8 +135,8 @@
     
     <entry>
       <title></title>
-      <link href="2021/03/22/mian-shi-liu-cheng-zhun-bei/"/>
-      <url>2021/03/22/mian-shi-liu-cheng-zhun-bei/</url>
+      <link href="/2021/03/22/mian-shi-liu-cheng-zhun-bei/"/>
+      <url>/2021/03/22/mian-shi-liu-cheng-zhun-bei/</url>
       
         <content type="html"><![CDATA[<p>公司面试流程准备:</p><p>1.个人介绍<br>2.项目介绍<br>3.根据项目提出问题,及前公司系统架构.<br>4.数据结构(现场面试:最好现场简单实现一个(ArrayList,单向链表,堆栈,二维数组,queue)<br>5.HashMap不同版本jdk实现<br>6.为什么要用spring<br>7.数据库优化案例,及索引失效情况<br>8.mybatis 中$和#区别 事务控制(抢购案例怎么设计)<br>9.linux 权限,文件中查找子串,端口查看<br>10.docker 容器 简单问几个命令<br>11.动态代理 jdk , cglib<br>12.sql优化的例子<br>13.工作中遇到的系统问题定位及解决的例子<br>14.ssl/seata<br>15.什么是缓存击穿<br>16.常用开发工具<br>17.开发好习惯<br>18.微服务架构熟悉程度和使用的版本<br>19.职业规划</p><p>public class ArrayListDemo {<br>    private Object[] arry;     //数组</p><pre><code>private int size = 0;      //下标public ArrayListDemo()&#123;    this.arry = new Object[10];&#125;public ArrayListDemo(int size) throws Exception &#123;    if(size &gt; 0)        this.arry = new Object[size];    else        throw new Exception(&quot;长度不允许小于零！&quot;);&#125;//新增public void add(Object number)&#123;    if(size &gt;= arry.length)&#123;        int length = arry.length;        Object[] newArry = new Object[length];        for(int i=0; i&lt;arry.length; i++)&#123;            newArry[i] = arry[i];        &#125;        length = (length*3)/2+1;        //更新数组长度        arry = new Object[length];      //对原有数组进行扩容        for(int j=0; j&lt;newArry.length; j++)&#123;            arry[j] = newArry[j];        &#125;        newArry = null;     //释放该数组    &#125;    arry[size] = number;    size++;&#125;//读取public Object get(int index) throws Exception &#123;    if(index &gt;= 0)        return arry[index];    throw new Exception(&quot;下标不符合要求！&quot;);&#125;//获得大小public int getSize()&#123;    int count = 0;    for(int i=0; i&lt;arry.length; i++)&#123;        if(arry[i] != null)&#123;            count++;        &#125;    &#125;    return count;&#125;</code></pre><p>}</p><p>##############################################2##############################################</p><p>列表属性过滤:<br>final List<User> collect = userList.stream().filter(user -&gt; list2.contains(user.getId())).collect(Collectors.toList());</User></p><p>==================================================</p>]]></content>
       
@@ -148,8 +148,8 @@
     
     <entry>
       <title></title>
-      <link href="2021/03/06/mvn-tips/"/>
-      <url>2021/03/06/mvn-tips/</url>
+      <link href="/2021/03/06/mvn-tips/"/>
+      <url>/2021/03/06/mvn-tips/</url>
       
         <content type="html"><![CDATA[<p>mvn install:install-file -Dfile=/Users/AverageJoe/idea-projects/b2b2c/javashop-v7.1.5/b2b2c-v7.1.5/javashop-core/maven-repository/com/enation/app/javashop/javashop-patch/2.0-SNAPSHOT/javashop-patch-2.0-SNAPSHOT.jar -DgroupId=com.enation.app.javashop -DartifactId=javashop-patch -Dversion=2.0-SNAPSHOT -Dpackaging=jar</p><p>mvn install:install-file -Dfile=/data/ -DgroupId=org.elasticsearch.client -DartifactId=x-pack-transport -Dversion=5.5.0 -Dpackaging=jar<br>mvn install:install-file -Dfile=/root/data/x-pack-transport-5.5.0.jar -DgroupId=org.elasticsearch.client -DartifactId=x-pack-transport -Dversion=5.5.0 -Dpackaging=jar</p><p>mvn install:install-file -Dfile=/root/data/transport-5.6.8.jar -DgroupId=org.elasticsearch.client -DartifactId=transport -Dversion=5.5.0 -Dpackaging=jar</p>]]></content>
       
@@ -161,8 +161,8 @@
     
     <entry>
       <title>diary shortcuts</title>
-      <link href="2020/12/24/diary/diary-tips/"/>
-      <url>2020/12/24/diary/diary-tips/</url>
+      <link href="/2020/12/24/diary/diary-tips/"/>
+      <url>/2020/12/24/diary/diary-tips/</url>
       
         <content type="html"><![CDATA[<p>创建带有文件目录的.md文档<br>hexo n 1030.md<br>Attach img!</p><p><a href="%E5%9B%BE%E7%89%871.png">图片链接1</a></p>]]></content>
       
@@ -186,8 +186,8 @@
     
     <entry>
       <title></title>
-      <link href="2020/12/21/jd-tips/"/>
-      <url>2020/12/21/jd-tips/</url>
+      <link href="/2020/12/21/jd-tips/"/>
+      <url>/2020/12/21/jd-tips/</url>
       
         <content type="html"><![CDATA[<p>店铺定位:</p><p>0.店铺类型:Bagene品牌旗舰店.</p><ol><li><p>人群定位:学生,白领. 客户消费集中在(107~221)段人群居多.</p></li><li><p>产品风格定位:高端,品质,多功能智能.</p></li><li><p>产品布局需求:</p></li><li><p>1 引流款 (价格低,利润不高,品质无疑,符合消费群体,配套搭配达到动销最大化)</p></li><li><p>2 活动款 (数量,评价,销量)</p></li><li><p>3 利润款 (利润高,品质好,有库存)</p></li><li><p>全店布局</p></li><li><p>1 1个引流款</p></li><li><p>2 2个金典款</p></li><li><p>3 3个利润款</p></li><li><p>4 5个活动款</p></li><li><p>5 n个形象款,要有销量达到美观美化的效果</p></li></ol><p>5.引流计划:<br>5.1 免费流量 (新品期一个月左右)<br>5.2 付费流量<br>5.3 活动流量(考核商家配合度,考核规模程度)</p><p>6.有效转化:<br>6.1 品质<br>6.2 价格<br>6.3 好评数<br>6.4 差评 (联系客户最好能删除,不能删除就及时回复)<br>6.5 视觉转化.(整体规模,细节图,文库,好处,对比,评价.功能)</p><p>7.1服务转化(客服及时专业耐心热情)<br>7.2合作物流 免运费,物流效率<br>7.3售后服务(七天无理由,质量包退)<br>7.4运费险 (赠送运费险)</p><p>8.商品标题字数在50左右.<br>8.1 卖点副标题<br>9.促销<br>10.商品评价(好评率影响活动)</p><p>11.商品问答(未购买提问)<br>商品详情.(海报活动主题活动)</p><p>店铺内功:<br>12.店长推荐</p><ol start="13"><li>行也大盘</li><li>竞争环境</li><li>客户服务(客户黏性非常高快速提高转化)</li><li>京东消费人群中高级.</li></ol><p>暴图:<br>1,促销<br>2,年龄<br>3,主图视觉亮点(主图促销)<br>4,赠品促销,人气提升.</p><p>主图视频:</p><p>1.时长<br>2.格式<br>3.大小<br>4.背景<br>5.效果 (严禁失真)<br>6.主旨 (突出商品主题增加人均停留时长)<br>7.长宽</p><p>注意事项(严禁出现联系方式)<br>严禁出现视频比较<br>禁止相同片段重复播放.</p><p>京东平台风向标:</p><p>促销:1高利润低产出,低利润高产出.<br>赠品促销,满减促销,打折促销,优惠卷,套装促销,直降促销,活动促销(节日..主题)<br>选品,页面迎合主题.<br>推广(预热)<br>新品(限购)</p><p>活动前中后</p>]]></content>
       
@@ -199,8 +199,8 @@
     
     <entry>
       <title></title>
-      <link href="2020/09/04/springboot-tips/"/>
-      <url>2020/09/04/springboot-tips/</url>
+      <link href="/2020/09/04/springboot-tips/"/>
+      <url>/2020/09/04/springboot-tips/</url>
       
         <content type="html"><![CDATA[<p>==================springboot=======================<br>ymal - 可配置集合<br>ymal 属性前需要空格</p><p>resource 本身就是classpath<br>classpath:static 放静态资源</p><p>lombok @slfj注解自动生成log对象<br>spring 默认支持hikaricp //spring-boot-starter-jdbc</p><p>mybatis-spring-boot-starter mybatis自己写的版本号必须自己定义</p><p>单表,的sql语句可以使用通用mapper 代码自动生成</p><p>pojo:<br>@id pojo 主键<br>@table (name=”tb_user”)<br>@Transient 代表字段不用持久化</p><p>spring-boot-starter-test</p><p>@Runwith(SpringRunner.class) maper.java直接测试</p><p>======================springcloud=======================<br>soa:dubbo x 强依赖关系,容易引起雪崩效应,服务拆分粒度大</p><p>微服务:<br>服务拆分边界…<br>接口必须时rest风格的,是一种服务架构的风格.http协议的方式.与语言无关平台无关.<br>在线制图工具:<br><a href="https://www.processon.com/">https://www.processon.com/</a></p><p>优势:<br>团队独立/技术独特/前后分离/数据库分离/部署分离<br>rpc dubbo 对服务调用不太灵活不规定双方技术</p><p>springcloud http 灵活对技术不限制.</p><p>resttemplate 底层jdk hhtpurlclient</p><p>maven:<br>dependency:子项目默认自动继承所有依赖<br>dependencyManageyment :子项目需要显示声明依赖并不指定版本才会依赖,指定版本会覆盖父依赖.<br>eureka client: discoveryclient 根据服务id拉取服务列表可以获取ip和port</p><p>本地测试联网ip和问题可以指定prefer-ip-address 127.0.0.1</p><p>相互注册:<br>eureka 启动就把自己注册到eureka上报错</p><p>开发阶段:默认为true<br>register-with-eureka:false</p><p>如果有缓存maven clean &gt;&gt;&gt;build-rebuild</p><p>renew心跳检测时间<br>lease-renewal-interval-in-seconds:30 默认30s<br>lease-expiration-duration-in-seconds:90 服务标记时间认为宕机down<br>失效剔除时间:eureka-server-eviction-interval-in-seconds 30s</p><p>fetch.client.interval-seconds:拉取服务列表间隔时间<br>enable.self.preservation false 缺省打开true.自我保护模式,认为服务好网络问题.<br>关闭服务是出发保护机制15分钟内心跳低于85%才会剔除服务</p><p>-Dserver.port=8080 jvm 参数 可覆盖配置文件</p><p>客户端负载均衡ribbon&gt; resttemplate—&gt;RibbonLoadBanlanceClient </p><p>ribbon:<br>服务名:<br>    ribbon:<br>        NFLoadBalanceerRuleClassName: com.netflix.loadbalancer.XXX</p><p>tomcat 默认200.</p><p>Hystriks 防止雪崩效应.防止阻塞.<br>作用:<br>1,线程隔离,分成不同线程池.<br>2,返回超时设置.<br>3,服务降级(线程池占满)优先保证核心服务.<br>4,服务消费放做降级处理.</p><p>@HystrixCommand (name=,v=)每个方法都要写,可以写成和方法返回值相同.可以定义超时时长</p><p>通用fallback 使用空参.字符串返回值.<br>@DefaultProperties(defaultFallbakc=”fallback_method”)</p><p>根据服务不同定义超时时长</p><p>circuitBreaker.requestVolumeThreshold=10 请求量统计值<br>circuitBreaker.sleepWindowMiliseconds=10000 10秒后重试<br>circuteBreaker.errorThresholdPercentage=50 百分之50错误后熔断器开启.</p><p>zuul网关服务鉴权(1安全控制),2路由,3,负载均衡(从eureka拉去列表),4限流.</p><p>服务网关GatewayApplication 也是一个单独服务<br>@EnableZuulProxy</p><p>zuul.routes: key:value 配置路由规则</p><p>面向服务的路由:</p><p>zuul:<br>    routes:<br>        hehe:#一般写service-id<br>            path: /user-service/**  #请求网关时匹配user-service<br>            url: <a href="http://127.0.0.1:8081/">http://127.0.0.1:8081</a>  #<strong>的匹配会路由到url后面<a href="http://127.0.0.1:8081/">http://127.0.0.1:8081/</a></strong><br>升级url写死:引入eureka url: service-id for  <a href="http://127.0.0.1:8081/">http://127.0.0.1:8081</a><br>eureka:<br>        client:  #作为客户端而可以取eureka拉取服务 列表 service-Id<br>                service-url:<br>                    defaultZone: http:eureka_ip:port/eureka</p><p>zuul 内部引入了ribbon 实现了对service-id对应的服务列表进行负载均衡</p><p>简化后配置:<br>zuul:<br>    routes:<br>        user-service: /user-service/**<br>key:user-service 服务id / value:服务的映射路径 满足映射路径的都会被转到key所对应的服务</p><p>zuul 默认为每一个微服务实现了 可以不配置<br>    user-service: /user-service/** 配置 </p><p>zuul默认配置会把所有的服务都配置好.<br>可以设置忽略..<br>ignored-service:<br>    - consumer-service</p><p>zuul:<br>    routes:<br>        user-service: /user/** 简化配置和默认配置同时可以使用.匹配路径会在mapping时丢失<br>访问真实地址是<a href="http://localhost:10010/user/user/9%E6%89%8D%E8%83%BD%E8%AE%BF%E9%97%AE%E5%88%B0user%E6%9C%8D%E5%8A%A1">http://localhost:10010/user/user/9才能访问到user服务</a></p><p>zuul:<br>    routes:<br>        user-service<br>            path:  /user/**<br>            serviced: user-service #根据服务地址实现负载均衡<br>            strip-prefix :false 匹配路径不去除前缀</p><pre><code>prefix : /api #全局路由前缀strip-prefix :false #保留全局路由前缀一般没用.</code></pre><p>ZuulFilter:<br>preFilter.&gt;&gt; routing Filter&gt;&gt;postFilter</p><p>preFilter:权限控制,限流</p><p>post/exception 通用异常处理</p><p>前端:<br>var for(var i=)<br>定义是全局变量i<br>let 局部<br>const 常量 无法修改</p><p>解构表达式:<br>let arr =[2,3,4,5]<br>let[x,y]=arr;  === let x=arr[0],y=arr[1]<br>let[,,a,b]=arr         a=arr[2],b=arr[3]</p><p>let[,…rest]=arr ===&gt;rest=[3,4,5]<br>let p={name:”jack”,age:21}<br>let {name,age}=p;</p><p>let p={name:”jack”,age:21}<br>let {name:n}=p;&gt;&gt;&gt;n=jack</p><p>let {girl:{name}} =p;<br>{} 解构表达式<br>let {…obj}=p<br>p==obj &gt;&gt;&gt;&gt;false 深层拷贝.</p><p>const add=(a,b)=&gt;a+b   java-&gt;</p><p>定义对象:<br>const p={<br>    key:value,#定义变量<br>    sayHello(){            #定义方式省略函数名<br>        console.log(“hello”);<br>    }<br>}<br>p.sayHello();</p><p>map和reduce</p><p>let arr=[‘1’,’2’,’3’]<br>let arr2=arr.map(s =&gt; parseInt(s)) #<br>arr2.reduce((a,b) =&gt;a+b) 对数组元素做累加<br>arr2.reduce((a,b) =&gt;a*b,0) 指定第一个累乘的元素为0 默认一个个元素</p><p>npm install nrm 镜像切换工具 -g全局</p><p>npm config set registry 私服地址   /nrm add local 私服地址</p><p>nrm ls #查看镜像列表<br>nrm use taobao<br>nrm test npm 测试<br>npm init -y 初始化<br>npm install vue –save 只针对当前项目使用.<br>v-model =”模型属性”  model变属性变属性变双向绑定</p><p>v-text 会转译html成纯文本<br>v-html html渲染<br>事件冒泡:<br>@click.stop=”print(‘button’)”<br>@click.prevent</p><p>v-for:<br>{差值表达式中可以写成js格式 }</p><p>:等同于v-bind &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;:class<br>:class=”{red:isRed,blue:!isRed}”</p><p>data中定义变量isRed=true<br>@click=”isRed=!isRed” 进行属性修改.</p><p>日期格式化:</p><p>#</p><p>data:{<br>birthday:123123213<br>person:{age: 21,<br>name:jack}<br>}<br>computed:{//计算属性<br>    birth(){<br>    const day=new Date(this.birtyday)<br>    day.getFullYear()+”年”+day.getFullMonth+”月”<br>    }<br>},//在方法里面地一个属性进行计算<br>watch:{</p><p>}<br>计算属性只在开始运行一次.</p><p>监控num值的变化:<br>watch:{<br>    num(newValue,oldvalue){  #浅监控<br>        console.log()<br>    }</p><pre><code>person:&#123; #深度监控    deep:true,    handler(val)&#123;        console.log(val.age)    &#125;&#125;</code></pre><p>}</p><div id="app"><counter></counter><counter></counter> 每个组件属性独立<counter></counter></div>Vue组件化开发. vue组件也是一个vue实例<p>Vue.component(“counter”,{  #全局组件定义<br>    template:”&lt;button @click=’count++’&gt;“ #templte中只能有一个根标签<br>    data(){<br>        return count,<br>        return xxx<br>    }<br>})</p><p>const app=new Vue({<br>    el:”#app”,<br>    data{},<br>    componets:{<br>    #局部组件定义 只在#根元素下生效放到vue实例内部<br>        #counter<br>        counter: counter   # es6 key=value 可以简写成 counter<br>    }<br>})</p><p>vuex :组件中通讯和父子间通讯</p><p>父子间通讯:</p><p><code>粘贴html源码不会有拼接</code> 在vue中<br>1,父在子上面绑定事件关联自己的方法<br>2,子:</p><script>const counter ={    template:`    <div>        <button @click="handlAdd">+</button>    </div>    <h1>        Num:    </h1>    # 组件html 不会拼接原样显示`}    props:['num']    methods:{        handleAdd(){            this.$emit('incr'); #实际上促发的式父组件的方法改变num        },    }</script><p>#########################################<br>webpack :<br>1,小文件打包成整体减少请求次数<br>2,将es6语法进行转换编译,兼容老版本浏览器<br>3,代码混淆,提高安全性</p><p>webpack脚手架:vue-cli<br>npm install -g vue-cli<br>ESlint 前端语法校验器.</p>]]></content>
       
@@ -212,8 +212,8 @@
     
     <entry>
       <title></title>
-      <link href="2020/08/28/sql-tip/"/>
-      <url>2020/08/28/sql-tip/</url>
+      <link href="/2020/08/28/sql-tip/"/>
+      <url>/2020/08/28/sql-tip/</url>
       
         <content type="html"><![CDATA[<p>上面我们提到，使用select…for update会把数据给锁住，不过我们需要注意一些锁的级别，MySQL InnoDB默认行级锁。行级锁都是基于索引的，如果一条SQL语句用不到索引是不会使用行级锁的，会使用表级锁把整张表锁住，这点需要注意。</p><p>select * from information_schema.innodb_trx;<br>kill 1070;</p><p>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘bagene’@’%’ IDENTIFIED BY ‘bg@82448299’</p>]]></content>
       
@@ -225,8 +225,8 @@
     
     <entry>
       <title></title>
-      <link href="2020/08/28/sublime-tips/"/>
-      <url>2020/08/28/sublime-tips/</url>
+      <link href="/2020/08/28/sublime-tips/"/>
+      <url>/2020/08/28/sublime-tips/</url>
       
         <content type="html"><![CDATA[<p>选中 某单词 command +D 选中相同&gt;&gt;同时编辑</p><p>command+shift+d 复制选择内容</p><p>command+l 选中行<br>再使用<br>command+shift+l 进行多行编辑command+l 选中行</p><p>alt+拖动光标选择多行进行编辑</p><p>st: command line redirect to sublime test</p><p>st a.txt sublime open a.txt to edit</p><p>st folder_a open directory with sublime Text</p><p>db.createUser({user: “test”, pwd: “123456”, roles: [{ role: “dbOwner”, db: “dialogflow” }]})</p><p>Ctrl+H:replace</p><p>ctrl+shift+p<br>install package<br>name the plugin you want</p><p>open file with sublime:</p><p>st fileName</p>]]></content>
       
@@ -238,8 +238,8 @@
     
     <entry>
       <title></title>
-      <link href="2020/08/28/vbox-tips/"/>
-      <url>2020/08/28/vbox-tips/</url>
+      <link href="/2020/08/28/vbox-tips/"/>
+      <url>/2020/08/28/vbox-tips/</url>
       
         <content type="html"><![CDATA[<p>chmod +x rc.local<br>/etc/rc.local 中添加开机自启<br>chmod 777 /root/share<br>sudo mount -t vboxsf Share /root/share</p>]]></content>
       
@@ -251,8 +251,8 @@
     
     <entry>
       <title></title>
-      <link href="2020/08/28/vi-tips/"/>
-      <url>2020/08/28/vi-tips/</url>
+      <link href="/2020/08/28/vi-tips/"/>
+      <url>/2020/08/28/vi-tips/</url>
       
         <content type="html"><![CDATA[<p>进入vi的命令 ：<br>vi +/pattern filename：打开文件，并将光标置于第一个与pattern匹配的串处<br>vi -r filename ：在上次正用vi编辑时发生系统崩溃，恢复filename<br>vi filename….filename ：打开多个文件，依次进行编辑</p><p>移动光标类命令:<br>k或Ctrl+p：光标上移一行<br>j或Ctrl+n ：光标下移一行<br>Enter ：光标下移一行<br>e或E ：光标右移一个字至字尾<br>) ：光标移至句尾<br>( ：光标移至句首<br>}：光标移至段落开头<br>{：光标移至段落结尾<br>n+：光标下移n行<br>n-：光标上移n行<br>n$：光标移至第n行尾<br>H ：光标移至屏幕顶行<br>M ：光标移至屏幕中间行<br>L ：光标移至屏幕最后行<br>0：（注意是数字零）光标移至当前行首<br>$：光标移至当前行尾</p><p>屏幕翻滚类命令:<br>Ctrl+u：向文件首翻半屏<br>Ctrl+d：向文件尾翻半屏<br>Ctrl+f：向文件尾翻一屏<br>Ctrl＋b；向文件首翻一屏<br>nz：将第n行滚至屏幕顶部，不指定n时将当前行滚至屏幕顶部。</p><p>插入文本类命令 ：<br>i ：在光标前<br>I ：在当前行首<br>R：替换当前字符及其后的字符，直至按ESC键<br>s：从当前光标位置处开始，以输入的文本替代指定数目的字符<br>S：删除指定数目的行，并以所输入文本代替之<br>ncw或nCW：修改指定数目的字<br>nCC：修改指定数目的行</p><p>删除命令：<br>ndw或ndW：删除光标处开始及其后的n-1个字<br>do：删至行首<br>d$：删至行尾<br>ndd：删除当前行及其后n-1行<br>x或X：删除一个字符，x删除光标后的，而X删除光标前的<br>Ctrl+u：删除输入方式下所输入的文本</p><p>搜索及替换命：<br>/pattern：从光标开始处向文件尾搜索pattern<br>?pattern：从光标开始处向文件首搜索pattern<br>n：在同一方向重复上一次搜索命令<br>N：在反方向上重复上一次搜索命令<br>：s/p1/p2/g：将当前行中所有p1均用p2替代<br>：n1,n2s/p1/p2/g：将第n1至n2行中所有p1均用p2替代<br>：g/p1/s//p2/g：将文件中所有p1均用p2替换</p><p>选项设置：<br>all：列出所有选项设置情况<br>term：设置终端类型<br>ignorance：在搜索中忽略大小写<br>list：显示制表位(Ctrl+I)和行尾标志（$)<br>number：显示行号<br>report：显示由面向行的命令修改过的数目<br>terse：显示简短的警告信息<br>warn：在转到别的文件时若没保存当前文件则显示NO write信息<br>nomagic：允许在搜索模式中，使用前面不带“\”的特殊字符<br>nowrapscan：禁止vi在搜索到达文件两端时，又从另一端开始<br>mesg：允许vi显示其他用户用write写到自己终端上的信息</p><p>最后行方式命：<br>：n1,n2 co n3：将n1行到n2行之间的内容拷贝到第n3行下<br>：n1,n2 m n3：将n1行到n2行之间的内容移至到第n3行下<br>：n1,n2 d ：将n1行到n2行之间的内容删除<br>：w ：保存当前文件<br>：e filename：打开文件filename进行编辑<br>：x：保存当前文件并退出<br>：q：退出vi<br>：q!：不保存文件并退出vi<br>：!command：执行shell命令command<br>：n1,n2 w!command：将文件中n1行至n2行的内容作为command的输入并执行之，若不指定n1，n2，则表示将整个文件内容作为command的输入<br>：r!command：将命令command的输出结果放到当前行</p><p>寄存器操作<br>“?nyy：将当前行及其下n行的内容保存到寄存器？中，其中?为一个字母，n为一个数字<br>“?nyw：将当前行及其下n个字保存到寄存器？中，其中?为一个字母，n为一个数字<br>“?nyl：将当前行及其下n个字符保存到寄存器？中，其中?为一个字母，n为一个数字<br>“?p：取出寄存器？中的内容并将其放到光标位置处。这里？可以是一个字母，也可以是一个数字<br>ndd：将当前行及其下共n行文本删除，并将所删内容放到1号删除寄存器中。</p><p>VI常用技巧</p><p>VI命令可以说是Unix/Linux世界里最常用的编辑文件的命令了，但是因为它的命令集众多，很多人都不习惯使用它，其实您只需要掌握基本命令，然后加以灵活运用，就会发现它的优势，并会逐渐喜欢使用这种方法。本文旨在介绍VI的一些最常用命令和高级应用技巧。</p><p>一、基本命令介绍</p><p> 1．光标命令</p><p>k、j、h、l——上、下、左、右光标移动命令。虽然您可以在Linux中使用键盘右边的4个光标键，但是记住这4个命令还是非常有用的。这4个键正是右手在键盘上放置的基本位置。<br>nG——跳转命令。n为行数，该命令立即使光标跳到指定行。<br>Ctrl+G——光标所在位置的行数和列数报告。<br>w、b——使光标向前或向后跳过一个单词。<br> 2．编辑命令<br>i、a、r——在光标的前、后以及所在处插入字符命令(i=insert、a=append、r=replace)。<br>cw、dw——改变(置换)/删除光标所在处的单词的命令 (c=change、d=delete)。<br>x、d$、dd——删除一个字符、删除光标所在处到行尾的所有字符以及删除整行的命令。<br> 3．查找命令<br> /string、?string——从光标所在处向后或向前查找相应的字符串的命令。<br> 4．拷贝复制命令<br> yy、p——拷贝一行到剪贴板或取出剪贴板中内容的命令。</p><p>二、常见问题及应用技巧</p><p> 1．在一个新文件中读/etc/passwd中的内容，取出用户名部分。<br> vi file<br> :r /etc/passwd 在打开的文件file中光标所在处读入/etc/passwd<br> :%s/:.*//g 删除/etc/passwd中用户名后面的从冒号开始直到行尾的所有部分。<br> 您也可以在指定的行号后读入文件内容，例如使用命令“:3r /etc/passwd”从新文件的第3行开始读入 /etc/passwd的所有内容。<br> 我们还可以使用以下方法删掉文件中所有的空行及以#开始的注释行。<br> #cat squid.conf.default | grep -v ^$ | grep -v ^#</p><p> 2．在打开一个文件编辑后才知道登录的用户对该文件没有写的权限，不能存盘，需要将所做修改存入临时文件。<br> vi file<br> :w /tmp/1 保存所做的所有修改，也可以将其中的某一部分修改保存到临时文件，例如仅仅把第20〜59行之间的内容存盘成文件/tmp/1，我们可以键入如下命令。<br> vi file<br> :20,59w /tmp/1</p><p> 3．用VI编辑一个文件，但需要删除大段的内容。<br> 首先利用编辑命令“vi file”打开文件，然后将光标移到需要删除的行处按Ctrl+G显示行号，再到结尾处再按Ctrl+G，显示文件结尾的行号。<br> :23,1045d 假定2次得到的行号为23和1045，则把这期间的内容全删除，也可以在要删除的开始行和结束行中用ma、mb命令标记，然后利用“:a,bd”命令删除。</p><p> 4．在整个文件的各行或某几行的行首或行尾加一些字符串。<br> vi file<br> :3,$s/^/some string / 在文件的第一行至最后一行的行首插入“some string”。<br> :%s/$/some string/g 在整个文件每一行的行尾添加“some string”。<br> :%s/string1/string2/g 在整个文件中替换“string1”成“string2”。<br> :3,7s/string1/string2/ 仅替换文件中的第3行到第7行中的“string1”成“string2”。<br> 注意: 其中s为substitute，%表示所有行，g表示global。</p><p> 5．同时编辑2个文件，拷贝一个文件中的文本并粘贴到另一个文件中。<br> vi file1 file2<br> yy 在文件1的光标处拷贝所在行<br> :n 切换到文件2 (n=next)<br> p 在文件2的光标所在处粘贴所拷贝的行<br> :n 切换回文件1</p><p> 6．替换文件中的路径。<br> 使用命令“:%s#/usr/bin#/bin#g”可以把文件中所有路径/usr/bin换成/bin。也可以使用命令“:%s//usr/bin//bin/g”实现，其中“”是转义字符，表明其后的“/”字符是具有实际意义的字符，不是分隔符。</p><p>ctrl+p :变量提示自动补全</p><p>ctrl+v :选中多行,&gt; 缩进多行</p>]]></content>
       
@@ -264,8 +264,8 @@
     
     <entry>
       <title></title>
-      <link href="2020/08/28/storm-tips/"/>
-      <url>2020/08/28/storm-tips/</url>
+      <link href="/2020/08/28/storm-tips/"/>
+      <url>/2020/08/28/storm-tips/</url>
       
         <content type="html"><![CDATA[<p>hadoop非实时计算体验不好.mapper/reduce /批处理而生<br>storm:实时计算 监控预警/婚恋网/推荐<br>hive : sql语句<br>====================================<br>优点:<br>低延迟//高性能//消息不丢失//消息有序//高容错</p><p>缺点:<br>单点  nimbus,编译语言维护成本高clojure</p><p>工作节点都运行了一个supervisor守护进程</p><p>快速失败:自动重启</p><h1 id="nimbus-单点-主节点-分配代码-布置任务-故障检查"><a href="#nimbus-单点-主节点-分配代码-布置任务-故障检查" class="headerlink" title="nimbus 单点:主节点 分配代码,布置任务,故障检查"></a>nimbus 单点:主节点 分配代码,布置任务,故障检查</h1><p>nimbus和工作进程之间由zk协调</p><p>应用组件名字:topology 部署应用拓扑消息流动<br>nimbus<br>Spout 外部数据读取主动角色 nextTuple()死循环<br>bolt 执行一个处理的组件所有操作被动角色executeTuple()<br>Tuple 相当于Valuelist<br>Stream: 源源不断的tuple<br>worker 进程 每一个进程有一个端口对应<br>supervisor<br>task:worker 中每一个spout/bolt 的线程</p><p>storm使用场景:<br>1,流聚合<br>2,批处理<br>3,读tuple 发多个或一个tuple<br>4,IbasicBolt execute(),ack()<br>5,Fields grouping组合<br>6,连接缓存短连接转换长连接</p><p>分组机制:<br> 1, Strem Grouping 一个流在bolt任务之间的切分规则.<br> 随机分组<br> 字段分组 指定字段分发bolt 哈希区域<br> allgroup :tuple 复制分组到所有bolt<br> 无分组 等同于随机分组 最终storm会把所有的无分组放到订阅的同一线程中运行<br> 直接分组:生产者决定tuple由那个bolt接收<br> 还可以实现customeStreamGrouping自己定义分组</p><p>storm ui :集群拓扑部署查看</p><p>停止:<br>nimbus 上运行<br>./storm kill  topology-name</p><p>BasicBolt 不用关心ack/fail</p><p>emit:发送到下一个节点</p>]]></content>
       
@@ -277,8 +277,8 @@
     
     <entry>
       <title></title>
-      <link href="2020/08/28/python-tips/"/>
-      <url>2020/08/28/python-tips/</url>
+      <link href="/2020/08/28/python-tips/"/>
+      <url>/2020/08/28/python-tips/</url>
       
         <content type="html"><![CDATA[<p>opt目录任何用户都有权限</p><h1 id="注释需要空格单行注释一个空格"><a href="#注释需要空格单行注释一个空格" class="headerlink" title="注释需要空格单行注释一个空格"></a>注释需要空格单行注释一个空格</h1><p>code  #单行注释可以放在当前行后面如果注释很短两个空格<br>运算符：<br>//取整<br><strong>次幂计算2</strong>3=8</p><p>变量：<br>变量第一次出现定义变量第二次修改变量</p><p>定义变量时python变量的类型是由等号右边的类型自动确定</p><p>数据类型：</p><p>0=False  非零=True   非零既真</p><p>复数型 ：科学计算</p><p>python2 中有int 和long 区分</p><p>python3 只有int类型</p><p> bool类型：<br> True&gt;&gt;&gt;1<br> False&gt;&gt;&gt;0</p><p> str1+str2 字符串相加等于拼接字符串</p><p>字符串变量可以用 * +  不能与数字运算</p><p>变量的输入：</p><p>input()的输入类型都是字符串类型的</p><p>类型转换函数：</p><p>int(“22”)<br>float（”2.3”） </p><p>格式化字符%：<br>s &gt;字符串<br>d &gt;num<br>f &gt;float<br>%% &gt;%</p><p>多值格式化 %（变量1，变量2….）</p><p>%.2f 表示小数点后面显示2位</p><p>%06d :表示输出展示整数的位数6位不足补0</p><p>scale=0.25<br>print(“数据比利是：%.2f%%”%(scale*100))</p><blockquote><blockquote><blockquote><blockquote><p>25%</p></blockquote></blockquote></blockquote></blockquote><p>变量命名：<br>关键字：<br>import keyword<br>print(keyword.kwlist)<br>推荐：下划线分割多个单词<br>可以驼峰命名</p><p>python2不等于可以有&lt;&gt; !=</p><p>相同缩进代表同一个代码块</p><p>相同数据类型才能进行大小比较</p><p>逻辑运算符：</p><p>and or 与或<br>非not 条件 :对条件取反</p><p>if critera1:<br>    do sth<br>elif critera2:<br>    do another..<br>elif critera3:<br>    do another…<br>else:<br>    none of above doing</p><p>if() or () or ():&gt;&gt;&gt;&gt;or条件换行</p><p>if(()<br>    or()<br>    or()):<br>编辑器自动换行: \ 不用添加括号</p><p>import 工具包在文件开头方便下面的代码调用</p><p>\转译字符<br>&quot; &gt;&gt;”<br>&#39;&gt;&gt;’<br>\&gt;&gt; <br>\r &gt;&gt; 回车</p><p>import while_test 导入自己写的工具包</p><p>def:定义函数<br>def functionName():<br>        “””函数文档注释 “””<br>函数是先定义再调用 python是从上到下执行</p><p>函数定义上方空两行</p><p>按住ctrl可以查看函数注释</p><p>###################################################################</p><p>python setup.py build 打包 exe </p><p>pip install -r C:\projects\flaskmongouserlogintemplate\requirements.txt</p><p>list(map(lambda x:str(x),auths))</p>]]></content>
       
@@ -290,8 +290,8 @@
     
     <entry>
       <title></title>
-      <link href="2020/08/28/windows-tips/"/>
-      <url>2020/08/28/windows-tips/</url>
+      <link href="/2020/08/28/windows-tips/"/>
+      <url>/2020/08/28/windows-tips/</url>
       
         <content type="html"><![CDATA[<p>最小化当前窗口：<br>alt+esc<br>ctrl+d ===ctrl+c 退出<br>alt+f4 close current window<br>ctrl+W close tab<br>win+m minimum window<br>win+D show desktop</p><p>chrome F12 developer mode</p><p>netstat -aon|findstr “49157”</p><p>netstat -ano | findstr “:80 “</p><p>delete service after program remvoed<br>sc delete MySQL </p><p>set JAVA_HOME=C:\Program Fiels (x86)\Java\jre1.8.0_171</p><p>netstat -anb 查看端口占用</p><p>taskkill /IM iexplore.exe /F</p><p>systeminfo</p><p>find . -name “*.css”|xargs grep -n “yun.ae8e0024.png”</p><p>netstat -aon|findstr “8070”<br>taskkill /pid 6128 /t /f</p><p>run on start folder:<br>C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp<br>alt + esc minimize window</p>]]></content>
       
@@ -303,23 +303,10 @@
     
     <entry>
       <title></title>
-      <link href="2020/08/28/vpn/"/>
-      <url>2020/08/28/vpn/</url>
+      <link href="/2020/08/28/vpn/"/>
+      <url>/2020/08/28/vpn/</url>
       
-        <content type="html"><![CDATA[<p>#!/bin/sh</p><p>yum install docker -y&amp;&amp;service docker start&amp;&amp;chkconfig docker on&amp;&amp;docker pull oddrationale/docker-shadowsocks&amp;&amp;docker run -d -p 17330:17330  –restart=always oddrationale/docker-shadowsocks -s 0.0.0.0 -p 17330 -k _pass123 -m aes-256-cfb&amp;&amp;yum update -y&amp;&amp;rpm –import <a href="https://www.elrepo.org/RPM-GPG-KEY-elrepo.org&amp;&amp;rpm">https://www.elrepo.org/RPM-GPG-KEY-elrepo.org&amp;&amp;rpm</a> -Uvh <a href="http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm&amp;&amp;echo">http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm&amp;&amp;echo</a> y | yum –enablerepo=elrepo-kernel install kernel-ml&amp;&amp;grub2-set-default 1&amp;&amp;echo y |yum install expect&amp;&amp;expect &lt;&lt;EOF<br>set timeout -1<br>spawn ssh-keygen -t rsa<br>expect “(/root/.ssh/id_rsa):”<br>send “\r”<br>expect “(empty for no passphrase):”<br>send “\r”<br>expect “again:”<br>send “\r”<br>expect eof<br>EOF<br>echo “ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDMfSgrbnmp10p2F2YenvFLfPQPwyJ1DrSWBh9G4u0iE1PolSxESFFHv0UWpoCfdCs9Rwg385zpq4gRDZIkFbZJ583KPB7EKD4PfzJ1Lzgs5hRXQxIFxYvmvEGvXwoBVJ9WAnl21FVO6bAuBhYbLx+hTBac3MZc9dfFcycBFyjVWKMAM7HuecR6nn9JM8jMWZokqg33uOhMWVaIF7vpq1S302B9BLx737Fn+fnASCjjLl8ZUxizBJI7b4lELNbM30DWtA9yDz8Ds+FPE1LtSKdA2Hi0r8QJ+3xC6f/QJ3c/Fe55tlvAr1UDoxUqVpSavJwHWOx9o61XvOIAaau/7HEj <a href="mailto:&#x31;&#53;&#51;&#51;&#x33;&#x36;&#48;&#48;&#x34;&#x34;&#64;&#113;&#113;&#46;&#99;&#111;&#x6d;">&#x31;&#53;&#51;&#51;&#x33;&#x36;&#48;&#48;&#x34;&#x34;&#64;&#113;&#113;&#46;&#99;&#111;&#x6d;</a>“ &gt; /root/.ssh/authorized_keys&amp;&amp;chmod 700 .ssh&amp;&amp;chmod 600 .ssh/authorized_keys&amp;&amp;reboot</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="2020/08/28/node-js-tips/"/>
-      <url>2020/08/28/node-js-tips/</url>
-      
-        <content type="html"><![CDATA[<p>angular:<br>grunt serve 启动前端web界面 </p><p>bower install angular#1.6.9 –save</p><p>node:<br>npm start </p><p>bower install <a href="mailto:&#x61;&#110;&#103;&#x75;&#108;&#x61;&#114;&#x40;&#x31;&#x2e;&#x36;&#x2e;&#57;">&#x61;&#110;&#103;&#x75;&#108;&#x61;&#114;&#x40;&#x31;&#x2e;&#x36;&#x2e;&#57;</a></p><p>#switch node version<br>npm install -g n<br>sudo n 8.10</p><p>yarn install –ignore-engines</p>]]></content>
+        <content type="html"><![CDATA[<p>#!/bin/sh</p><p>yum install docker -y&amp;&amp;service docker start&amp;&amp;chkconfig docker on&amp;&amp;docker pull oddrationale/docker-shadowsocks&amp;&amp;docker run -d -p 17330:17330  –restart=always oddrationale/docker-shadowsocks -s 0.0.0.0 -p 17330 -k _pass123 -m aes-256-cfb&amp;&amp;yum update -y&amp;&amp;rpm –import <a href="https://www.elrepo.org/RPM-GPG-KEY-elrepo.org&amp;&amp;rpm">https://www.elrepo.org/RPM-GPG-KEY-elrepo.org&amp;&amp;rpm</a> -Uvh <a href="http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm&amp;&amp;echo">http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm&amp;&amp;echo</a> y | yum –enablerepo=elrepo-kernel install kernel-ml&amp;&amp;grub2-set-default 1&amp;&amp;echo y |yum install expect&amp;&amp;expect &lt;&lt;EOF<br>set timeout -1<br>spawn ssh-keygen -t rsa<br>expect “(/root/.ssh/id_rsa):”<br>send “\r”<br>expect “(empty for no passphrase):”<br>send “\r”<br>expect “again:”<br>send “\r”<br>expect eof<br>EOF<br>echo “ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDMfSgrbnmp10p2F2YenvFLfPQPwyJ1DrSWBh9G4u0iE1PolSxESFFHv0UWpoCfdCs9Rwg385zpq4gRDZIkFbZJ583KPB7EKD4PfzJ1Lzgs5hRXQxIFxYvmvEGvXwoBVJ9WAnl21FVO6bAuBhYbLx+hTBac3MZc9dfFcycBFyjVWKMAM7HuecR6nn9JM8jMWZokqg33uOhMWVaIF7vpq1S302B9BLx737Fn+fnASCjjLl8ZUxizBJI7b4lELNbM30DWtA9yDz8Ds+FPE1LtSKdA2Hi0r8QJ+3xC6f/QJ3c/Fe55tlvAr1UDoxUqVpSavJwHWOx9o61XvOIAaau/7HEj <a href="mailto:&#49;&#53;&#51;&#51;&#51;&#54;&#x30;&#x30;&#52;&#52;&#x40;&#113;&#113;&#46;&#x63;&#111;&#x6d;">&#49;&#53;&#51;&#51;&#51;&#54;&#x30;&#x30;&#52;&#52;&#x40;&#113;&#113;&#46;&#x63;&#111;&#x6d;</a>“ &gt; /root/.ssh/authorized_keys&amp;&amp;chmod 700 .ssh&amp;&amp;chmod 600 .ssh/authorized_keys&amp;&amp;reboot</p>]]></content>
       
       
       
@@ -329,10 +316,10 @@
     
     <entry>
       <title></title>
-      <link href="2020/08/28/linux-command-tips/"/>
-      <url>2020/08/28/linux-command-tips/</url>
+      <link href="/2020/08/28/node-js-tips/"/>
+      <url>/2020/08/28/node-js-tips/</url>
       
-        <content type="html"><![CDATA[<p>echo $SHELL</p><p>chsh -s /bin/zsh</p><p>cmd&gt;&gt;bash切换至：<br>bash on Ubuntu on Windows</p><p>gi first search box focus</p><p>which 查看命令位置</p><p>ls -lh 可查看文件大小</p><p>环境变量系统路径<br>echo $PATH<br>递归删除某后缀文件<br>find . -name “*.pyc”  | xargs rm -f</p><p>curl -O #download </p><p>getconf LONG_BIT</p><p>cat /etc/redhat-release</p><p>#查看哪个应用占用某端口:<br> ss -lpn src :22122</p><p> sudo chown -R www corp.bagene.com</p><p> sudo chgrp -R www corp.bagene.com</p><p> 防火墙状态:<br> firewall-cmd –state<br> 开放端口:<br> firewall-cmd –zone=public –add-port=3306/tcp –permanent</p><p>宝塔面板秘钥重置:<br> cd /www/server/panel &amp;&amp; python tools.py panel testpasswd</p><p>redis客户端远程连接:<br> redis-cli -h host -p port -a password</p><p> firewall-cmd –zone=public –add-port=3306/tcp –permanent<br> firewall-cmd –reload</p><h1 id="查找”-“目录下所有大于100M的所有文件"><a href="#查找”-“目录下所有大于100M的所有文件" class="headerlink" title="查找”/“目录下所有大于100M的所有文件"></a>查找”/“目录下所有大于100M的所有文件</h1><p> find / -type f -size +100M -print0 | xargs -0 du -h | sort -nr<br> find / -size +100M -exec du -h {} ;</p><p>拷贝 local到server<br> scp -r ~/.m2/repository/org/elasticsearch/client/x-pack-transport/5.5.0/* <a href="mailto:&#x72;&#x6f;&#111;&#x74;&#64;&#x31;&#x2e;&#49;&#x34;&#x2e;&#x31;&#51;&#x33;&#46;&#x31;&#57;&#49;">&#x72;&#x6f;&#111;&#x74;&#64;&#x31;&#x2e;&#49;&#x34;&#x2e;&#x31;&#51;&#x33;&#46;&#x31;&#57;&#49;</a>:/root/.m2/repository/org/elasticsearch/client/x-pack-transport/5.5.0/</p><p>查找:<br>grep “String” filename.txt<br>#字符串  文件名<br>grep -r “String” /home/</p><p>du -sh * 目录文件占用显示</p><p>df -h </p><p>清理 buff/cache:<br>echo 1 &gt; /proc/sys/vm/drop_caches</p><p>执行以下命令，查找当前分区是否存在未被清除句柄的文件。<br>lsof |grep delete</p><p>‘abrt-cli status’ timed out<br>abrt-auto-reporting enabled</p><p>keytool -genkey -alias appSecret -keyalg RSA -keysize 2048 -validity 36500 -keystore top3.keystore<br>计算目录文件个数:<br>ls -lR|grep “^-“|wc -l<br>目录文件夹个数<br>ls -lR|grep “^d”|wc -l</p><p>renew cert:<br>certbot certonly –preferred-challenges dns –manual  -d *.burningfire.cn –server <a href="https://acme-v02.api.letsencrypt.org/directory">https://acme-v02.api.letsencrypt.org/directory</a></p><p>#手动测试，查看证书过期时间<br>certbot renew<br>#忽略证书过期时间，直接重置证书时间<br>certbot renew –force-renewal<br>#定时任务<br>crontab -e<br>#编辑文件<br>0 0 1 * * /usr/bin/certbot renew –force-renewal</p><p>查询大文件目录:<br>du -sh * | sort -n</p><p>查看上GB的目录并且排序,可以用这个命令<br>du -h –max-depth=1 |grep ‘G’ |sort</p><p>除keep1和keep2都删除<br>rm -rf !(keep1|keep2) </p><p>#rpm -qa|grep php    查询被安装的php包<br> #rpm -e xxx     删除查询到的包<br> #rpm -e xxx –nodeps   如果有依赖报错，强制删除</p>]]></content>
+        <content type="html"><![CDATA[<p>angular:<br>grunt serve 启动前端web界面 </p><p>bower install angular#1.6.9 –save</p><p>node:<br>npm start </p><p>bower install <a href="mailto:&#97;&#x6e;&#103;&#117;&#108;&#97;&#114;&#64;&#49;&#x2e;&#54;&#x2e;&#57;">&#97;&#x6e;&#103;&#117;&#108;&#97;&#114;&#64;&#49;&#x2e;&#54;&#x2e;&#57;</a></p><p>#switch node version<br>npm install -g n<br>sudo n 8.10</p><p>yarn install –ignore-engines</p>]]></content>
       
       
       
@@ -342,8 +329,21 @@
     
     <entry>
       <title></title>
-      <link href="2020/08/14/php/"/>
-      <url>2020/08/14/php/</url>
+      <link href="/2020/08/28/linux-command-tips/"/>
+      <url>/2020/08/28/linux-command-tips/</url>
+      
+        <content type="html"><![CDATA[<p>echo $SHELL</p><p>chsh -s /bin/zsh</p><p>cmd&gt;&gt;bash切换至：<br>bash on Ubuntu on Windows</p><p>gi first search box focus</p><p>which 查看命令位置</p><p>ls -lh 可查看文件大小</p><p>环境变量系统路径<br>echo $PATH<br>递归删除某后缀文件<br>find . -name “*.pyc”  | xargs rm -f</p><p>curl -O #download </p><p>getconf LONG_BIT</p><p>cat /etc/redhat-release</p><p>#查看哪个应用占用某端口:<br> ss -lpn src :22122</p><p> sudo chown -R www corp.bagene.com</p><p> sudo chgrp -R www corp.bagene.com</p><p> 防火墙状态:<br> firewall-cmd –state<br> 开放端口:<br> firewall-cmd –zone=public –add-port=3306/tcp –permanent</p><p>宝塔面板秘钥重置:<br> cd /www/server/panel &amp;&amp; python tools.py panel testpasswd</p><p>redis客户端远程连接:<br> redis-cli -h host -p port -a password</p><p> firewall-cmd –zone=public –add-port=3306/tcp –permanent<br> firewall-cmd –reload</p><h1 id="查找”-“目录下所有大于100M的所有文件"><a href="#查找”-“目录下所有大于100M的所有文件" class="headerlink" title="查找”/“目录下所有大于100M的所有文件"></a>查找”/“目录下所有大于100M的所有文件</h1><p> find / -type f -size +100M -print0 | xargs -0 du -h | sort -nr<br> find / -size +100M -exec du -h {} ;</p><p>拷贝 local到server<br> scp -r ~/.m2/repository/org/elasticsearch/client/x-pack-transport/5.5.0/* <a href="mailto:&#114;&#x6f;&#111;&#116;&#64;&#x31;&#46;&#49;&#x34;&#46;&#x31;&#51;&#x33;&#x2e;&#49;&#x39;&#49;">&#114;&#x6f;&#111;&#116;&#64;&#x31;&#46;&#49;&#x34;&#46;&#x31;&#51;&#x33;&#x2e;&#49;&#x39;&#49;</a>:/root/.m2/repository/org/elasticsearch/client/x-pack-transport/5.5.0/</p><p>查找:<br>grep “String” filename.txt<br>#字符串  文件名<br>grep -r “String” /home/</p><p>du -sh * 目录文件占用显示</p><p>df -h </p><p>清理 buff/cache:<br>echo 1 &gt; /proc/sys/vm/drop_caches</p><p>执行以下命令，查找当前分区是否存在未被清除句柄的文件。<br>lsof |grep delete</p><p>‘abrt-cli status’ timed out<br>abrt-auto-reporting enabled</p><p>keytool -genkey -alias appSecret -keyalg RSA -keysize 2048 -validity 36500 -keystore top3.keystore<br>计算目录文件个数:<br>ls -lR|grep “^-“|wc -l<br>目录文件夹个数<br>ls -lR|grep “^d”|wc -l</p><p>renew cert:<br>certbot certonly –preferred-challenges dns –manual  -d *.burningfire.cn –server <a href="https://acme-v02.api.letsencrypt.org/directory">https://acme-v02.api.letsencrypt.org/directory</a></p><p>#手动测试，查看证书过期时间<br>certbot renew<br>#忽略证书过期时间，直接重置证书时间<br>certbot renew –force-renewal<br>#定时任务<br>crontab -e<br>#编辑文件<br>0 0 1 * * /usr/bin/certbot renew –force-renewal</p><p>查询大文件目录:<br>du -sh * | sort -n</p><p>查看上GB的目录并且排序,可以用这个命令<br>du -h –max-depth=1 |grep ‘G’ |sort</p><p>除keep1和keep2都删除<br>rm -rf !(keep1|keep2) </p><p>#rpm -qa|grep php    查询被安装的php包<br> #rpm -e xxx     删除查询到的包<br> #rpm -e xxx –nodeps   如果有依赖报错，强制删除</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2020/08/14/php/"/>
+      <url>/2020/08/14/php/</url>
       
         <content type="html"><![CDATA[<p>apache默认服务器安装目录:<br>/etc/apache2<br>命令<br>sudo apachectl start     //开始<br>sudo apachectl restart   //重启<br>sudo apachectl stop      //停止</p>]]></content>
       
